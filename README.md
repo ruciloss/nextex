@@ -32,5 +32,3 @@ First, `yarn install` or `npm install` workspace.
 ## Contributing
 
 NexteX is under [MIT License](./LICENSE)
-
-Created by [Ruciloss](https://github.com/ruciloss)

@@ -22,7 +22,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <html
-            id="next"
+            id="nextex"
             lang="en"
             dir="ltr"
             {...stylex.props(

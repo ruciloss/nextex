@@ -24,7 +24,9 @@ const Footer = () => (
             >
                 License MIT
             </a>
-            <span>&mdash;</span>
+            <span>&bull;</span>
+            <span>v1.0.0</span>
+            <span>&bull;</span>
             <a
                 href="https://github.com/ruciloss/ruciloss.github.io"
                 target="_blank"

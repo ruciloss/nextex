@@ -30,11 +30,11 @@ const NotFound = () => {
                 <span {...stylex.props(styles.divider)}></span>
                 <span>This page could not be found.</span>
             </div>
-            <span {...stylex.props(styles.paragraph)}>
-                You will be redirected to the homepage in{" "}
-                <span {...stylex.props(styles.countdown)}>{countdown}</span>{" "}
-                seconds.
-            </span>
+            <div>
+                <span>You will be redirected to the homepage in </span>
+                <span {...stylex.props(styles.countdown)}>{countdown} </span>
+                <span>seconds.</span>
+            </div>
         </Inner>
     );
 };

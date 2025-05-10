@@ -17,9 +17,6 @@ export const styles = stylex.create({
         height: "100%",
         width: "1px",
     },
-    paragraph: {
-        marginTop: spacing.lg,
-    },
     countdown: {
         color: `rgba(${colors.dangerR}, ${colors.dangerG}, ${colors.dangerB}, 1)`,
         fontWeight: 600,
