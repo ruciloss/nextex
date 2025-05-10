@@ -1,0 +1,45 @@
+@layer resets {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    input,
+    button,
+    textarea,
+    select,
+    option {
+        background: none;
+        border: none;
+        font: inherit;
+        color: inherit;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+}
+
+@stylex;
+
+.pm__title {
+    display: unset !important;
+}
+
+.pm__title small {
+    display: block;
+    margin-top: 0.5em;
+    font-weight: 400;
+}
+
+.pm__section-desc p {
+    display: block !important;
+}
+
+.pm-overlay {
+    backdrop-filter: blur(6px) !important;
+}
