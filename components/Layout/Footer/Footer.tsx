@@ -6,7 +6,7 @@ const Footer = () => (
     <div role="contentinfo" {...stylex.props(styles.wrapper)}>
         <div {...stylex.props(styles.item)}>
             <Image
-                src="/logo.svg"
+                src="/nextex/logo.svg"
                 alt="Created by Ruciloss"
                 width={16}
                 height={16}
