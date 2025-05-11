@@ -4,7 +4,7 @@ import { styles } from "./Header.stylex";
 import ThemeToggler from "@/components/Core/ThemeToggler/ThemeToggler";
 import Logo from "@/components/Content/Logo/Logo";
 import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
-import SocialIcon from "@/components/Core/SocialIcon/SocialIcon";
+import SocialIcon from "@/components/Content/SocialIcon/SocialIcon";
 
 const Header = () => {
     return (
