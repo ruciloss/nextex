@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         "A simple template for building modern websites with Next.js & StyleX.",
 };
 
-export const styles = stylex.create({
+const styles = stylex.create({
     heading: {
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
         display: "block",
