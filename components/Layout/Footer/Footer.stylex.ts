@@ -20,6 +20,11 @@ export const styles = stylex.create({
         display: "flex",
         gap: spacing.xxs,
     },
+    logo: {
+        display: "flex",
+        height: "auto",
+        width: "18px",
+    },
     link: {
         color: "inherit",
         display: "flex",

@@ -24,10 +24,11 @@ export const styles = stylex.create({
     wrapperInner: {
         alignItems: "center",
         display: "flex",
-        gap: spacing.sm,
+        gap: spacing.xxs,
     },
     logo: {
-        color: "inherit",
         display: "flex",
+        height: "auto",
+        width: "40px",
     },
 });

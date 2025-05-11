@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import * as stylex from "@stylexjs/stylex";
-import { colors, text } from "../app/globalTokens.stylex";
+import { colors, text } from "./globalTokens.stylex";
 import Inner from "@/components/Layout/Inner/Inner";
 import Footer from "@/components/Layout/Footer/Footer";
 
