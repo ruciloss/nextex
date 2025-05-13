@@ -200,7 +200,7 @@ export const spacing = stylex.defineVars({
  * Global Tokens
  */
 export const global = stylex.defineVars({
-    headerHeight: "55px",
+    headerHeight: "51px",
 });
 
 const DARK_MODE = "@media (prefers-color-scheme: dark)";

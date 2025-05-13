@@ -15,7 +15,7 @@ export const styles = stylex.create({
         justifyContent: "space-between",
         left: 0,
         margin: "auto",
-        padding: `${spacing.xxs} ${spacing.xs}`,
+        padding: `${spacing.xxxs} ${spacing.xs}`,
         position: "fixed",
         top: 0,
         width: "100%",
