@@ -20,7 +20,7 @@ const Footer = () => (
         </div>
         <div {...stylex.props(styles.item)}>
             <a
-                href="https://github.com/ruciloss/ruciloss.github.io/blob/master/LICENSE"
+                href="https://github.com/ruciloss/nextex/blob/master/LICENSE"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Link to Licene MIT"

@@ -26,9 +26,13 @@ const NotFound = () => {
     return (
         <Inner>
             <div {...stylex.props(styles.heading)}>
-                <span>404</span>
+                <span role="heading" aria-level={1}>
+                    404
+                </span>
                 <span {...stylex.props(styles.divider)}></span>
-                <span>This page could not be found.</span>
+                <span role="heading" aria-level={1}>
+                    This page could not be found.
+                </span>
             </div>
             <div>
                 <span>You will be redirected to the homepage in </span>
