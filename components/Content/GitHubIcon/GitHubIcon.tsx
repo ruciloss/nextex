@@ -1,8 +1,8 @@
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./SocialIcon.stylex";
+import { styles } from "./GitHubIcon.stylex";
 import { Github } from "lucide-react";
 
-const SocialIcon = () => {
+const GitHubIcon = () => {
     return (
         <a
             href="https://github.com/ruciloss/nextex"
@@ -10,6 +10,7 @@ const SocialIcon = () => {
             rel="noopener noreferrer"
             aria-label="Link to GitHub"
             role="link"
+            tabIndex={0}
             {...stylex.props(styles.button)}
         >
             <Github
@@ -17,10 +18,10 @@ const SocialIcon = () => {
                 height={18}
                 strokeWidth={2}
                 role="img"
-                aria-label="automatic theme icon"
+                aria-label="GitHub Icon"
             />
         </a>
     );
 };
 
-export default SocialIcon;
+export default GitHubIcon;

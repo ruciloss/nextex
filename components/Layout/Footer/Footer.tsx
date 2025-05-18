@@ -11,6 +11,7 @@ const Footer = () => (
                     href="/"
                     aria-label="Link to Homepage"
                     role="link"
+                    tabIndex={0}
                     {...stylex.props(styles.logo)}
                 >
                     <Logo />
@@ -19,16 +20,15 @@ const Footer = () => (
             <span>Created by Ruciloss &copy; {new Date().getFullYear()}</span>
         </div>
         <div {...stylex.props(styles.item)}>
-            <a
-                href="https://github.com/ruciloss/nextex/blob/master/LICENSE"
-                target="_blank"
-                rel="noopener noreferrer"
+            <Link
+                href="/mit"
                 aria-label="Link to Licene MIT"
                 role="link"
+                tabIndex={0}
                 {...stylex.props(styles.link)}
             >
                 License MIT
-            </a>
+            </Link>
             <span>&bull;</span>
             <span>v1.0.0</span>
         </div>

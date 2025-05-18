@@ -17,12 +17,15 @@ const styles = stylex.create({
         fontSize: text.h2,
         fontWeight: 700,
     },
+    wrapper: {
+        textAlign: "center",
+    },
 });
 
 const Homepage = () => {
     return (
         <Inner>
-            <div>
+            <div {...stylex.props(styles.wrapper)}>
                 <span
                     role="heading"
                     aria-level={1}

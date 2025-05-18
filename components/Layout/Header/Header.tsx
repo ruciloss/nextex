@@ -3,7 +3,7 @@ import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Header.stylex";
 import ThemeToggler from "@/components/Core/ThemeToggler/ThemeToggler";
 import Logo from "@/components/Content/Logo/Logo";
-import SocialIcon from "@/components/Content/SocialIcon/SocialIcon";
+import GitHubIcon from "@/components/Content/GitHubIcon/GitHubIcon";
 
 const Header = () => {
     return (
@@ -13,13 +13,14 @@ const Header = () => {
                     href="/"
                     aria-label="Link to Homepage"
                     role="link"
+                    tabIndex={0}
                     {...stylex.props(styles.logo)}
                 >
                     <Logo />
                 </Link>
             </div>
             <div {...stylex.props(styles.wrapperInner)}>
-                <SocialIcon />
+                <GitHubIcon />
                 <ThemeToggler />
             </div>
         </div>

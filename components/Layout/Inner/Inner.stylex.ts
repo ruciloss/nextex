@@ -9,9 +9,8 @@ export const styles = stylex.create({
         gap: spacing.lg,
         justifyContent: "start",
         margin: "auto",
-        maxWidth: "500px",
+        maxWidth: "600px",
         padding: `0 ${spacing.xs}`,
-        textAlign: "center",
         width: "100%",
     },
 });

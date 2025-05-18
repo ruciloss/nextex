@@ -8,7 +8,6 @@ const Logo = () => (
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <title>Logo</title>
         <g transform="matrix(1,0,0,1,-1.66667,-1.66667)">
             <g transform="matrix(0.987448,0,0,0.987448,-6.78661,-4.81172)">
                 <circle
