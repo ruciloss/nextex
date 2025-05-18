@@ -238,6 +238,14 @@ export const colors = stylex.defineVars({
     blackWhiteG: { default: "9", [DARK_MODE]: "250" },
     blackWhiteB: { default: "11", [DARK_MODE]: "250" },
 
+    successR: { default: "49", [DARK_MODE]: "49" },
+    successG: { default: "162", [DARK_MODE]: "162" },
+    successB: { default: "76", [DARK_MODE]: "76" },
+
+    warningR: { default: "242", [DARK_MODE]: "242" },
+    warningG: { default: "169", [DARK_MODE]: "169" },
+    warningB: { default: "24", [DARK_MODE]: "24" },
+
     dangerR: { default: "239", [DARK_MODE]: "239" },
     dangerG: { default: "68", [DARK_MODE]: "68" },
     dangerB: { default: "68", [DARK_MODE]: "68" },

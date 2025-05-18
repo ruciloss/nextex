@@ -12,7 +12,7 @@ export const styles = stylex.create({
         gap: spacing.sm,
         justifyContent: "space-between",
         marginTop: spacing.xxl,
-        paddingTop: spacing.sm,
+        paddingTop: spacing.xxs,
         width: "100%",
     },
     item: {

@@ -27,18 +27,6 @@ export const light = stylex.createTheme(colors, {
     bgAltHoverG: "216",
     bgAltHoverB: "220",
 
-    primaryR: "8",
-    primaryG: "102",
-    primaryB: "255",
-
-    blackWhiteR: "8",
-    blackWhiteG: "8",
-    blackWhiteB: "9",
-
-    dangerR: "239",
-    dangerG: "68",
-    dangerB: "68",
-
     borderR: "187",
     borderG: "189",
     borderB: "193",
@@ -46,6 +34,26 @@ export const light = stylex.createTheme(colors, {
     shadowR: "0",
     shadowG: "0",
     shadowB: "0",
+
+    blackWhiteR: "8",
+    blackWhiteG: "8",
+    blackWhiteB: "9",
+
+    primaryR: "8",
+    primaryG: "102",
+    primaryB: "255",
+
+    successR: "49",
+    successG: "162",
+    successB: "76",
+
+    warningR: "242",
+    warningG: "169",
+    warningB: "24",
+
+    dangerR: "239",
+    dangerG: "68",
+    dangerB: "68",
 });
 
 export const dark = stylex.createTheme(colors, {
@@ -73,18 +81,6 @@ export const dark = stylex.createTheme(colors, {
     bgAltHoverG: "80",
     bgAltHoverB: "80",
 
-    primaryR: "8",
-    primaryG: "102",
-    primaryB: "255",
-
-    blackWhiteR: "226",
-    blackWhiteG: "229",
-    blackWhiteB: "233",
-
-    dangerR: "239",
-    dangerG: "68",
-    dangerB: "68",
-
     borderR: "101",
     borderG: "104",
     borderB: "108",
@@ -92,4 +88,24 @@ export const dark = stylex.createTheme(colors, {
     shadowR: "0",
     shadowG: "0",
     shadowB: "0",
+
+    blackWhiteR: "226",
+    blackWhiteG: "229",
+    blackWhiteB: "233",
+
+    primaryR: "8",
+    primaryG: "102",
+    primaryB: "255",
+
+    successR: "49",
+    successG: "162",
+    successB: "76",
+
+    warningR: "242",
+    warningG: "169",
+    warningB: "24",
+
+    dangerR: "239",
+    dangerG: "68",
+    dangerB: "68",
 });
