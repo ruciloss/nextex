@@ -11,7 +11,6 @@ export const styles = stylex.create({
         fontSize: text.xs,
         gap: spacing.sm,
         justifyContent: "space-between",
-        marginTop: spacing.xxl,
         paddingTop: spacing.xxs,
         width: "100%",
     },

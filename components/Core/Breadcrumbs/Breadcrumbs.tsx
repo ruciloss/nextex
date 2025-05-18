@@ -2,7 +2,6 @@ import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Breadcrumbs.stylex";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import React from "react";
 
 const Breadcrumbs = () => {
     const pathname = usePathname();
@@ -28,7 +27,7 @@ const Breadcrumbs = () => {
             {...stylex.props(styles.wrapper)}
         >
             {breadcrumbs.map((breadcrumb, index) => (
-                <React.Fragment key={index}>
+                <div key={index}>
                     {index < breadcrumbs.length - 1 ? (
                         <Link
                             href={breadcrumb.href}
@@ -41,7 +40,7 @@ const Breadcrumbs = () => {
                     )}
 
                     {index < breadcrumbs.length - 1 && <span>&mdash;</span>}
-                </React.Fragment>
+                </div>
             ))}
         </div>
     );
