@@ -7,6 +7,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 */
 
 const nextConfig: NextConfig = {
+    transpilePackages: ["@stylexjs/open-props"],
     poweredByHeader: false,
     output: "export",
     images: {
@@ -18,7 +19,6 @@ const nextConfig: NextConfig = {
         defaultLocale: 'en',
     },
     */
-    transpilePackages: ["@stylexjs/open-props"],
 };
 
 export default nextConfig;

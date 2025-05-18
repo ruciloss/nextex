@@ -11,11 +11,11 @@ export default function (api) {
         [
             "@stylexjs/babel-plugin",
             {
+                // classNamePrefix: "y",
                 dev: process.env.NODE_ENV === "development",
                 test: process.env.NODE_ENV === "test",
                 runtimeInjection: false,
                 treeshakeCompensation: true,
-                // classNamePrefix: "y",
                 aliases: {
                     "@/*": [join(dirname, "*")],
                 },
