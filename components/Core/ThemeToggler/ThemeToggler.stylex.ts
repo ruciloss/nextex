@@ -86,6 +86,7 @@ export const styles = stylex.create({
         fontWeight: 600,
     },
     itemDescription: {
+        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
         display: "block",
         fontSize: text.xs,
         paddingRight: spacing.sm,
