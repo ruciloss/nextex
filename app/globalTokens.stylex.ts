@@ -1,12 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 
 /**
- * o--o o    o   o o-O-o o-o       o--o  o-o  o   o o-O-o  o-o
- * |    |    |   |   |   |  \      |    o   o |\  |   |   |
- * O-o  |    |   |   |   |   O     O-o  |   | | \ |   |    o-o
- * |    |    |   |   |   |  /      |    o   o |  \|   |       |
- * o    O---o o-o  o-O-o o-o       o     o-o  o   o   o   o--o
- *
  * Reference: https://utopia.fyi/type/calculator
  *
  * The following constants are used to calculate fluid typography.
@@ -89,12 +83,6 @@ export const text = stylex.defineVars({
 });
 
 /**
- * o--o o    o   o o-O-o o-o        o-o  o--o    O    o-o o--o
- * |    |    |   |   |   |  \      |     |   |  / \  /    |
- * O-o  |    |   |   |   |   O      o-o  O--o  o---oO     O-o
- * |    |    |   |   |   |  /          | |     |   | \    |
- * o    O---o o-o  o-O-o o-o       o--o  o     o   o  o-o o--o
- *
  * Reference: https://utopia.fyi/space/calculator
  *
  * Similar to the fluid typography, we can create fluid values for spacing.
@@ -113,7 +101,6 @@ export const text = stylex.defineVars({
  * use `px` because using `rems` here makes font-size behave like zoom.
  *
  * Users that prefer larger text, don't necessarily want larger spacing as well.
- *
  */
 const MULT = {
     xxxs: 0.25,
@@ -194,6 +181,73 @@ export const spacing = stylex.defineVars({
     xxl:   `clamp(${MIN_SPACE.xxl   }px, calc(${INTERCEPT_SPACE.xxl   }px + ${ Math.round(10000 * SLOPE_SPACE.xxl   ) / 100 }vw), ${MAX_SPACE.xxl   }px)`,
     xxxl:  `clamp(${MIN_SPACE.xxxl  }px, calc(${INTERCEPT_SPACE.xxxl  }px + ${ Math.round(10000 * SLOPE_SPACE.xxxl  ) / 100 }vw), ${MAX_SPACE.xxxl  }px)`,
     xxxxl: `clamp(${MIN_SPACE.xxxxl }px, calc(${INTERCEPT_SPACE.xxxxl }px + ${ Math.round(10000 * SLOPE_SPACE.xxxxl ) / 100 }vw), ${MAX_SPACE.xxxxl }px)`,
+});
+
+/**
+ * Reference: https://utopia.fyi/clamp/calculator
+ *
+ * This code implements fluid radius values for UI elements,
+ * similar to fluid typography but applied to border-radius,
+ * providing smooth scaling between a minimum and maximum radius
+ * based on viewport width.
+ *
+ * It uses a linear interpolation between MIN_RADIUS and MAX_RADIUS
+ * for different size scales (sm, md, lg, xl), clamped between
+ * fixed minimum and maximum pixel values using CSS clamp().
+ *
+ * Unlike font-size where rem units are recommended for accessibility,
+ * here px units are preferred to keep radius consistent regardless
+ * of user font scaling preferences.
+ *
+ * Feel free to extend the scales or adjust base values to fit your design needs.
+ */
+const MULT_RADIUS = {
+    xs: 0.25,
+    sm: 0.5,
+    md: 0.75,
+    lg: 1,
+    xl: 1.5,
+};
+
+const MIN_RADIUS = {
+    xs: MULT_RADIUS.xs * MIN_BASE_SIZE,
+    sm: MULT_RADIUS.sm * MIN_BASE_SIZE,
+    md: MULT_RADIUS.md * MIN_BASE_SIZE,
+    lg: MULT_RADIUS.lg * MIN_BASE_SIZE,
+    xl: MULT_RADIUS.xl * MIN_BASE_SIZE,
+};
+
+const MAX_RADIUS = {
+    xs: MULT_RADIUS.xs * MAX_BASE_SIZE,
+    sm: MULT_RADIUS.sm * MAX_BASE_SIZE,
+    md: MULT_RADIUS.md * MAX_BASE_SIZE,
+    lg: MULT_RADIUS.lg * MAX_BASE_SIZE,
+    xl: MULT_RADIUS.xl * MAX_BASE_SIZE,
+};
+
+const SLOPE_RADIUS = {
+    xs: (MAX_RADIUS.xs - MIN_RADIUS.xs) / (MAX_WIDTH - MIN_WIDTH),
+    sm: (MAX_RADIUS.sm - MIN_RADIUS.sm) / (MAX_WIDTH - MIN_WIDTH),
+    md: (MAX_RADIUS.md - MIN_RADIUS.md) / (MAX_WIDTH - MIN_WIDTH),
+    lg: (MAX_RADIUS.lg - MIN_RADIUS.lg) / (MAX_WIDTH - MIN_WIDTH),
+    xl: (MAX_RADIUS.xl - MIN_RADIUS.xl) / (MAX_WIDTH - MIN_WIDTH),
+};
+
+const INTERCEPT_RADIUS = {
+    xs: Math.round(4 * (MIN_RADIUS.xs - SLOPE_RADIUS.xs * MIN_WIDTH)) / 4,
+    sm: Math.round(4 * (MIN_RADIUS.sm - SLOPE_RADIUS.sm * MIN_WIDTH)) / 4,
+    md: Math.round(4 * (MIN_RADIUS.md - SLOPE_RADIUS.md * MIN_WIDTH)) / 4,
+    lg: Math.round(4 * (MIN_RADIUS.lg - SLOPE_RADIUS.lg * MIN_WIDTH)) / 4,
+    xl: Math.round(4 * (MIN_RADIUS.xl - SLOPE_RADIUS.xl * MIN_WIDTH)) / 4,
+};
+
+// prettier-ignore
+export const radius = stylex.defineVars({
+    xs: `clamp(${MIN_RADIUS.xs}px, calc(${INTERCEPT_RADIUS.xs}px + ${Math.round(10000 * SLOPE_RADIUS.xs) / 100}vw), ${MAX_RADIUS.xs}px)`,
+    sm: `clamp(${MIN_RADIUS.sm}px, calc(${INTERCEPT_RADIUS.sm}px + ${Math.round(10000 * SLOPE_RADIUS.sm) / 100}vw), ${MAX_RADIUS.sm}px)`,
+    md: `clamp(${MIN_RADIUS.md}px, calc(${INTERCEPT_RADIUS.md}px + ${Math.round(10000 * SLOPE_RADIUS.md) / 100}vw), ${MAX_RADIUS.md}px)`,
+    lg: `clamp(${MIN_RADIUS.lg}px, calc(${INTERCEPT_RADIUS.lg}px + ${Math.round(10000 * SLOPE_RADIUS.lg) / 100}vw), ${MAX_RADIUS.lg}px)`,
+    xl: `clamp(${MIN_RADIUS.xl}px, calc(${INTERCEPT_RADIUS.xl}px + ${Math.round(10000 * SLOPE_RADIUS.xl) / 100}vw), ${MAX_RADIUS.xl}px)`,
 });
 
 /**
@@ -295,10 +349,4 @@ export const scales = stylex.defineVars({
     sm: "scale(0.95)",
     md: "scale(1)",
     lg: "scale(1.2)",
-});
-
-export const radius = stylex.defineVars({
-    sm: "6px",
-    md: "9px",
-    lg: "12px",
 });
