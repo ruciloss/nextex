@@ -7,6 +7,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 */
 
 const nextConfig: NextConfig = {
+    basePath: "/nextex",
     transpilePackages: ["@stylexjs/open-props"],
     poweredByHeader: false,
     output: "export",
