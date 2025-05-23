@@ -192,7 +192,7 @@ export const spacing = stylex.defineVars({
  * based on viewport width.
  *
  * It uses a linear interpolation between MIN_RADIUS and MAX_RADIUS
- * for different size scales (sm, md, lg, xl), clamped between
+ * for different size scales, clamped between
  * fixed minimum and maximum pixel values using CSS clamp().
  *
  * Unlike font-size where rem units are recommended for accessibility,
