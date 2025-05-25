@@ -102,7 +102,6 @@ export const styles = stylex.create({
         outlineStyle: "solid",
         outlineWidth: "2px",
         position: "relative",
-        transition: "background-color 0.2s ease, border-color 0.2s ease",
         width: "12px",
     },
     radioSelected: {

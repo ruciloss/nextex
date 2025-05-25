@@ -64,8 +64,8 @@ const ThemeToggler = () => {
             >
                 {currentOption?.icon ? (
                     <currentOption.icon
-                        width={18}
-                        height={18}
+                        width={20}
+                        height={20}
                         strokeWidth={2}
                         role="img"
                         aria-hidden="false"
@@ -73,8 +73,8 @@ const ThemeToggler = () => {
                     />
                 ) : (
                     <Monitor
-                        width={18}
-                        height={18}
+                        width={20}
+                        height={20}
                         strokeWidth={2}
                         role="img"
                         aria-label="automatic theme icon"
@@ -87,8 +87,8 @@ const ThemeToggler = () => {
                     <div {...stylex.props(styles.header)}>
                         <span {...stylex.props(styles.icon)}>
                             <Moon
-                                width={18}
-                                height={18}
+                                width={20}
+                                height={20}
                                 strokeWidth={2}
                                 role="img"
                                 aria-label="Moon icon"

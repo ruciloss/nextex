@@ -1,7 +1,10 @@
+"use client";
+
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Breadcrumbs.stylex";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import React from "react";
 
 const Breadcrumbs = () => {
     const pathname = usePathname();
@@ -26,22 +29,27 @@ const Breadcrumbs = () => {
             aria-label="Breadcrumbs"
             {...stylex.props(styles.wrapper)}
         >
-            {breadcrumbs.map((breadcrumb, index) => (
-                <div key={index}>
-                    {index < breadcrumbs.length - 1 ? (
-                        <Link
-                            href={breadcrumb.href}
-                            {...stylex.props(styles.link)}
-                        >
-                            {breadcrumb.label}
-                        </Link>
-                    ) : (
-                        <span>{breadcrumb.label}</span>
-                    )}
+            {breadcrumbs.map((breadcrumb, index) => {
+                const isLast = index === breadcrumbs.length - 1;
 
-                    {index < breadcrumbs.length - 1 && <span>&mdash;</span>}
-                </div>
-            ))}
+                return (
+                    <React.Fragment key={index}>
+                        <span>
+                            {isLast ? (
+                                <span>{breadcrumb.label}</span>
+                            ) : (
+                                <Link
+                                    href={breadcrumb.href}
+                                    {...stylex.props(styles.link)}
+                                >
+                                    {breadcrumb.label}
+                                </Link>
+                            )}
+                        </span>
+                        {!isLast && <span>&bull;</span>}
+                    </React.Fragment>
+                );
+            })}
         </div>
     );
 };

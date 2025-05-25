@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing } from "../../../app/globalTokens.stylex";
+import { colors, global, spacing } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
@@ -12,10 +12,11 @@ export const styles = stylex.create({
         boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .1)`,
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteG}, 1)`,
         display: "flex",
+        height: global.headerHeight,
         justifyContent: "space-between",
         left: 0,
         margin: "auto",
-        padding: `${spacing.xxxs} ${spacing.xs}`,
+        padding: `0 ${spacing.xs}`,
         position: "fixed",
         top: 0,
         width: "100%",

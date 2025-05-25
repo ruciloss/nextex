@@ -10,7 +10,7 @@ export const styles = stylex.create({
         justifyContent: "start",
         margin: "auto",
         maxWidth: "600px",
-        padding: `0 ${spacing.xs}`,
+        padding: `${spacing.lg} ${spacing.xs}`,
         width: "100%",
     },
 });

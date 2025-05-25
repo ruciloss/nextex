@@ -14,8 +14,8 @@ const GitHubIcon = () => {
             {...stylex.props(styles.button)}
         >
             <Github
-                width={18}
-                height={18}
+                width={20}
+                height={20}
                 strokeWidth={2}
                 role="img"
                 aria-label="GitHub Icon"

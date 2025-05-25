@@ -254,7 +254,7 @@ export const radius = stylex.defineVars({
  * Global Tokens
  */
 export const global = stylex.defineVars({
-    headerHeight: "51px",
+    headerHeight: "56px",
 });
 
 const DARK_MODE = "@media (prefers-color-scheme: dark)";
@@ -349,4 +349,10 @@ export const scales = stylex.defineVars({
     sm: "scale(0.95)",
     md: "scale(1)",
     lg: "scale(1.2)",
+});
+
+export const transitions = stylex.defineVars({
+    fast: "all 0.2s ease-in-out",
+    medium: "all 0.4s ease-in-out",
+    slow: "all 0.6s ease-in-out",
 });

@@ -3,18 +3,31 @@ import { colors, spacing, text } from "./globalTokens.stylex";
 
 export const styles = stylex.create({
     heading: {
-        alignItems: "center",
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
-        display: "flex",
+        display: "block",
         fontSize: text.p,
         fontWeight: 700,
-        gap: spacing.xs,
-        height: "50px",
+        marginBottom: spacing.xs,
         textAlign: "center",
     },
-    divider: {
-        backgroundColor: `rgba(${colors.borderR}, ${colors.borderG}, ${colors.borderB}, 1)`,
-        height: "100%",
-        width: "1px",
+    paragraph: {
+        display: "block",
+        marginBottom: spacing.md,
+        textAlign: "center",
+    },
+    link: {
+        color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+        display: "block",
+        fontWeight: 600,
+        textAlign: "center",
+        textDecoration: {
+            default: "none",
+            ":hover": "underline",
+        },
+    },
+    icon: {
+        display: "block",
+        margin: "auto",
+        marginBottom: spacing.xs,
     },
 });

@@ -6,7 +6,7 @@ import Footer from "@/components/Layout/Footer/Footer";
 import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
 
 export const metadata: Metadata = {
-    title: "MIT | NexteX",
+    title: "Codex | NexteX",
     description:
         "A simple template for building modern websites with Next.js & StyleX.",
 };
@@ -15,9 +15,15 @@ const styles = stylex.create({
     heading: {
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
         display: "block",
+        marginBottom: spacing.sm,
+    },
+    h1: {
         fontSize: text.h2,
         fontWeight: 700,
-        marginBottom: spacing.md,
+    },
+    h2: {
+        fontSize: text.h5,
+        fontWeight: 700,
     },
     paragraph: {
         display: "block",
@@ -25,7 +31,7 @@ const styles = stylex.create({
     },
 });
 
-const pageMIT = () => {
+const pageCodex = () => {
     return (
         <Inner>
             <div>
@@ -33,22 +39,27 @@ const pageMIT = () => {
                 <span
                     role="heading"
                     aria-level={1}
-                    {...stylex.props(styles.heading)}
+                    {...stylex.props(styles.heading, styles.h1)}
                 >
-                    MIT License
+                    Code of Conduct
+                </span>
+                <span
+                    role="heading"
+                    aria-level={2}
+                    {...stylex.props(styles.heading, styles.h2)}
+                >
+                    Our Pledge
                 </span>
                 <span {...stylex.props(styles.paragraph)}>
-                    Copyright (c) {new Date().getFullYear()} Ruciloss
-                </span>
-                <span {...stylex.props(styles.paragraph)}>
-                    Permission is hereby granted, free of charge, to any person
-                    obtaining a copy of this software and associated
-                    documentation files (the &quot;Software&quot;), to deal in
-                    the Software without restriction, including without
-                    limitation the rights to use, copy, modify, merge, publish,
-                    distribute, sublicense, and/or sell copies of the Software,
-                    and to permit persons to whom the Software is furnished to
-                    do so, subject to the following conditions:
+                    In the interest of fostering an open and welcoming
+                    environment, we as contributors and maintainers pledge to
+                    make participation in our project and our community a
+                    harassment-free experience for everyone, regardless of age,
+                    body size, disability, ethnicity, sex characteristics,
+                    gender identity and expression, level of experience,
+                    education, socio-economic status, nationality, personal
+                    appearance, race, religion, or sexual identity and
+                    orientation.
                 </span>
                 <span {...stylex.props(styles.paragraph)}>
                     THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY
@@ -67,4 +78,4 @@ const pageMIT = () => {
     );
 };
 
-export default pageMIT;
+export default pageCodex;
