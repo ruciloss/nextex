@@ -30,6 +30,6 @@ export const styles = stylex.create({
     logo: {
         display: "flex",
         height: "auto",
-        width: "40px",
+        maxWidth: "40px",
     },
 });

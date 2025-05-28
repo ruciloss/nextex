@@ -10,10 +10,12 @@ import {
 export const styles = stylex.create({
     wrapper: {
         backgroundColor: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
-        borderRadius: radius.lg,
+        borderRadius: radius.xl,
         height: `calc(${global.headerHeight} - ${spacing.xs})`,
         maxWidth: "400px",
+        position: "relative",
         width: "100%",
+        zIndex: 2,
     },
     inputWrapper: {
         alignItems: "center",
@@ -21,11 +23,12 @@ export const styles = stylex.create({
         gap: spacing.xxs,
         height: "inherit",
         padding: `0 ${spacing.xs}`,
+        position: "relative",
+        zIndex: 2,
     },
     input: {
         height: "inherit",
     },
-
     dropdown: {
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
         borderBottomLeftRadius: radius.sm,
@@ -37,14 +40,18 @@ export const styles = stylex.create({
         paddingTop: spacing.xl,
         position: "absolute",
         top: 0,
-        zIndex: -1,
+        zIndex: 1,
+    },
+    link: {
+        textDecoration: "none",
     },
     item: {
+        alignItems: "center",
         cursor: "pointer",
         display: "flex",
+        gap: spacing.xxs,
         padding: spacing.xxs,
         textDecoration: "none",
-        transition: "background 0.2s",
     },
     title: {
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,

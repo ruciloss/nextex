@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, text } from "../globalTokens.stylex";
+import { spacing } from "../globalTokens.stylex";
 import Inner from "@/components/Layout/Inner/Inner";
 import Footer from "@/components/Layout/Footer/Footer";
 import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
+import Heading from "@/components/Content/Heading/Heading";
 
 export const metadata: Metadata = {
     title: "MIT | NexteX",
@@ -12,13 +13,6 @@ export const metadata: Metadata = {
 };
 
 const styles = stylex.create({
-    heading: {
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
-        display: "block",
-        fontSize: text.h2,
-        fontWeight: 700,
-        marginBottom: spacing.md,
-    },
     paragraph: {
         display: "block",
         marginBottom: spacing.xs,
@@ -30,13 +24,7 @@ const pageMIT = () => {
         <Inner>
             <div>
                 <Breadcrumbs />
-                <span
-                    role="heading"
-                    aria-level={1}
-                    {...stylex.props(styles.heading)}
-                >
-                    MIT License
-                </span>
+                <Heading level={2}>MIT License</Heading>
                 <span {...stylex.props(styles.paragraph)}>
                     Copyright (c) {new Date().getFullYear()} Ruciloss
                 </span>

@@ -22,8 +22,8 @@ export const styles = stylex.create({
         cursor: "pointer",
         display: "flex",
         justifyContent: "center",
-        minHeight: "35px",
-        minWidth: "35px",
+        minHeight: "40px",
+        minWidth: "40px",
     },
     dropdown: {
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,

@@ -13,7 +13,7 @@ export const styles = stylex.create({
         color: "inherit",
         display: "flex",
         justifyContent: "center",
-        minHeight: "35px",
-        minWidth: "35px",
+        minHeight: "40px",
+        minWidth: "40px",
     },
 });

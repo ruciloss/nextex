@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import * as stylex from "@stylexjs/stylex";
-import { colors, radius, spacing, text } from "./globalTokens.stylex";
+import { spacing } from "./globalTokens.stylex";
 import Inner from "@/components/Layout/Inner/Inner";
 import Footer from "@/components/Layout/Footer/Footer";
+import Card from "@/components/Content/Card/Card";
+import Heading from "@/components/Content/Heading/Heading";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -11,12 +13,6 @@ export const metadata: Metadata = {
 };
 
 const styles = stylex.create({
-    heading: {
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
-        display: "block",
-        fontSize: text.h2,
-        fontWeight: 700,
-    },
     wrapper: {
         textAlign: "center",
     },
@@ -27,32 +23,13 @@ const styles = stylex.create({
         justifyContent: "center",
         paddingTop: spacing.lg,
     },
-    card: {
-        backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
-        borderRadius: radius.md,
-        boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .2)`,
-        padding: `${spacing.xs} ${spacing.sm}`,
-    },
-    cardHeading: {
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
-        display: "block",
-        fontSize: text.p,
-        fontWeight: 700,
-        marginBottom: spacing.xxxs,
-    },
 });
 
 const Homepage = () => {
     return (
         <Inner>
             <div {...stylex.props(styles.wrapper)}>
-                <span
-                    role="heading"
-                    aria-level={1}
-                    {...stylex.props(styles.heading)}
-                >
-                    NexteX
-                </span>
+                <Heading level={1}>NexteX</Heading>
                 <span>
                     A streamlined starter template leveraging a modern tech
                     stack for rapid development and effortless customization.
@@ -60,20 +37,16 @@ const Homepage = () => {
             </div>
 
             <div {...stylex.props(styles.cardWrapper)}>
-                <div {...stylex.props(styles.card)}>
-                    <span {...stylex.props(styles.cardHeading)}>Title</span>
-                    <span>
-                        Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit
-                        atmet.
-                    </span>
-                </div>
-                <div {...stylex.props(styles.card)}>
-                    <span {...stylex.props(styles.cardHeading)}>Title</span>
-                    <span>
-                        Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit
-                        atmet.
-                    </span>
-                </div>
+                <Card
+                    title="Title"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    image="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                />
+                <Card
+                    title="Title"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    image="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                />
             </div>
             <Footer />
         </Inner>
