@@ -1,10 +1,15 @@
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Wrapper.stylex";
+import { ReactNode } from "react";
 
-const Container = ({ children }: { children: React.ReactNode }) => (
+type ContainerProps = {
+    children: ReactNode;
+};
+
+const Wrapper = ({ children }: ContainerProps) => (
     <div role="main" {...stylex.props(styles.wrapper)}>
         {children}
     </div>
 );
 
-export default Container;
+export default Wrapper;

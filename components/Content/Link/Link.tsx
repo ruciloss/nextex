@@ -1,8 +1,13 @@
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Link.stylex";
+import { ReactNode } from "react";
 
-const Link = ({ children }) => {
-    return <span {...stylex.props(styles.heading)}>{children}</span>;
+type LinkProps = {
+    children: ReactNode;
+};
+
+const Link = ({ children }: LinkProps) => {
+    return <span {...stylex.props(styles.link)}>{children}</span>;
 };
 
 export default Link;
