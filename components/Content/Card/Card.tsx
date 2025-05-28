@@ -12,19 +12,17 @@ const Card = ({ title, description, image }: CardProps) => {
     return (
         <div {...stylex.props(styles.wrapper)}>
             {image && (
-                <div {...stylex.props(styles.imageWrapper)}>
-                    <Image
-                        src={image}
-                        alt={title}
-                        width={300}
-                        height={200}
-                        style={{
-                            objectFit: "cover",
-                            width: "100%",
-                            height: "auto",
-                        }}
-                    />
-                </div>
+                <Image
+                    src={image}
+                    alt={title}
+                    width={300}
+                    height={200}
+                    style={{
+                        objectFit: "cover",
+                        width: "100%",
+                        height: "auto",
+                    }}
+                />
             )}
             <div {...stylex.props(styles.body)}>
                 <span {...stylex.props(styles.heading)}>{title}</span>
