@@ -28,6 +28,9 @@ export const styles = stylex.create({
     },
     input: {
         height: "inherit",
+        "::placeholder": {
+            color: "inherit",
+        },
     },
     dropdown: {
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
@@ -43,10 +46,16 @@ export const styles = stylex.create({
         zIndex: 1,
     },
     link: {
+        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
         textDecoration: "none",
     },
     item: {
         alignItems: "center",
+        backgroundColor: {
+            default: "transparent",
+            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+        },
+        borderRadius: radius.sm,
         cursor: "pointer",
         display: "flex",
         gap: spacing.xxs,
@@ -66,5 +75,23 @@ export const styles = stylex.create({
     },
     notFound: {
         padding: spacing.sm,
+    },
+    closeButton: {
+        alignItems: "center",
+        backgroundColor: {
+            default: "transparent",
+            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+        },
+        borderRadius: "100%",
+        cursor: "pointer",
+        display: "flex",
+        justifyContent: "center",
+        left: 0,
+        marginLeft: spacing.xs,
+        marginTop: spacing.xxs,
+        minHeight: "40px",
+        minWidth: "40px",
+        position: "absolute",
+        top: 0,
     },
 });

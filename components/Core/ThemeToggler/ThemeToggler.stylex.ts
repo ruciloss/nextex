@@ -24,6 +24,7 @@ export const styles = stylex.create({
         justifyContent: "center",
         minHeight: "40px",
         minWidth: "40px",
+        position: "relative",
     },
     dropdown: {
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
@@ -34,7 +35,6 @@ export const styles = stylex.create({
         padding: `${spacing.xs} ${spacing.xxs}`,
         position: "absolute",
         right: 0,
-        zIndex: 9999,
     },
     header: {
         alignItems: "start",
@@ -43,21 +43,19 @@ export const styles = stylex.create({
         marginBottom: spacing.sm,
     },
     heading: {
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
         display: "block",
         fontSize: text.p,
         fontWeight: 700,
         marginBottom: spacing.xxxs,
     },
     description: {
-        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
+        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
         display: "block",
     },
     icon: {
         alignItems: "center",
         backgroundColor: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
         borderRadius: "100%",
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
         display: "flex",
         justifyContent: "center",
         minHeight: "35px",
@@ -81,12 +79,11 @@ export const styles = stylex.create({
         justifyContent: "space-between",
     },
     itemTitle: {
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
         display: "block",
         fontWeight: 600,
     },
     itemDescription: {
-        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
+        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
         display: "block",
         fontSize: text.xs,
         paddingRight: spacing.sm,
@@ -108,5 +105,20 @@ export const styles = stylex.create({
         backgroundColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         borderColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         outlineColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+    },
+    arrow: {
+        alignItems: "center",
+        backgroundColor: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+        borderColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
+        borderRadius: "100%",
+        borderStyle: "solid",
+        borderWidth: "2px",
+        bottom: 0,
+        display: "flex",
+        height: "14px",
+        justifyContent: "center",
+        position: "absolute",
+        right: 0,
+        width: "14px",
     },
 });

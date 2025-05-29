@@ -9,7 +9,6 @@ export const styles = stylex.create({
             ":hover": `rgba(${colors.bgAltHoverR}, ${colors.bgAltHoverG}, ${colors.bgAltHoverB}, 1)`,
         },
         borderRadius: "100%",
-        borderWidth: 0,
         color: "inherit",
         display: "flex",
         justifyContent: "center",

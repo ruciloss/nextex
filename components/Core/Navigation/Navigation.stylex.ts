@@ -34,7 +34,7 @@ export const styles = stylex.create({
             ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
         },
         borderRadius: radius.sm,
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
+        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
         display: "flex",
         gap: spacing.xxxs,
         height: "calc(100% - 8px)",

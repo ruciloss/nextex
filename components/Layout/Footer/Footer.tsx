@@ -1,7 +1,9 @@
-import Link from "next/link";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Footer.stylex";
 import Logo from "@/components/Content/Logo/Logo";
+import Text from "@/components/UI/Text/Text";
+import Link from "@/components/UI/Link/Link";
+import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
 
 const Footer = () => (
     <div role="contentinfo" {...stylex.props(styles.wrapper)}>
@@ -10,27 +12,23 @@ const Footer = () => (
                 <Link
                     href="/"
                     aria-label="Link to Homepage"
-                    role="link"
-                    tabIndex={0}
                     {...stylex.props(styles.logo)}
                 >
                     <Logo />
                 </Link>
             </span>
-            <span>Created by Ruciloss &copy; {new Date().getFullYear()}</span>
+            <Text variant="small">
+                Created by Ruciloss &copy; {new Date().getFullYear()}
+            </Text>
         </div>
         <div {...stylex.props(styles.item)}>
-            <Link
-                href="/mit"
-                aria-label="Link to Licene MIT"
-                role="link"
-                tabIndex={0}
-                {...stylex.props(styles.link)}
-            >
+            <Link href="/mit" aria-label="Link to License MIT">
                 License MIT
             </Link>
             <span>&bull;</span>
-            <span>v1.0.0</span>
+            <Text variant="small">v1.0.0</Text>
+            <span>&bull;</span>
+            <Breadcrumbs />
         </div>
     </div>
 );

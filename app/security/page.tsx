@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing } from "../globalTokens.stylex";
+import { colors } from "../globalTokens.stylex";
 import Inner from "@/components/Layout/Inner/Inner";
 import Footer from "@/components/Layout/Footer/Footer";
-import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
-import Heading from "@/components/Content/Heading/Heading";
+import Heading from "@/components/UI/Heading/Heading";
+import Text from "@/components/UI/Text/Text";
+import Link from "@/components/UI/Link/Link";
 
 export const metadata: Metadata = {
     title: "Security | NexteX",
@@ -13,10 +14,6 @@ export const metadata: Metadata = {
 };
 
 const styles = stylex.create({
-    paragraph: {
-        display: "block",
-        marginBottom: spacing.xs,
-    },
     link: {
         color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         fontWeight: 600,
@@ -32,29 +29,26 @@ const pageSecurity = () => {
     return (
         <Inner>
             <div>
-                <Breadcrumbs />
-                <Heading level={2}>Security</Heading>
-                <span {...stylex.props(styles.paragraph)}>
+                <Heading level={1} variant="h2" spacing={3}>
+                    Security
+                </Heading>
+                <Text spacing={2}>
                     If you discover a security vulnerability in this project, we
                     kindly ask you to report it via our GitHub repository by
                     clicking on{" "}
-                    <a
+                    <Link
                         href=""
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Link to GitHub"
-                        role="link"
-                        tabIndex={0}
+                        aria-label="Link to Report a vulnerability"
                         {...stylex.props(styles.link)}
                     >
                         Report a vulnerability
-                    </a>
+                    </Link>
                     .
-                </span>
-                <span {...stylex.props(styles.paragraph)}>
+                </Text>
+                <Text>
                     We carefully review all valid reports and aim to address any
                     confirmed issues as quickly as possible.
-                </span>
+                </Text>
             </div>
             <Footer />
         </Inner>

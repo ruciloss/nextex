@@ -260,9 +260,13 @@ export const global = stylex.defineVars({
 const DARK_MODE = "@media (prefers-color-scheme: dark)";
 
 export const colors = stylex.defineVars({
-    foregroundR: { default: "101", [DARK_MODE]: "176" },
-    foregroundG: { default: "104", [DARK_MODE]: "179" },
-    foregroundB: { default: "108", [DARK_MODE]: "184" },
+    foregroundR: { default: "8", [DARK_MODE]: "226" },
+    foregroundG: { default: "8", [DARK_MODE]: "229" },
+    foregroundB: { default: "9", [DARK_MODE]: "233" },
+
+    secondaryTextR: { default: "101", [DARK_MODE]: "176" },
+    secondaryTextG: { default: "104", [DARK_MODE]: "179" },
+    secondaryTextB: { default: "108", [DARK_MODE]: "184" },
 
     bgStartR: { default: "242", [DARK_MODE]: "28" },
     bgStartG: { default: "244", [DARK_MODE]: "28" },

@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, text } from "../../../app/globalTokens.stylex";
+import { colors, spacing } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
@@ -8,7 +8,6 @@ export const styles = stylex.create({
         borderTopStyle: "solid",
         borderTopWidth: "1px",
         display: "flex",
-        fontSize: text.xs,
         gap: spacing.sm,
         justifyContent: "space-between",
         paddingTop: spacing.xxs,
@@ -23,13 +22,5 @@ export const styles = stylex.create({
         display: "flex",
         height: "auto",
         width: "18px",
-    },
-    link: {
-        color: "inherit",
-        display: "flex",
-        textDecoration: {
-            default: "none",
-            ":hover": "underline",
-        },
     },
 });

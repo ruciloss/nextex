@@ -49,7 +49,7 @@ const Navigation = () => {
                                 role="link"
                                 tabIndex={0}
                             >
-                                <Icon size={24} />
+                                <Icon size={24} aria-hidden="true" />
                             </Link>
                         </span>
                     );

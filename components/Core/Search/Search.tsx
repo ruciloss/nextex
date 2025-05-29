@@ -48,7 +48,7 @@ const navLinks = [
 
 const SearchForm = () => {
     const [query, setQuery] = useState("");
-    const [isFocused, setIsFocused] = useState(false);
+    const [isFocused, setIsFocused] = useState(true);
 
     const filtered =
         query.length > 0
@@ -80,10 +80,18 @@ const SearchForm = () => {
             <div>
                 {showDropdown && (
                     <div {...stylex.props(styles.dropdown)}>
-                        {/* 🔙 Tlačítko pro zavření dropdownu */}
-                        <div onClick={() => setIsFocused(false)}>
-                            <ArrowLeftIcon size={16} />
-                        </div>
+                        <span
+                            onClick={() => setIsFocused(false)}
+                            {...stylex.props(styles.closeButton)}
+                            role="button"
+                            tabIndex={0}
+                        >
+                            <ArrowLeftIcon
+                                aria-label="Close search"
+                                size={20}
+                            />
+                        </span>
+                        <span>Recent</span>
 
                         {filtered.length === 0 ? (
                             <span {...stylex.props(styles.notFound)}>
@@ -97,9 +105,10 @@ const SearchForm = () => {
                                     {...stylex.props(styles.link)}
                                 >
                                     <div {...stylex.props(styles.item)}>
-                                        <span>
-                                            <item.icon size={16} />
-                                        </span>
+                                        <item.icon
+                                            size={16}
+                                            aria-hidden="true"
+                                        />
                                         <div>
                                             <span
                                                 {...stylex.props(styles.title)}

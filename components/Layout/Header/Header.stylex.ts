@@ -10,7 +10,6 @@ export const styles = stylex.create({
         borderBottomStyle: "solid",
         borderBottomWidth: "1px",
         boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .1)`,
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteG}, 1)`,
         display: "flex",
         height: global.headerHeight,
         justifyContent: "space-between",

@@ -3,9 +3,13 @@ import * as stylex from "@stylexjs/stylex";
 import { colors } from "./globalTokens.stylex";
 
 export const light = stylex.createTheme(colors, {
-    foregroundR: "101",
-    foregroundG: "104",
-    foregroundB: "108",
+    foregroundR: "8",
+    foregroundG: "8",
+    foregroundB: "9",
+
+    secondaryTextR: "101",
+    secondaryTextG: "104",
+    secondaryTextB: "108",
 
     bgStartR: "214",
     bgStartG: "219",
@@ -57,9 +61,13 @@ export const light = stylex.createTheme(colors, {
 });
 
 export const dark = stylex.createTheme(colors, {
-    foregroundR: "176",
-    foregroundG: "179",
-    foregroundB: "184",
+    foregroundR: "226",
+    foregroundG: "229",
+    foregroundB: "233",
+
+    secondaryTextR: "176",
+    secondaryTextG: "179",
+    secondaryTextB: "184",
 
     bgStartR: "28",
     bgStartG: "28",

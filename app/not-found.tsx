@@ -4,7 +4,8 @@ import Link from "next/link";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./not-found.stylex";
 import Inner from "@/components/Layout/Inner/Inner";
-import Heading from "@/components/Content/Heading/Heading";
+import Heading from "@/components/UI/Heading/Heading";
+import Text from "@/components/UI/Text/Text";
 import { FileLock2Icon } from "lucide-react";
 
 const NotFound = () => {
@@ -17,14 +18,14 @@ const NotFound = () => {
                     aria-hidden="true"
                     {...stylex.props(styles.icon)}
                 />
-                <Heading level={5}>
+                <Heading level={1} variant="h5" align="center" spacing={1}>
                     This content isn&apos;t available right now.
                 </Heading>
-                <span {...stylex.props(styles.paragraph)}>
+                <Text align="center" spacing={4}>
                     When this happens, it&apos;s usually because the content is
                     no longer available, the link is broken, or access has been
                     restricted by the owner.
-                </span>
+                </Text>
                 <Link
                     href="/"
                     aria-label="Link to Homepage"

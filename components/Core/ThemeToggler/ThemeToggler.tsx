@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./ThemeToggler.stylex";
-import { Sun, Moon, Monitor } from "lucide-react";
+import { ChevronDown, Monitor, Moon, Sun } from "lucide-react";
 
 const options = [
     { value: "light", label: "Off", icon: Sun },
@@ -80,6 +80,9 @@ const ThemeToggler = () => {
                         aria-label="automatic theme icon"
                     />
                 )}
+                <span {...stylex.props(styles.arrow)}>
+                    <ChevronDown strokeWidth={4} aria-hidden="true" />
+                </span>
             </span>
 
             {open && (

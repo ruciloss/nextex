@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import * as stylex from "@stylexjs/stylex";
-import { spacing } from "../globalTokens.stylex";
 import Inner from "@/components/Layout/Inner/Inner";
 import Footer from "@/components/Layout/Footer/Footer";
-import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
-import Heading from "@/components/Content/Heading/Heading";
+import Heading from "@/components/UI/Heading/Heading";
+import Text from "@/components/UI/Text/Text";
 
 export const metadata: Metadata = {
     title: "Codex | NexteX",
@@ -12,21 +10,17 @@ export const metadata: Metadata = {
         "A simple template for building modern websites with Next.js & StyleX.",
 };
 
-const styles = stylex.create({
-    paragraph: {
-        display: "block",
-        marginBottom: spacing.xs,
-    },
-});
-
 const pageCodex = () => {
     return (
         <Inner>
             <div>
-                <Breadcrumbs />
-                <Heading level={3}>Code of Conduct</Heading>
-                <Heading level={5}>Our Pledge</Heading>
-                <span {...stylex.props(styles.paragraph)}>
+                <Heading level={1} variant="h2" spacing={3}>
+                    Code of Conduct
+                </Heading>
+                <Heading level={2} variant="h5" spacing={2}>
+                    Our Pledge
+                </Heading>
+                <Text spacing={2}>
                     In the interest of fostering an open and welcoming
                     environment, we as contributors and maintainers pledge to
                     make participation in our project and our community a
@@ -36,9 +30,11 @@ const pageCodex = () => {
                     education, socio-economic status, nationality, personal
                     appearance, race, religion, or sexual identity and
                     orientation.
-                </span>
+                </Text>
 
-                <Heading level={5}>Our Standards</Heading>
+                <Heading level={2} variant="h5" spacing={2}>
+                    Our Standards
+                </Heading>
                 <div
                     role="list"
                     aria-label="Examples of behavior that contributes to creating a positive environment"
@@ -115,8 +111,10 @@ const pageCodex = () => {
                     </div>
                 </div>
 
-                <Heading level={5}>Our Responsibilities</Heading>
-                <span {...stylex.props(styles.paragraph)}>
+                <Heading level={2} variant="h5" spacing={2}>
+                    Our Responsibilities
+                </Heading>
+                <Text spacing={2}>
                     Project maintainers are responsible for clarifying the
                     standards of acceptable behavior and are expected to take
                     appropriate and fair corrective action in response to any
@@ -127,18 +125,22 @@ const pageCodex = () => {
                     or to ban temporarily or permanently any contributor for
                     other behaviors that they deem inappropriate, threatening,
                     offensive, or harmful.
-                </span>
+                </Text>
 
-                <Heading level={5}>Scope</Heading>
-                <span {...stylex.props(styles.paragraph)}>
+                <Heading level={2} variant="h5" spacing={2}>
+                    Scope
+                </Heading>
+                <Text spacing={2}>
                     This Code of Conduct applies to all spaces managed by the
                     project organization, as well as to all interactions between
                     project contributors and the community, both online and
                     offline.
-                </span>
+                </Text>
 
-                <Heading level={5}>Enforcement</Heading>
-                <span {...stylex.props(styles.paragraph)}>
+                <Heading level={2} variant="h5" spacing={2}>
+                    Enforcement
+                </Heading>
+                <Text spacing={2}>
                     Instances of abusive, harassing, or otherwise unacceptable
                     behavior may be reported by contacting the maintainers
                     directly via private message. All complaints will be
@@ -151,14 +153,16 @@ const pageCodex = () => {
                     Conduct in good faith may face temporary or permanent
                     repercussions as determined by other members of the
                     project&apos;s leadership.
-                </span>
+                </Text>
 
-                <Heading level={5}>Attribution</Heading>
-                <span {...stylex.props(styles.paragraph)}>
+                <Heading level={2} variant="h5" spacing={2}>
+                    Attribution
+                </Heading>
+                <Text>
                     This Code of Conduct is adapted from the Contributor
                     Covenant, version 1.4, available here. For answers to common
                     questions about this code of conduct, see faq.
-                </span>
+                </Text>
             </div>
             <Footer />
         </Inner>

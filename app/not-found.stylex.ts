@@ -2,11 +2,6 @@ import * as stylex from "@stylexjs/stylex";
 import { colors, spacing } from "./globalTokens.stylex";
 
 export const styles = stylex.create({
-    paragraph: {
-        display: "block",
-        marginBottom: spacing.md,
-        textAlign: "center",
-    },
     link: {
         color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         display: "block",
