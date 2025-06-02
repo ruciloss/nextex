@@ -27,7 +27,7 @@ const List = ({ children, spacing }: ListProps) => {
 
 const Item = ({ children, spacing, align }: ListItemProps) => {
     const stylesArray = [
-        styles.listItem,
+        styles.item,
         spacing && styles[`marginBottom${spacing}` as keyof typeof styles],
         align && styles[align],
     ].filter(Boolean);
