@@ -3,7 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Search.stylex";
-import Button from "@/components/UI/Button/Button";
 import { ArrowLeft, X } from "lucide-react";
 
 import {
@@ -94,9 +93,9 @@ const SearchForm = () => {
                                 size={20}
                             />
                         </span>
-                        <Button variant="circle" ariaLabel="Close search">
+                        <ArrowLeft>
                             <X size={20} aria-hidden="true" />
-                        </Button>
+                        </ArrowLeft>
                         <span>Recent</span>
 
                         {filtered.length === 0 ? (
