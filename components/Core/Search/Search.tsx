@@ -3,6 +3,9 @@ import { useState } from "react";
 import Link from "next/link";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Search.stylex";
+import Button from "@/components/UI/Button/Button";
+import { ArrowLeft, X } from "lucide-react";
+
 import {
     HomeIcon,
     InfoIcon,
@@ -65,7 +68,7 @@ const SearchForm = () => {
                 <div {...stylex.props(styles.inputWrapper)}>
                     <SearchIcon size={16} />
                     <input
-                        type="text"
+                        type="search"
                         placeholder="Search NexteX"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
@@ -91,6 +94,9 @@ const SearchForm = () => {
                                 size={20}
                             />
                         </span>
+                        <Button variant="circle" ariaLabel="Close search">
+                            <X size={20} aria-hidden="true" />
+                        </Button>
                         <span>Recent</span>
 
                         {filtered.length === 0 ? (

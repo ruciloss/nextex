@@ -9,7 +9,7 @@ import {
 
 export const styles = stylex.create({
     wrapper: {
-        backgroundColor: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+        backgroundColor: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
         borderRadius: radius.xl,
         height: `calc(${global.headerHeight} - ${spacing.xs})`,
         maxWidth: "400px",
@@ -53,7 +53,7 @@ export const styles = stylex.create({
         alignItems: "center",
         backgroundColor: {
             default: "transparent",
-            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+            ":hover": `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
         },
         borderRadius: radius.sm,
         cursor: "pointer",
@@ -80,9 +80,9 @@ export const styles = stylex.create({
         alignItems: "center",
         backgroundColor: {
             default: "transparent",
-            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+            ":hover": `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
         },
-        borderRadius: "100%",
+        borderRadius: "50%",
         cursor: "pointer",
         display: "flex",
         justifyContent: "center",

@@ -280,17 +280,21 @@ export const colors = stylex.defineVars({
     bgSecondaryG: { default: "255", [DARK_MODE]: "39" },
     bgSecondaryB: { default: "255", [DARK_MODE]: "40" },
 
-    bgAltR: { default: "226", [DARK_MODE]: "59" },
-    bgAltG: { default: "229", [DARK_MODE]: "61" },
-    bgAltB: { default: "233", [DARK_MODE]: "62" },
+    bgTertiaryR: { default: "226", [DARK_MODE]: "59" },
+    bgTertiaryG: { default: "229", [DARK_MODE]: "61" },
+    bgTertiaryB: { default: "233", [DARK_MODE]: "62" },
 
-    bgAltHoverR: { default: "213", [DARK_MODE]: "78" },
-    bgAltHoverG: { default: "216", [DARK_MODE]: "80" },
-    bgAltHoverB: { default: "220", [DARK_MODE]: "80" },
+    bgTertiaryHoverR: { default: "213", [DARK_MODE]: "78" },
+    bgTertiaryHoverG: { default: "216", [DARK_MODE]: "80" },
+    bgTertiaryHoverB: { default: "220", [DARK_MODE]: "80" },
 
     primaryR: { default: "8", [DARK_MODE]: "8" },
     primaryG: { default: "102", [DARK_MODE]: "102" },
     primaryB: { default: "255", [DARK_MODE]: "255" },
+
+    primaryHoverR: { default: "34", [DARK_MODE]: "34" },
+    primaryHoverG: { default: "118", [DARK_MODE]: "118" },
+    primaryHoverB: { default: "255", [DARK_MODE]: "255" },
 
     blackWhiteR: { default: "9", [DARK_MODE]: "250" },
     blackWhiteG: { default: "9", [DARK_MODE]: "250" },
@@ -304,9 +308,9 @@ export const colors = stylex.defineVars({
     warningG: { default: "169", [DARK_MODE]: "169" },
     warningB: { default: "24", [DARK_MODE]: "24" },
 
-    dangerR: { default: "239", [DARK_MODE]: "239" },
-    dangerG: { default: "68", [DARK_MODE]: "68" },
-    dangerB: { default: "68", [DARK_MODE]: "68" },
+    errorR: { default: "239", [DARK_MODE]: "239" },
+    errorG: { default: "68", [DARK_MODE]: "68" },
+    errorB: { default: "68", [DARK_MODE]: "68" },
 
     borderR: { default: "187", [DARK_MODE]: "101" },
     borderG: { default: "189", [DARK_MODE]: "104" },

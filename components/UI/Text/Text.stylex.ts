@@ -1,13 +1,16 @@
 import * as stylex from "@stylexjs/stylex";
-import { spacing, text } from "../../../app/globalTokens.stylex";
+import { spacing, text, colors } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
-    displayblock: { display: "block" },
-    displayinline: { display: "inline-block" },
+    text: {},
 
-    fontSmall: { fontSize: text.xs },
+    t: {
+        display: "block",
+    },
 
-    fontWeight600: { fontWeight: 600 },
+    small: { fontSize: text.xs },
+
+    bold: { fontWeight: 600 },
 
     marginBottom1: { marginBottom: spacing.xxxs },
     marginBottom2: { marginBottom: spacing.xxs },
@@ -15,7 +18,22 @@ export const styles = stylex.create({
     marginBottom4: { marginBottom: spacing.sm },
     marginBottom5: { marginBottom: spacing.md },
 
-    textAligncenter: { textAlign: "center" },
-    textAlignleft: { textAlign: "left" },
-    textAlignright: { textAlign: "right" },
+    center: { textAlign: "center" },
+    right: { textAlign: "right" },
+
+    primary: {
+        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
+    },
+    secondary: {
+        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
+    },
+    error: {
+        color: `rgba(${colors.errorR}, ${colors.errorG}, ${colors.errorB}, 1)`,
+    },
+    success: {
+        color: `rgba(${colors.successR}, ${colors.successG}, ${colors.successB}, 1)`,
+    },
+    warning: {
+        color: `rgba(${colors.warningR}, ${colors.warningG}, ${colors.warningB}, 1)`,
+    },
 });

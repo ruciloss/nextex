@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Inner from "@/components/Layout/Inner/Inner";
-import Footer from "@/components/Layout/Footer/Footer";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
+import List from "@/components/UI/List/List";
 
 export const metadata: Metadata = {
     title: "Codex | NexteX",
@@ -14,12 +14,14 @@ const pageCodex = () => {
     return (
         <Inner>
             <div>
-                <Heading level={1} variant="h2" spacing={3}>
+                <Heading level={1} size="h2" spacing={3}>
                     Code of Conduct
                 </Heading>
-                <Heading level={2} variant="h5" spacing={2}>
+
+                <Heading level={2} size="h5" spacing={2}>
                     Our Pledge
                 </Heading>
+
                 <Text spacing={2}>
                     In the interest of fostering an open and welcoming
                     environment, we as contributors and maintainers pledge to
@@ -32,88 +34,77 @@ const pageCodex = () => {
                     orientation.
                 </Text>
 
-                <Heading level={2} variant="h5" spacing={2}>
+                <Heading level={2} size="h5" spacing={2}>
                     Our Standards
                 </Heading>
-                <div
-                    role="list"
-                    aria-label="Examples of behavior that contributes to creating a positive environment"
-                >
-                    <h2>
-                        Examples of behavior that contributes to creating a
-                        positive environment include:
-                    </h2>
-                    <div role="listitem">
-                        <span role="listitem">
-                            Using welcoming and inclusive language
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
+
+                <Heading level={3} size="h6" spacing={2}>
+                    Examples of behavior that contributes to creating a positive
+                    environment include:
+                </Heading>
+
+                <List spacing={2}>
+                    <List.Item>
+                        <Text>Using welcoming and inclusive language</Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>
                             Being respectful of differing viewpoints and
                             experiences
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
-                            Gracefully accepting constructive criticism
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
-                            Focusing on what is best for the community
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
+                        </Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>Gracefully accepting constructive criticism</Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>Focusing on what is best for the community</Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>
                             Showing empathy towards other community members
-                        </span>
-                    </div>
-                </div>
+                        </Text>
+                    </List.Item>
+                </List>
 
-                <div
-                    role="list"
-                    aria-label="Examples of unacceptable behavior by participants"
-                >
-                    <h2>
-                        Examples of unacceptable behavior by participants
-                        include:
-                    </h2>
-                    <div role="listitem">
-                        <span role="listitem">
-                            The use of sexualized language or imagery and
-                            unwelcome sexual attention or advances
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
+                <Heading level={3} size="h6" spacing={2}>
+                    Examples of unacceptable behavior by participants include:
+                </Heading>
+
+                <List spacing={2}>
+                    <List.Item>
+                        <Text>
+                            Using sexualized language or imagery and unwelcome
+                            sexual attention or advances
+                        </Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>
                             Trolling, insulting/derogatory comments, and
                             personal or political attacks
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
-                            Public or private harassment
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
+                        </Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>Public or private harassment</Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>
                             Publishing other&apos;s private information, such as
                             a physical or electronic address, without explicit
                             permission
-                        </span>
-                    </div>
-                    <div role="listitem">
-                        <span role="listitem">
+                        </Text>
+                    </List.Item>
+                    <List.Item>
+                        <Text>
                             Other conduct which could reasonably be considered
                             inappropriate in a professional setting
-                        </span>
-                    </div>
-                </div>
+                        </Text>
+                    </List.Item>
+                </List>
 
-                <Heading level={2} variant="h5" spacing={2}>
+                <Heading level={2} size="h5" spacing={2}>
                     Our Responsibilities
                 </Heading>
+
                 <Text spacing={2}>
                     Project maintainers are responsible for clarifying the
                     standards of acceptable behavior and are expected to take
@@ -127,9 +118,10 @@ const pageCodex = () => {
                     offensive, or harmful.
                 </Text>
 
-                <Heading level={2} variant="h5" spacing={2}>
+                <Heading level={2} size="h5" spacing={2}>
                     Scope
                 </Heading>
+
                 <Text spacing={2}>
                     This Code of Conduct applies to all spaces managed by the
                     project organization, as well as to all interactions between
@@ -137,9 +129,10 @@ const pageCodex = () => {
                     offline.
                 </Text>
 
-                <Heading level={2} variant="h5" spacing={2}>
+                <Heading level={2} size="h5" spacing={2}>
                     Enforcement
                 </Heading>
+
                 <Text spacing={2}>
                     Instances of abusive, harassing, or otherwise unacceptable
                     behavior may be reported by contacting the maintainers
@@ -155,16 +148,16 @@ const pageCodex = () => {
                     project&apos;s leadership.
                 </Text>
 
-                <Heading level={2} variant="h5" spacing={2}>
+                <Heading level={2} size="h5" spacing={2}>
                     Attribution
                 </Heading>
+
                 <Text>
                     This Code of Conduct is adapted from the Contributor
                     Covenant, version 1.4, available here. For answers to common
                     questions about this code of conduct, see faq.
                 </Text>
             </div>
-            <Footer />
         </Inner>
     );
 };

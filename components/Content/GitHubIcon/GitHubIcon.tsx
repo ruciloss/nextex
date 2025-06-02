@@ -1,26 +1,14 @@
-import * as stylex from "@stylexjs/stylex";
-import { styles } from "./GitHubIcon.stylex";
+import Link from "@/components/UI/Link/Link";
 import { Github } from "lucide-react";
 
 const GitHubIcon = () => {
     return (
-        <a
+        <Link
             href="https://github.com/ruciloss/nextex"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to GitHub"
-            role="link"
-            tabIndex={0}
-            {...stylex.props(styles.button)}
+            ariaLabel="Link to GitHub"
         >
-            <Github
-                width={20}
-                height={20}
-                strokeWidth={2}
-                role="img"
-                aria-label="GitHub Icon"
-            />
-        </a>
+            <Github size={20} strokeWidth={2} />
+        </Link>
     );
 };
 

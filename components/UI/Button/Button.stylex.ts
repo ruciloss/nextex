@@ -2,28 +2,17 @@ import * as stylex from "@stylexjs/stylex";
 import { colors, radius, spacing } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
-    link: {
+    button: {
         cursor: "pointer",
     },
-    /*
-    link: {
-        color: "inherit",
+    btn: {
+        borderRadius: radius.sm,
+        borderWidth: 0,
+        cursor: "pointer",
         display: "inline-block",
-        textDecoration: {
-            default: "none",
-            ":hover": "underline",
-        },
+        fontWeight: 600,
+        textDecoration: "none",
     },
-*/
-    linkPrimary: {
-        color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-    },
-
-    displayblock: { display: "block" },
-    displayinline: { display: "inline-block" },
-
-    fontWeightBold: { fontWeight: 600 },
-
     marginBottom1: { marginBottom: spacing.xxxs },
     marginBottom2: { marginBottom: spacing.xxs },
     marginBottom3: { marginBottom: spacing.xs },
@@ -31,52 +20,73 @@ export const styles = stylex.create({
     marginBottom5: { marginBottom: spacing.md },
 
     center: { textAlign: "center" },
+    left: { textAlign: "left" },
     right: { textAlign: "right" },
 
-    btn: {
-        borderRadius: radius.sm,
-        borderWidth: 0,
-        cursor: "pointer",
-        fontWeight: 600,
-        textAlign: "center",
-        textDecoration: "none",
+    solid: {
+        color: "inherit",
+        padding: `${spacing.xxs} ${spacing.xs}`,
     },
 
-    btnSolid: {
-        backgroundColor: {
-            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
-        },
-        color: "#fff",
-        padding: `${spacing.xxxs} ${spacing.xxs}`,
-    },
-
-    btnOutline: {
+    outline: {
         backgroundColor: "transparent",
-        borderColor: {
-            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
-        },
         borderStyle: "solid",
         borderWidth: "2px",
-        color: {
-            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
-        },
-        padding: `${spacing.xxxs} ${spacing.xxs}`,
+        padding: `${spacing.xxs} ${spacing.xs}`,
     },
 
-    btnCircle: {
+    circle: {
         alignItems: "center",
-        backgroundColor: {
-            default: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
-            ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
-        },
         borderRadius: "50%",
         display: "flex",
         height: "40px",
         justifyContent: "center",
         position: "relative",
         width: "40px",
+    },
+
+    arrow: {
+        alignItems: "center",
+        backgroundColor: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
+        borderColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
+        borderRadius: "50%",
+        borderStyle: "solid",
+        borderWidth: "2px",
+        bottom: 0,
+        display: "flex",
+        height: "14px",
+        justifyContent: "center",
+        position: "absolute",
+        right: 0,
+        width: "14px",
+    },
+
+    primary: {
+        backgroundColor: {
+            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+        },
+        borderColor: {
+            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+        },
+        color: {
+            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+        },
+    },
+
+    secondary: {
+        backgroundColor: {
+            default: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
+            ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
+        },
+    },
+
+    transparent: {
+        backgroundColor: {
+            default: "transparent",
+            ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
+        },
     },
 });

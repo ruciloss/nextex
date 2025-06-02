@@ -4,25 +4,6 @@
         padding: 0;
         margin: 0;
     }
-
-    input,
-    button,
-    textarea,
-    select,
-    option {
-        background: none;
-        border: none;
-        font: inherit;
-        color: inherit;
-        outline: none;
-    }
-
-    input[type="radio"],
-    input[type="checkbox"] {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
 }
 
 @stylex;

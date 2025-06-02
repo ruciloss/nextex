@@ -5,8 +5,8 @@ export const styles = stylex.create({
     button: {
         alignItems: "center",
         backgroundColor: {
-            default: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
-            ":hover": `rgba(${colors.bgAltHoverR}, ${colors.bgAltHoverG}, ${colors.bgAltHoverB}, 1)`,
+            default: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
+            ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
         },
         borderRadius: "100%",
         color: "inherit",

@@ -3,8 +3,8 @@
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Breadcrumbs.stylex";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
-import React from "react";
+import Link from "@/components/UI/Link/Link";
+import Text from "@/components/UI/Text/Text";
 
 const Breadcrumbs = () => {
     const pathname = usePathname();
@@ -33,21 +33,21 @@ const Breadcrumbs = () => {
                 const isLast = index === breadcrumbs.length - 1;
 
                 return (
-                    <React.Fragment key={index}>
+                    <div key={index}>
                         <span>
                             {isLast ? (
-                                <span>{breadcrumb.label}</span>
+                                <Text size="small">{breadcrumb.label}</Text>
                             ) : (
                                 <Link
                                     href={breadcrumb.href}
-                                    {...stylex.props(styles.link)}
+                                    ariaLabel={breadcrumb.label}
                                 >
                                     {breadcrumb.label}
                                 </Link>
                             )}
                         </span>
                         {!isLast && <span>&bull;</span>}
-                    </React.Fragment>
+                    </div>
                 );
             })}
         </div>

@@ -1,12 +1,13 @@
+import NextLink from "next/link";
+import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Link.stylex";
-import NextLink from "next/link";
-import React, { ReactNode } from "react";
 
 type Props = {
     href: string;
     children: ReactNode;
-    ariaLabel?: string;
+    ariaLabel: string;
+    customStyles?: stylex.StyleXStyles[];
 };
 
 const isExternalLink = (href: string) => {
@@ -17,7 +18,7 @@ const isExternalLink = (href: string) => {
     );
 };
 
-const Link = ({ href, children, ariaLabel }: Props) => {
+const Link = ({ href, children, ariaLabel, customStyles = [] }: Props) => {
     const external = isExternalLink(href);
 
     if (external) {
@@ -26,10 +27,10 @@ const Link = ({ href, children, ariaLabel }: Props) => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={ariaLabel || undefined}
+                aria-label={ariaLabel}
                 role="link"
                 tabIndex={0}
-                {...stylex.props(styles.link)}
+                {...stylex.props(styles.link, ...customStyles)}
             >
                 {children}
             </a>
@@ -39,10 +40,10 @@ const Link = ({ href, children, ariaLabel }: Props) => {
     return (
         <NextLink
             href={href}
-            aria-label={ariaLabel || undefined}
+            aria-label={ariaLabel}
             role="link"
             tabIndex={0}
-            {...stylex.props(styles.link)}
+            {...stylex.props(styles.link, ...customStyles)}
         >
             {children}
         </NextLink>

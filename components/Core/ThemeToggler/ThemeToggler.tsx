@@ -67,17 +67,14 @@ const ThemeToggler = () => {
                         width={20}
                         height={20}
                         strokeWidth={2}
-                        role="img"
-                        aria-hidden="false"
-                        aria-label={`${theme} theme icon`}
+                        aria-hidden="true"
                     />
                 ) : (
                     <Monitor
                         width={20}
                         height={20}
                         strokeWidth={2}
-                        role="img"
-                        aria-label="automatic theme icon"
+                        aria-hidden="true"
                     />
                 )}
                 <span {...stylex.props(styles.arrow)}>
@@ -93,8 +90,7 @@ const ThemeToggler = () => {
                                 width={20}
                                 height={20}
                                 strokeWidth={2}
-                                role="img"
-                                aria-label="Moon icon"
+                                aria-hidden="true"
                             />
                         </span>
                         <div>

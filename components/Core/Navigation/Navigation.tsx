@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/UI/Link/Link";
 import { usePathname } from "next/navigation";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Navigation.stylex";
+import Navigation from "@/components/Core/Navigation/Navigation";
+import List from "@/components/UI/List/List";
 import {
     OctagonAlertIcon,
     BadgeCheckIcon,
@@ -20,43 +22,40 @@ const navLinks = [
     { href: "/error", label: "Error", icon: OctagonAlertIcon },
 ];
 
-const Navigation = () => {
+const MainMenu = () => {
     const pathname = usePathname();
 
     return (
-        <div role="navigation" {...stylex.props(styles.wrapper)}>
-            <div {...stylex.props(styles.list)} role="list">
+        <Navigation ariaLabel="Shortcuts" {...stylex.props(styles.wrapper)}>
+            <List {...stylex.props(styles.list)} ariaLabel="Shortcuts">
                 {navLinks.map(({ href, label, icon: Icon }) => {
                     const isActive = pathname === href;
 
                     return (
-                        <span
+                        <List.Item
                             key={href}
                             {...stylex.props(
                                 styles.item,
                                 isActive && styles.linkActive,
                             )}
-                            role="listitem"
                         >
                             <Link
                                 key={href}
                                 href={href}
-                                {...stylex.props(
+                                customStyles={[
                                     styles.link,
                                     isActive && styles.linkActive,
-                                )}
-                                aria-label={`Link to ${label}`}
-                                role="link"
-                                tabIndex={0}
+                                ]}
+                                ariaLabel={`Link to ${label}`}
                             >
-                                <Icon size={24} aria-hidden="true" />
+                                <Icon size={24} />
                             </Link>
-                        </span>
+                        </List.Item>
                     );
                 })}
-            </div>
-        </div>
+            </List>
+        </Navigation>
     );
 };
 
-export default Navigation;
+export default MainMenu;

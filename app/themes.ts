@@ -23,13 +23,13 @@ export const light = stylex.createTheme(colors, {
     bgSecondaryG: "255",
     bgSecondaryB: "255",
 
-    bgAltR: "226",
-    bgAltG: "229",
-    bgAltB: "233",
+    bgTertiaryR: "226",
+    bgTertiaryG: "229",
+    bgTertiaryB: "233",
 
-    bgAltHoverR: "213",
-    bgAltHoverG: "216",
-    bgAltHoverB: "220",
+    bgTertiaryHoverR: "213",
+    bgTertiaryHoverG: "216",
+    bgTertiaryHoverB: "220",
 
     borderR: "187",
     borderG: "189",
@@ -55,9 +55,9 @@ export const light = stylex.createTheme(colors, {
     warningG: "169",
     warningB: "24",
 
-    dangerR: "239",
-    dangerG: "68",
-    dangerB: "68",
+    errorR: "239",
+    errorG: "68",
+    errorB: "68",
 });
 
 export const dark = stylex.createTheme(colors, {
@@ -81,13 +81,13 @@ export const dark = stylex.createTheme(colors, {
     bgSecondaryG: "39",
     bgSecondaryB: "40",
 
-    bgAltR: "59",
-    bgAltG: "61",
-    bgAltB: "62",
+    bgTertiaryR: "59",
+    bgTertiaryG: "61",
+    bgTertiaryB: "62",
 
-    bgAltHoverR: "78",
-    bgAltHoverG: "80",
-    bgAltHoverB: "80",
+    bgTertiaryHoverR: "78",
+    bgTertiaryHoverG: "80",
+    bgTertiaryHoverB: "80",
 
     borderR: "101",
     borderG: "104",
@@ -113,7 +113,7 @@ export const dark = stylex.createTheme(colors, {
     warningG: "169",
     warningB: "24",
 
-    dangerR: "239",
-    dangerG: "68",
-    dangerB: "68",
+    errorR: "239",
+    errorG: "68",
+    errorB: "68",
 });

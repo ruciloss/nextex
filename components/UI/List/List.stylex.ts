@@ -1,21 +1,10 @@
 import * as stylex from "@stylexjs/stylex";
-import { spacing, text } from "../../../app/globalTokens.stylex";
+import { spacing } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
-    heading: {
-        display: "block",
-        fontWeight: 700,
-    },
+    list: {},
 
-    regular: { fontWeight: 400 },
-    bold: { fontWeight: 600 },
-
-    h1: { fontSize: text.h1 },
-    h2: { fontSize: text.h2 },
-    h3: { fontSize: text.h3 },
-    h4: { fontSize: text.h4 },
-    h5: { fontSize: text.h5 },
-    h6: { fontSize: text.p },
+    item: {},
 
     marginBottom1: { marginBottom: spacing.xxxs },
     marginBottom2: { marginBottom: spacing.xxs },
@@ -25,4 +14,12 @@ export const styles = stylex.create({
 
     center: { textAlign: "center" },
     right: { textAlign: "right" },
+
+    /*
+    listItem: {
+        display: "list-item",
+        listStyleType: "disc",
+        marginLeft: spacing.md,
+    },
+    */
 });

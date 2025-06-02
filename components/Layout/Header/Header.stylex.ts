@@ -27,6 +27,7 @@ export const styles = stylex.create({
         gap: spacing.xxs,
     },
     logo: {
+        borderRadius: "50%",
         display: "flex",
         height: "auto",
         maxWidth: "40px",

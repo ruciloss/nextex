@@ -31,7 +31,7 @@ export const styles = stylex.create({
         alignItems: "center",
         backgroundColor: {
             default: "transparent",
-            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+            ":hover": `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
         },
         borderRadius: radius.sm,
         color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,

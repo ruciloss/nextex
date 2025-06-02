@@ -6,6 +6,7 @@ import Footer from "@/components/Layout/Footer/Footer";
 import Card from "@/components/UI/Card/Card";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
+import Sidebar from "@/components/Layout/Sidebar/Sidebar";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -29,15 +30,15 @@ const styles = stylex.create({
 const Homepage = () => {
     return (
         <>
-            <div aria-label="Shortcuts" role="navigation">
-                dasdadsa
-            </div>
+            <Sidebar aria-label="Shortcuts" role="navigation">
+                <Footer />
+            </Sidebar>
             <Inner>
                 <div {...stylex.props(styles.wrapper)}>
-                    <Heading level={1} variant="h1" align="center" spacing={2}>
+                    <Heading level={1} size="h1" align="center" spacing={2}>
                         NexteX
                     </Heading>
-                    <Text align="center">
+                    <Text color="secondary" align="center">
                         A streamlined starter template leveraging a modern tech
                         stack for rapid development and effortless
                         customization.
@@ -56,9 +57,8 @@ const Homepage = () => {
                         image="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
                     />
                 </div>
-                <Footer />
             </Inner>
-            <div role="complementary">dasdadsa</div>
+            <Sidebar role="complementary">dasdadsa</Sidebar>
         </>
     );
 };

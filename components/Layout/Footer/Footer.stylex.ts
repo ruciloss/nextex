@@ -10,17 +10,12 @@ export const styles = stylex.create({
         display: "flex",
         gap: spacing.sm,
         justifyContent: "space-between",
-        paddingTop: spacing.xxs,
+        paddingTop: spacing.xs,
         width: "100%",
     },
     item: {
         alignItems: "center",
         display: "flex",
         gap: spacing.xxs,
-    },
-    logo: {
-        display: "flex",
-        height: "auto",
-        width: "18px",
     },
 });
