@@ -30,7 +30,7 @@ const styles = stylex.create({
 const Homepage = () => {
     return (
         <>
-            <Sidebar aria-label="Shortcuts" role="navigation">
+            <Sidebar ariaLabel="Shortcuts" role="navigation">
                 <Footer />
             </Sidebar>
             <Inner>
@@ -49,7 +49,9 @@ const Homepage = () => {
                     </Card>
                 </div>
             </Inner>
-            <Sidebar role="complementary">dasdadsa</Sidebar>
+            <Sidebar ariaLabel="Sidebar" role="complementary">
+                dasdadsa
+            </Sidebar>
         </>
     );
 };

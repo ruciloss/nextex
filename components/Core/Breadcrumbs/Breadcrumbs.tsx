@@ -36,7 +36,7 @@ const Breadcrumbs = () => {
                     <div key={index}>
                         <span>
                             {isLast ? (
-                                <Text size="small">{breadcrumb.label}</Text>
+                                <Text>{breadcrumb.label}</Text>
                             ) : (
                                 <Link
                                     href={breadcrumb.href}
