@@ -1,12 +1,20 @@
 "use client";
 
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./not-found.stylex";
+import { spacing } from "./globalTokens.stylex";
 import Inner from "@/components/Layout/Inner/Inner";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
 import Link from "@/components/UI/Link/Link";
 import { FileLock2Icon } from "lucide-react";
+
+export const styles = stylex.create({
+    icon: {
+        display: "block",
+        margin: "auto",
+        marginBottom: spacing.xs,
+    },
+});
 
 const NotFound = () => {
     return (
@@ -18,11 +26,11 @@ const NotFound = () => {
                     {...stylex.props(styles.icon)}
                 />
 
-                <Heading level={1} size="h5" align="center" spacing={1}>
+                <Heading level={1}>
                     This content isn&apos;t available right now.
                 </Heading>
 
-                <Text align="center" spacing={4}>
+                <Text>
                     When this happens, it&apos;s usually because the content is
                     no longer available, the link is broken, or access has been
                     restricted by the owner.

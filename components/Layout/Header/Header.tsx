@@ -4,7 +4,7 @@ import { styles } from "./Header.stylex";
 import ThemeToggler from "@/components/Core/ThemeToggler/ThemeToggler";
 import Logo from "@/components/Content/Logo/Logo";
 import GitHubIcon from "@/components/Content/GitHubIcon/GitHubIcon";
-import Navigation from "@/components/Core/Navigation/Navigation";
+import Shortcuts from "@/components/Core/Shortcuts/Shortcuts";
 import Search from "@/components/Core/Search/Search";
 
 const Header = () => {
@@ -22,7 +22,7 @@ const Header = () => {
                 </Link>
                 <Search />
             </div>
-            <Navigation />
+            <Shortcuts />
             <div {...stylex.props(styles.wrapperInner)}>
                 <GitHubIcon />
                 <ThemeToggler />

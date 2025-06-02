@@ -10,19 +10,14 @@ export const metadata: Metadata = {
         "A simple template for building modern websites with Next.js & StyleX.",
 };
 
-const pageCodex = () => {
+const PageCodex = () => {
     return (
         <Inner>
             <div>
-                <Heading level={1} size="h2" spacing={3}>
-                    Code of Conduct
-                </Heading>
+                <Heading level={1}>Code of Conduct</Heading>
 
-                <Heading level={2} size="h5" spacing={2}>
-                    Our Pledge
-                </Heading>
-
-                <Text spacing={2}>
+                <Heading level={2}>Our Pledge</Heading>
+                <Text>
                     In the interest of fostering an open and welcoming
                     environment, we as contributors and maintainers pledge to
                     make participation in our project and our community a
@@ -34,16 +29,13 @@ const pageCodex = () => {
                     orientation.
                 </Text>
 
-                <Heading level={2} size="h5" spacing={2}>
-                    Our Standards
-                </Heading>
+                <Heading level={2}>Our Standards</Heading>
 
-                <Heading level={3} size="h6" spacing={2}>
+                <Heading level={3}>
                     Examples of behavior that contributes to creating a positive
                     environment include:
                 </Heading>
-
-                <List spacing={2}>
+                <List ariaLabel="Examples of positive behavior">
                     <List.Item>
                         <Text>Using welcoming and inclusive language</Text>
                     </List.Item>
@@ -66,11 +58,10 @@ const pageCodex = () => {
                     </List.Item>
                 </List>
 
-                <Heading level={3} size="h6" spacing={2}>
+                <Heading level={3}>
                     Examples of unacceptable behavior by participants include:
                 </Heading>
-
-                <List spacing={2}>
+                <List ariaLabel="Examples of unacceptable behavior">
                     <List.Item>
                         <Text>
                             Using sexualized language or imagery and unwelcome
@@ -101,11 +92,8 @@ const pageCodex = () => {
                     </List.Item>
                 </List>
 
-                <Heading level={2} size="h5" spacing={2}>
-                    Our Responsibilities
-                </Heading>
-
-                <Text spacing={2}>
+                <Heading level={2}>Our Responsibilities</Heading>
+                <Text>
                     Project maintainers are responsible for clarifying the
                     standards of acceptable behavior and are expected to take
                     appropriate and fair corrective action in response to any
@@ -118,22 +106,16 @@ const pageCodex = () => {
                     offensive, or harmful.
                 </Text>
 
-                <Heading level={2} size="h5" spacing={2}>
-                    Scope
-                </Heading>
-
-                <Text spacing={2}>
+                <Heading level={2}>Scope</Heading>
+                <Text>
                     This Code of Conduct applies to all spaces managed by the
                     project organization, as well as to all interactions between
                     project contributors and the community, both online and
                     offline.
                 </Text>
 
-                <Heading level={2} size="h5" spacing={2}>
-                    Enforcement
-                </Heading>
-
-                <Text spacing={2}>
+                <Heading level={2}>Enforcement</Heading>
+                <Text>
                     Instances of abusive, harassing, or otherwise unacceptable
                     behavior may be reported by contacting the maintainers
                     directly via private message. All complaints will be
@@ -148,10 +130,7 @@ const pageCodex = () => {
                     project&apos;s leadership.
                 </Text>
 
-                <Heading level={2} size="h5" spacing={2}>
-                    Attribution
-                </Heading>
-
+                <Heading level={2}>Attribution</Heading>
                 <Text>
                     This Code of Conduct is adapted from the Contributor
                     Covenant, version 1.4, available here. For answers to common
@@ -162,4 +141,4 @@ const pageCodex = () => {
     );
 };
 
-export default pageCodex;
+export default PageCodex;

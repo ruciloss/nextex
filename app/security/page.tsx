@@ -14,24 +14,20 @@ const pageSecurity = () => {
     return (
         <Inner>
             <div>
-                <Heading level={1} size="h2" spacing={3}>
-                    Security
-                </Heading>
-                <Text color="secondary" spacing={2}>
+                <Heading level={1}>Security</Heading>
+                <Text>
                     If you discover a security vulnerability in this project, we
                     kindly ask you to report it via our GitHub repository by
                     clicking on{" "}
                     <Link
                         href="https://ruciloss.github.io/nextex/security"
                         ariaLabel="Link to Report a vulnerability"
-                        variant="linkPrimary"
-                        weight="bold"
                     >
                         Report a vulnerability
                     </Link>
                     .
                 </Text>
-                <Text color="secondary">
+                <Text>
                     We carefully review all valid reports and aim to address any
                     confirmed issues as quickly as possible.
                 </Text>

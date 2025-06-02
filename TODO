@@ -1,0 +1,11 @@
+Aria-* ... doresit u vsech komponent
+id ... doresit u komponent
+data-* ... doresit u komponent
+style ani class predavat nebudu
+ref a key neni treba to je interni
+
+Nove komponenty:
+progressbar (loading)
+Skeleton
+Doresit Card
+Image komponenta (Mozna icon) .. duplicitne pridavat aria-hidden true nebo role img i kdyz uz to tam je

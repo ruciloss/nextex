@@ -35,10 +35,8 @@ const Homepage = () => {
             </Sidebar>
             <Inner>
                 <div {...stylex.props(styles.wrapper)}>
-                    <Heading level={1} size="h1" align="center" spacing={2}>
-                        NexteX
-                    </Heading>
-                    <Text color="secondary" align="center">
+                    <Heading level={1}>NexteX</Heading>
+                    <Text>
                         A streamlined starter template leveraging a modern tech
                         stack for rapid development and effortless
                         customization.
@@ -46,16 +44,9 @@ const Homepage = () => {
                 </div>
 
                 <div {...stylex.props(styles.cardWrapper)}>
-                    <Card
-                        title="Title"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                        image="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-                    />
-                    <Card
-                        title="Title"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                        image="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-                    />
+                    <Card>
+                        <Card.Body>aaa</Card.Body>
+                    </Card>
                 </div>
             </Inner>
             <Sidebar role="complementary">dasdadsa</Sidebar>

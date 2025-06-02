@@ -3,8 +3,8 @@
 import Link from "@/components/UI/Link/Link";
 import { usePathname } from "next/navigation";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Navigation.stylex";
-import Navigation from "@/components/Core/Navigation/Navigation";
+import { styles } from "./Shortcuts.stylex";
+import Navigation from "@/components/UI/Navigation/Navigation";
 import List from "@/components/UI/List/List";
 import {
     OctagonAlertIcon,
@@ -22,7 +22,7 @@ const navLinks = [
     { href: "/error", label: "Error", icon: OctagonAlertIcon },
 ];
 
-const MainMenu = () => {
+const Shortcuts = () => {
     const pathname = usePathname();
 
     return (
@@ -58,4 +58,4 @@ const MainMenu = () => {
     );
 };
 
-export default MainMenu;
+export default Shortcuts;

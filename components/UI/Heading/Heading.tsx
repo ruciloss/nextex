@@ -4,13 +4,18 @@ import { styles } from "./Heading.stylex";
 
 type Props = {
     children: ReactNode;
+    level: 1 | 2 | 3 | 4 | 5;
     id?: string;
     customStyles?: stylex.StyleXStyles[];
 };
 
-const Heading = ({ children, id, customStyles = [] }: Props) => {
+const Heading = ({ children, level, id, customStyles = [] }: Props) => {
     return (
-        <span id={id} {...stylex.props(styles.heading, ...customStyles)}>
+        <span
+            id={id}
+            aria-level={level}
+            {...stylex.props(styles.heading, ...customStyles)}
+        >
             {children}
         </span>
     );

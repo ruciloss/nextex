@@ -1,35 +1,29 @@
+import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Card.stylex";
-import Image from "next/image";
 
-type CardProps = {
-    title: string;
-    description: string;
-    image?: string;
+type Props = {
+    children: ReactNode;
+    customStyles?: stylex.StyleXStyles[];
 };
 
-const Card = ({ title, description, image }: CardProps) => {
+type BodyProps = {
+    children: ReactNode;
+    customStyles?: stylex.StyleXStyles[];
+};
+
+const Card = ({ children, customStyles = [] }: Props) => {
     return (
-        <div {...stylex.props(styles.wrapper)}>
-            {image && (
-                <Image
-                    src={image}
-                    alt={title}
-                    width={300}
-                    height={200}
-                    style={{
-                        objectFit: "cover",
-                        width: "100%",
-                        height: "auto",
-                    }}
-                />
-            )}
-            <div {...stylex.props(styles.body)}>
-                <span {...stylex.props(styles.heading)}>{title}</span>
-                <span>{description}</span>
-            </div>
-        </div>
+        <div {...stylex.props(styles.card, ...customStyles)}>{children}</div>
     );
 };
+
+const Body = ({ children, customStyles = [] }: BodyProps) => {
+    return (
+        <div {...stylex.props(styles.body, ...customStyles)}>{children}</div>
+    );
+};
+
+Card.Body = Body;
 
 export default Card;

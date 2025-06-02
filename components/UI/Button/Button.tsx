@@ -4,7 +4,7 @@ import { styles } from "./Button.stylex";
 
 type Props = {
     children: ReactNode;
-    ariaLabel: string;
+    ariaLabel?: string;
     ariaPressed?: boolean;
     ariaExpanded?: boolean;
     ariaControls?: string;
