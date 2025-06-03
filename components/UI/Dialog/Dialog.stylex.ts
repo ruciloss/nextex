@@ -4,6 +4,7 @@ import { colors, radius } from "../../../app/globalTokens.stylex";
 export const baseStyles = stylex.create({
     dialog: {
         bottom: 0,
+        display: "none",
         left: 0,
         position: "fixed",
         right: 0,
