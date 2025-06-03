@@ -24,7 +24,7 @@ export const styles = stylex.create({
     item: {
         borderBottomColor: "transparent",
         borderBottomStyle: "solid",
-        borderBottomWidth: "3px",
+        borderBottomWidth: 3,
         height: "inherit",
     },
     link: {
@@ -41,7 +41,7 @@ export const styles = stylex.create({
         justifyContent: "center",
         marginTop: spacing.xxxs,
         textDecoration: "none",
-        width: "100px",
+        width: 100,
     },
     linkActive: {
         backgroundColor: "transparent",

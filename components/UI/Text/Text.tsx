@@ -1,16 +1,16 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Text.stylex";
+import { baseStyles } from "./Text.stylex";
 
 type Props = {
     children: ReactNode;
     id?: string;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
-const Text = ({ children, id, customStyles = [] }: Props) => {
+const Text = ({ children, id, styles = [] }: Props) => {
     return (
-        <span id={id} {...stylex.props(styles.text, ...customStyles)}>
+        <span id={id} {...stylex.props(baseStyles.text, ...styles)}>
             {children}
         </span>
     );

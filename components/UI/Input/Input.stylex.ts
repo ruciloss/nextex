@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 
-export const styles = stylex.create({
+export const baseStyles = stylex.create({
     input: {
         appearance: "none",
         background: "none",

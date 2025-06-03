@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import { colors, radius, spacing } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
+export const baseStyles = stylex.create({
     link: {
         cursor: "pointer",
     },
@@ -45,7 +45,7 @@ export const styles = stylex.create({
     btnSolid: {
         backgroundColor: {
             default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         },
         color: "#fff",
         padding: `${spacing.xxxs} ${spacing.xxs}`,
@@ -55,13 +55,13 @@ export const styles = stylex.create({
         backgroundColor: "transparent",
         borderColor: {
             default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         },
         borderStyle: "solid",
         borderWidth: "2px",
         color: {
             default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         },
         padding: `${spacing.xxxs} ${spacing.xxs}`,
     },

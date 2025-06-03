@@ -1,33 +1,33 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./List.stylex";
+import { baseStyles } from "./List.stylex";
 
 type Props = {
     children: ReactNode;
     ariaLabel: string;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
 type ItemProps = {
     children: ReactNode;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
-const List = ({ children, ariaLabel, customStyles = [] }: Props) => {
+const List = ({ children, ariaLabel, styles = [] }: Props) => {
     return (
         <div
             role="list"
             aria-label={ariaLabel}
-            {...stylex.props(styles.list, ...customStyles)}
+            {...stylex.props(baseStyles.list, ...styles)}
         >
             {children}
         </div>
     );
 };
 
-const Item = ({ children, customStyles = [] }: ItemProps) => {
+const Item = ({ children, styles = [] }: ItemProps) => {
     return (
-        <div role="listitem" {...stylex.props(styles.item, ...customStyles)}>
+        <div role="listitem" {...stylex.props(baseStyles.item, ...styles)}>
             {children}
         </div>
     );

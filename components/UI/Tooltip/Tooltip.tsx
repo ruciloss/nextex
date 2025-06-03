@@ -1,28 +1,23 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Tooltip.stylex";
+import { baseStyles } from "./Tooltip.stylex";
 
 type Props = {
     children: ReactNode;
     id?: string;
     ariaHidden?: boolean;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
-const Tooltip = ({
-    children,
-    id,
-    ariaHidden = true,
-    customStyles = [],
-}: Props) => {
+const Tooltip = ({ children, id, ariaHidden = true, styles = [] }: Props) => {
     return (
         <div
             id={id}
             role="tooltip"
             aria-hidden={ariaHidden}
-            {...stylex.props(styles.tooltip, ...customStyles)}
+            {...stylex.props(baseStyles.tooltip)}
         >
-            {children}
+            <div {...stylex.props(baseStyles.item, ...styles)}>{children}</div>
         </div>
     );
 };

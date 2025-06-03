@@ -288,17 +288,21 @@ export const colors = stylex.defineVars({
     bgTertiaryHoverG: { default: "216", [DARK_MODE]: "80" },
     bgTertiaryHoverB: { default: "220", [DARK_MODE]: "80" },
 
+    borderR: { default: "187", [DARK_MODE]: "101" },
+    borderG: { default: "189", [DARK_MODE]: "104" },
+    borderB: { default: "193", [DARK_MODE]: "108" },
+
+    shadowR: { default: "0", [DARK_MODE]: "0" },
+    shadowG: { default: "0", [DARK_MODE]: "0" },
+    shadowB: { default: "0", [DARK_MODE]: "0" },
+
+    overlayR: { default: "0", [DARK_MODE]: "0" },
+    overlayG: { default: "0", [DARK_MODE]: "0" },
+    overlayB: { default: "0", [DARK_MODE]: "0" },
+
     primaryR: { default: "8", [DARK_MODE]: "8" },
     primaryG: { default: "102", [DARK_MODE]: "102" },
     primaryB: { default: "255", [DARK_MODE]: "255" },
-
-    primaryHoverR: { default: "34", [DARK_MODE]: "34" },
-    primaryHoverG: { default: "118", [DARK_MODE]: "118" },
-    primaryHoverB: { default: "255", [DARK_MODE]: "255" },
-
-    blackWhiteR: { default: "9", [DARK_MODE]: "250" },
-    blackWhiteG: { default: "9", [DARK_MODE]: "250" },
-    blackWhiteB: { default: "11", [DARK_MODE]: "250" },
 
     successR: { default: "49", [DARK_MODE]: "49" },
     successG: { default: "162", [DARK_MODE]: "162" },
@@ -311,14 +315,6 @@ export const colors = stylex.defineVars({
     errorR: { default: "239", [DARK_MODE]: "239" },
     errorG: { default: "68", [DARK_MODE]: "68" },
     errorB: { default: "68", [DARK_MODE]: "68" },
-
-    borderR: { default: "187", [DARK_MODE]: "101" },
-    borderG: { default: "189", [DARK_MODE]: "104" },
-    borderB: { default: "193", [DARK_MODE]: "108" },
-
-    shadowR: { default: "0", [DARK_MODE]: "0" },
-    shadowG: { default: "0", [DARK_MODE]: "0" },
-    shadowB: { default: "0", [DARK_MODE]: "0" },
 });
 
 export const fonts = stylex.defineVars({
@@ -353,14 +349,37 @@ export const fonts = stylex.defineVars({
     ].join(", "),
 });
 
-export const scales = stylex.defineVars({
-    sm: "scale(0.95)",
-    md: "scale(1)",
-    lg: "scale(1.2)",
-});
-
 export const transitions = stylex.defineVars({
     fast: "all 0.2s ease-in-out",
     medium: "all 0.4s ease-in-out",
     slow: "all 0.6s ease-in-out",
+});
+
+const blink = stylex.keyframes({
+    "0%": { opacity: 1 },
+    "50%": { opacity: 0.65 },
+    "100%": { opacity: 1 },
+});
+
+const pulse = stylex.keyframes({
+    "0%": { transform: "scale(1)" },
+    "50%": { transform: "scale(1.1)" },
+    "100%": { transform: "scale(1)" },
+});
+
+const fadeIn = stylex.keyframes({
+    "0%": { opacity: 0 },
+    "100%": { opacity: 1 },
+});
+
+const fadeOut = stylex.keyframes({
+    "0%": { opacity: 1 },
+    "100%": { opacity: 0 },
+});
+
+export const animations = stylex.defineVars({
+    blink,
+    pulse,
+    fadeIn,
+    fadeOut,
 });

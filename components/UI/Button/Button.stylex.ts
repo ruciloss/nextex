@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import { colors, radius, spacing } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
+export const baseStyles = stylex.create({
     button: {
         cursor: "pointer",
     },
@@ -64,15 +64,15 @@ export const styles = stylex.create({
     primary: {
         backgroundColor: {
             default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         },
         borderColor: {
             default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         },
         color: {
             default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
-            ":hover": `rgba(${colors.primaryHoverR}, ${colors.primaryHoverG}, ${colors.primaryHoverB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         },
     },
 

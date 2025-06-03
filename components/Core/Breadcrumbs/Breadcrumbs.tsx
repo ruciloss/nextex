@@ -5,6 +5,7 @@ import { styles } from "./Breadcrumbs.stylex";
 import { usePathname } from "next/navigation";
 import Link from "@/components/UI/Link/Link";
 import Text from "@/components/UI/Text/Text";
+import Navigation from "@/components/UI/Navigation/Navigation";
 
 const Breadcrumbs = () => {
     const pathname = usePathname();
@@ -24,11 +25,7 @@ const Breadcrumbs = () => {
     ];
 
     return (
-        <div
-            role="navigation"
-            aria-label="Breadcrumbs"
-            {...stylex.props(styles.wrapper)}
-        >
+        <Navigation ariaLabel="Breadcrumbs" styles={[styles.wrapper]}>
             {breadcrumbs.map((breadcrumb, index) => {
                 const isLast = index === breadcrumbs.length - 1;
 
@@ -46,11 +43,15 @@ const Breadcrumbs = () => {
                                 </Link>
                             )}
                         </span>
-                        {!isLast && <span>&bull;</span>}
+                        {!isLast && (
+                            <span {...stylex.props(styles.divider)}>
+                                &bull;
+                            </span>
+                        )}
                     </div>
                 );
             })}
-        </div>
+        </Navigation>
     );
 };
 

@@ -1,6 +1,8 @@
+"use client";
+
 import { ReactNode, KeyboardEvent } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Button.stylex";
+import { baseStyles } from "./Button.stylex";
 
 type Props = {
     children: ReactNode;
@@ -14,7 +16,7 @@ type Props = {
 
     onClick?: () => void;
     onKeyDown?: (e: KeyboardEvent<HTMLSpanElement>) => void;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
 const Button = ({
@@ -29,7 +31,7 @@ const Button = ({
 
     onClick,
     onKeyDown,
-    customStyles = [],
+    styles = [],
 }: Props) => {
     const handleKeyDown = (e: KeyboardEvent<HTMLSpanElement>) => {
         if (ariaDisabled) {
@@ -60,7 +62,7 @@ const Button = ({
             tabIndex={ariaDisabled ? -1 : 0}
             onClick={ariaDisabled ? undefined : onClick}
             onKeyDown={ariaDisabled ? undefined : handleKeyDown}
-            {...stylex.props(styles.button, ...customStyles)}
+            {...stylex.props(baseStyles.button, ...styles)}
         >
             {children}
         </span>

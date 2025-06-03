@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Input.stylex";
+import { baseStyles } from "./Input.stylex";
 
 type InputType =
     | "text"
@@ -21,6 +21,7 @@ type Props = {
     id?: string;
     name?: string;
     value?: string | number | readonly string[];
+    placeholder?: string;
     ariaLabel?: string;
     ariaLabelledby?: string;
     ariaDescribedby?: string;
@@ -28,7 +29,9 @@ type Props = {
     disabled?: boolean;
     required?: boolean;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-    customStyles?: stylex.StyleXStyles[];
+    onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
+    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+    styles?: stylex.StyleXStyles[];
 };
 
 const Input = ({
@@ -36,6 +39,7 @@ const Input = ({
     id,
     name,
     value,
+    placeholder,
     ariaLabel,
     ariaLabelledby,
     ariaDescribedby,
@@ -43,7 +47,9 @@ const Input = ({
     disabled,
     required,
     onChange,
-    customStyles = [],
+    onFocus,
+    onBlur,
+    styles = [],
 }: Props) => {
     return (
         <label>
@@ -52,6 +58,7 @@ const Input = ({
                 id={id}
                 name={name}
                 value={value}
+                placeholder={placeholder}
                 aria-label={ariaLabel}
                 aria-labelledby={ariaLabelledby}
                 aria-describedby={ariaDescribedby}
@@ -61,7 +68,9 @@ const Input = ({
                 disabled={disabled}
                 required={required}
                 onChange={onChange}
-                {...stylex.props(styles.input, ...customStyles)}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                {...stylex.props(baseStyles.input, ...styles)}
             />
         </label>
     );

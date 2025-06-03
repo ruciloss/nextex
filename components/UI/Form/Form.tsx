@@ -1,6 +1,6 @@
 import { ReactNode, FormEvent } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Form.stylex";
+import { baseStyles } from "./Form.stylex";
 
 type Props = {
     children: ReactNode;
@@ -8,7 +8,7 @@ type Props = {
     ariaDescribedby?: string;
     ariaBusy?: boolean;
     onSubmit?: (e: FormEvent<HTMLFormElement>) => void;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
 const Form = ({
@@ -17,7 +17,7 @@ const Form = ({
     ariaDescribedby,
     ariaBusy,
     onSubmit,
-    customStyles = [],
+    styles = [],
 }: Props) => {
     return (
         <form
@@ -25,7 +25,7 @@ const Form = ({
             aria-labelledby={ariaLabelledby}
             aria-describedby={ariaDescribedby}
             aria-busy={ariaBusy}
-            {...stylex.props(styles.form, ...customStyles)}
+            {...stylex.props(baseStyles.form, ...styles)}
         >
             {children}
         </form>

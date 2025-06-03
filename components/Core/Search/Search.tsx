@@ -1,10 +1,13 @@
 "use client";
+
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/UI/Link/Link";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Search.stylex";
-import { ArrowLeft, X } from "lucide-react";
-
+import Input from "@/components/UI/Input/Input";
+import Button from "@/components/UI/Button/Button";
+import Heading from "@/components/UI/Heading/Heading";
+import Text from "@/components/UI/Text/Text";
 import {
     HomeIcon,
     InfoIcon,
@@ -48,9 +51,9 @@ const navLinks = [
     },
 ];
 
-const SearchForm = () => {
+const Search = () => {
     const [query, setQuery] = useState("");
-    const [isFocused, setIsFocused] = useState(true);
+    const [isFocused, setIsFocused] = useState(false);
 
     const filtered =
         query.length > 0
@@ -66,7 +69,7 @@ const SearchForm = () => {
             <div {...stylex.props(styles.wrapper)}>
                 <div {...stylex.props(styles.inputWrapper)}>
                     <SearchIcon size={16} />
-                    <input
+                    <Input
                         type="search"
                         placeholder="Search NexteX"
                         value={query}
@@ -75,38 +78,32 @@ const SearchForm = () => {
                         onBlur={() =>
                             setTimeout(() => setIsFocused(false), 150)
                         }
-                        {...stylex.props(styles.input)}
+                        styles={[styles.input]}
                     />
                 </div>
             </div>
             <div>
                 {showDropdown && (
                     <div {...stylex.props(styles.dropdown)}>
-                        <span
+                        <Button
+                            ariaLabel="Back"
+                            styles={[styles.closeButton]}
                             onClick={() => setIsFocused(false)}
-                            {...stylex.props(styles.closeButton)}
-                            role="button"
-                            tabIndex={0}
                         >
-                            <ArrowLeftIcon
-                                aria-label="Close search"
-                                size={20}
-                            />
-                        </span>
-                        <ArrowLeft>
-                            <X size={20} aria-hidden="true" />
-                        </ArrowLeft>
-                        <span>Recent</span>
+                            <ArrowLeftIcon aria-label="Back" size={20} />
+                        </Button>
+                        <Heading>Recent</Heading>
 
                         {filtered.length === 0 ? (
-                            <span {...stylex.props(styles.notFound)}>
-                                No results found
-                            </span>
+                            <div {...stylex.props(styles.notFound)}>
+                                <Text>No results found</Text>
+                            </div>
                         ) : (
                             filtered.map((item) => (
                                 <Link
                                     key={item.href}
                                     href={item.href}
+                                    ariaLabel={`Link to ${item.label}`}
                                     {...stylex.props(styles.link)}
                                 >
                                     <div {...stylex.props(styles.item)}>
@@ -139,4 +136,4 @@ const SearchForm = () => {
     );
 };
 
-export default SearchForm;
+export default Search;

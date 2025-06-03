@@ -6,7 +6,9 @@ export const styles = stylex.create({
         alignItems: "center",
         display: "flex",
         fontSize: text.xs,
-        gap: spacing.xxxs,
         textTransform: "capitalize",
+    },
+    divider: {
+        margin: `0 ${spacing.xxxs}`,
     },
 });

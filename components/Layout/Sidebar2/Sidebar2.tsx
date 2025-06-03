@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { baseStyles } from "./Sidebar.stylex";
+import { baseStyles } from "./Sidebar2.stylex";
 
 type SidebarProps = {
     children: React.ReactNode;
@@ -8,7 +8,7 @@ type SidebarProps = {
     styles?: stylex.StyleXStyles[];
 };
 
-const Sidebar = ({ children, ariaLabel, role, styles = [] }: SidebarProps) => {
+const Sidebar2 = ({ children, ariaLabel, role, styles = [] }: SidebarProps) => {
     return (
         <div
             aria-label={ariaLabel}
@@ -20,4 +20,4 @@ const Sidebar = ({ children, ariaLabel, role, styles = [] }: SidebarProps) => {
     );
 };
 
-export default Sidebar;
+export default Sidebar2;

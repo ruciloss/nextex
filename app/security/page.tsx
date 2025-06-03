@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Inner from "@/components/Layout/Inner/Inner";
+import Feed from "@/components/Layout/Feed/Feed";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
 import Link from "@/components/UI/Link/Link";
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
         "A simple template for building modern websites with Next.js & StyleX.",
 };
 
-const pageSecurity = () => {
+const PageSecurity = () => {
     return (
-        <Inner>
+        <Feed>
             <div>
                 <Heading level={1}>Security</Heading>
                 <Text>
@@ -32,8 +32,8 @@ const pageSecurity = () => {
                     confirmed issues as quickly as possible.
                 </Text>
             </div>
-        </Inner>
+        </Feed>
     );
 };
 
-export default pageSecurity;
+export default PageSecurity;

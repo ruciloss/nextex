@@ -2,7 +2,7 @@
 
 import * as stylex from "@stylexjs/stylex";
 import { spacing } from "./globalTokens.stylex";
-import Inner from "@/components/Layout/Inner/Inner";
+import Inner from "@/components/Layout/Feed/Feed";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
 import Link from "@/components/UI/Link/Link";

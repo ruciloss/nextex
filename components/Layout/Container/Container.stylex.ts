@@ -2,10 +2,9 @@ import * as stylex from "@stylexjs/stylex";
 import { global } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
-    wrapper: {
+    container: {
         display: "flex",
+        marginTop: global.headerHeight,
         minHeight: "100vh",
-        paddingTop: global.headerHeight,
-        position: "relative",
     },
 });

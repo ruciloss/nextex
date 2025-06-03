@@ -7,7 +7,10 @@ import { ThemeProvider, useTheme } from "@/contexts/ThemeContext";
 import { light, dark } from "./themes";
 import SelfXSSWarning from "@/components/Core/SelfXSSWarning";
 import Header from "@/components/Layout/Header/Header";
-import Wrapper from "@/components/Layout/Wrapper/Wrapper";
+import Container from "@/components/Layout/Container/Wrapper";
+import Footer from "@/components/Layout/Footer/Footer";
+import Sidebar from "@/components/Layout/Sidebar/Sidebar";
+import Sidebar2 from "@/components/Layout/Sidebar2/Sidebar2";
 
 const Root = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -36,7 +39,15 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         >
             <body {...stylex.props(styles.reset, styles.body)}>
                 <Header />
-                <Wrapper>{children}</Wrapper>
+                <Container>
+                    <Sidebar ariaLabel="Shortcuts" role="navigation">
+                        <Footer />
+                    </Sidebar>
+                    {children}
+                    <Sidebar2 ariaLabel="Sidebar" role="complementary">
+                        dasdadsa
+                    </Sidebar2>
+                </Container>
                 <SelfXSSWarning />
             </body>
         </html>

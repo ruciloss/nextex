@@ -1,19 +1,19 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Navigation.stylex";
+import { baseStyles } from "./Navigation.stylex";
 
 type Props = {
     children: ReactNode;
     ariaLabel: string;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
-const Navigation = ({ children, ariaLabel, customStyles = [] }: Props) => {
+const Navigation = ({ children, ariaLabel, styles = [] }: Props) => {
     return (
         <div
             role="navigation"
             aria-label={ariaLabel}
-            {...stylex.props(styles.navigation, ...customStyles)}
+            {...stylex.props(baseStyles.navigation, ...styles)}
         >
             {children}
         </div>

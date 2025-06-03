@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Inner from "@/components/Layout/Inner/Inner";
+import Feed from "@/components/Layout/Feed/Feed";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
 import List from "@/components/UI/List/List";
+import Link from "@/components/UI/Link/Link";
 
 export const metadata: Metadata = {
     title: "Codex | NexteX",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 const PageCodex = () => {
     return (
-        <Inner>
+        <Feed>
             <div>
                 <Heading level={1}>Code of Conduct</Heading>
 
@@ -132,12 +133,32 @@ const PageCodex = () => {
 
                 <Heading level={2}>Attribution</Heading>
                 <Text>
-                    This Code of Conduct is adapted from the Contributor
-                    Covenant, version 1.4, available here. For answers to common
-                    questions about this code of conduct, see faq.
+                    This Code of Conduct is adapted from the
+                    <Link
+                        href="https://www.contributor-covenant.org/"
+                        ariaLabel="Link to Contributor Covenant"
+                    >
+                        Contributor Covenant
+                    </Link>
+                    , version 1.4, available{" "}
+                    <Link
+                        href="https://www.contributor-covenant.org/version/1/4/code-of-conduct/"
+                        ariaLabel="Link to version 1.4 of the Contributor Covenant"
+                    >
+                        here
+                    </Link>
+                    . For answers to common questions about this code of
+                    conduct, see{" "}
+                    <Link
+                        href="https://www.contributor-covenant.org/faq/"
+                        ariaLabel="Link to FAQ"
+                    >
+                        FAQ
+                    </Link>
+                    .
                 </Text>
             </div>
-        </Inner>
+        </Feed>
     );
 };
 

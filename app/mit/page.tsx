@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Inner from "@/components/Layout/Inner/Inner";
+import Feed from "@/components/Layout/Feed/Feed";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
 
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
         "A simple template for building modern websites with Next.js & StyleX.",
 };
 
-const pageMIT = () => {
+const PageMIT = () => {
     return (
-        <Inner>
+        <Feed>
             <div>
                 <Heading level={1}>MIT License</Heading>
                 <Text>Copyright (c) {new Date().getFullYear()} Ruciloss</Text>
@@ -37,8 +37,8 @@ const pageMIT = () => {
                     THE SOFTWARE.
                 </Text>
             </div>
-        </Inner>
+        </Feed>
     );
 };
 
-export default pageMIT;
+export default PageMIT;

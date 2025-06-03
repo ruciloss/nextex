@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Dialog.stylex";
+import { baseStyles } from "./Dialog.stylex";
 
 type Props = {
     children: ReactNode;
@@ -9,7 +9,7 @@ type Props = {
     ariaLabel?: string;
     ariaLabelledby?: string;
     ariaDescribedby?: string;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
 const Dialog = ({
@@ -17,20 +17,28 @@ const Dialog = ({
     id,
     role = "dialog",
     ariaLabel,
-    ariaLabelledby,
     ariaDescribedby,
-    customStyles = [],
+    styles = [],
 }: Props) => {
     return (
-        <div
-            id={id}
-            role={role}
-            aria-label={ariaLabel}
-            aria-labelledby={ariaLabelledby}
-            aria-describedby={ariaDescribedby}
-            {...stylex.props(styles.dialog, ...customStyles)}
-        >
-            {children}
+        <div {...stylex.props(baseStyles.dialog)}>
+            <div {...stylex.props(baseStyles.inner)}>
+                <div
+                    id={id}
+                    role={role}
+                    aria-label={ariaLabel}
+                    aria-describedby={ariaDescribedby}
+                    {...stylex.props(baseStyles.modal, ...styles)}
+                >
+                    <div {...stylex.props(baseStyles.header)}>
+                        <span>dsadsa</span>
+                        <span>Close</span>
+                    </div>
+                    <div {...stylex.props(baseStyles.body)}>{children}</div>
+                    <div {...stylex.props(baseStyles.footer)}>dasdsa</div>
+                </div>
+            </div>
+            <div role="presentation" {...stylex.props(baseStyles.overlay)} />
         </div>
     );
 };

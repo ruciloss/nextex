@@ -2,7 +2,6 @@
 
 import Link from "@/components/UI/Link/Link";
 import { usePathname } from "next/navigation";
-import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Shortcuts.stylex";
 import Navigation from "@/components/UI/Navigation/Navigation";
 import List from "@/components/UI/List/List";
@@ -26,23 +25,23 @@ const Shortcuts = () => {
     const pathname = usePathname();
 
     return (
-        <Navigation ariaLabel="Shortcuts" {...stylex.props(styles.wrapper)}>
-            <List {...stylex.props(styles.list)} ariaLabel="Shortcuts">
+        <Navigation ariaLabel="Shortcuts" styles={[styles.wrapper]}>
+            <List ariaLabel="Shortcuts" styles={[styles.list]}>
                 {navLinks.map(({ href, label, icon: Icon }) => {
                     const isActive = pathname === href;
 
                     return (
                         <List.Item
                             key={href}
-                            {...stylex.props(
+                            styles={[
                                 styles.item,
                                 isActive && styles.linkActive,
-                            )}
+                            ]}
                         >
                             <Link
                                 key={href}
                                 href={href}
-                                customStyles={[
+                                styles={[
                                     styles.link,
                                     isActive && styles.linkActive,
                                 ]}

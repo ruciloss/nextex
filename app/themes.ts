@@ -39,9 +39,9 @@ export const light = stylex.createTheme(colors, {
     shadowG: "0",
     shadowB: "0",
 
-    blackWhiteR: "8",
-    blackWhiteG: "8",
-    blackWhiteB: "9",
+    overlayR: "0",
+    overlayG: "0",
+    overlayB: "0",
 
     primaryR: "8",
     primaryG: "102",
@@ -97,9 +97,9 @@ export const dark = stylex.createTheme(colors, {
     shadowG: "0",
     shadowB: "0",
 
-    blackWhiteR: "226",
-    blackWhiteG: "229",
-    blackWhiteB: "233",
+    overlayR: "0",
+    overlayG: "0",
+    overlayB: "0",
 
     primaryR: "8",
     primaryG: "102",

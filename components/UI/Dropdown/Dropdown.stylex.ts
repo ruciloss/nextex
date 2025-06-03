@@ -1,11 +1,24 @@
 import * as stylex from "@stylexjs/stylex";
-import { spacing } from "../../../app/globalTokens.stylex";
+import { colors, radius, spacing } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
-    dropdown: {},
-    item: {
-        display: "list-item",
-        listStyleType: "disc",
-        marginLeft: spacing.md,
+export const baseStyles = stylex.create({
+    dropdown: {
+        position: "relative",
+    },
+    modal: {
+        backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
+        borderRadius: radius.md,
+        boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .2)`,
+        display: "none",
+        left: 0,
+        marginTop: spacing.xs,
+        minWidth: 360,
+        padding: `${spacing.xs} ${spacing.xxs}`,
+        position: "absolute",
+        zIndex: 2,
+    },
+    item: {},
+    button: {
+        position: "relative",
     },
 });

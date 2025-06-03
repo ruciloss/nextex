@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import { spacing, text } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
+export const baseStyles = stylex.create({
     heading: {
         display: "block",
         fontWeight: 700,

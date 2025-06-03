@@ -9,6 +9,7 @@ export const baseStyles = stylex.create({
         overflowY: "auto",
         padding: "16px",
         position: "fixed",
+        right: 0,
         top: global.headerHeight,
         width: "280px",
     },

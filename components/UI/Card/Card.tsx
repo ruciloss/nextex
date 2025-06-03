@@ -1,29 +1,34 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Card.stylex";
+import { baseStyles } from "./Card.stylex";
 
 type Props = {
     children: ReactNode;
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
-type BodyProps = {
-    children: ReactNode;
-    customStyles?: stylex.StyleXStyles[];
+const Card = ({ children, styles = [] }: Props) => {
+    return <div {...stylex.props(baseStyles.card, ...styles)}>{children}</div>;
 };
 
-const Card = ({ children, customStyles = [] }: Props) => {
+const Header = ({ children, styles = [] }: Props) => {
     return (
-        <div {...stylex.props(styles.card, ...customStyles)}>{children}</div>
+        <div {...stylex.props(baseStyles.header, ...styles)}>{children}</div>
     );
 };
 
-const Body = ({ children, customStyles = [] }: BodyProps) => {
+const Body = ({ children, styles = [] }: Props) => {
+    return <div {...stylex.props(baseStyles.body, ...styles)}>{children}</div>;
+};
+
+const Footer = ({ children, styles = [] }: Props) => {
     return (
-        <div {...stylex.props(styles.body, ...customStyles)}>{children}</div>
+        <div {...stylex.props(baseStyles.footer, ...styles)}>{children}</div>
     );
 };
 
+Card.Header = Header;
 Card.Body = Body;
+Card.Footer = Footer;
 
 export default Card;

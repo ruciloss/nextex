@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Heading.stylex";
+import { baseStyles } from "./Heading.stylex";
 
 type Props = {
     children: React.ReactNode;
@@ -19,11 +19,11 @@ const Heading = ({
     align,
 }: Props) => {
     const stylesArray = [
-        styles.heading,
-        styles[size],
-        weight && styles[weight],
-        align && styles[align],
-        spacing && styles[`marginBottom${spacing}` as keyof typeof styles],
+        baseStyles.heading,
+        baseStyles[size],
+        weight && baseStyles[weight],
+        align && baseStyles[align],
+        spacing && baseStyles[`marginBottom${spacing}` as keyof typeof styles],
     ].filter(Boolean);
 
     const accessibilityProps = level

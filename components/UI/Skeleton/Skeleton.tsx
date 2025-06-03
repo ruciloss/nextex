@@ -1,14 +1,16 @@
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Skeleton.stylex";
+import { baseStyles } from "./Skeleton.stylex";
 
 type Props = {
-    customStyles?: stylex.StyleXStyles[];
+    styles?: stylex.StyleXStyles[];
 };
 
-const Skeleton = ({ customStyles = [] }: Props) => (
+const Skeleton = ({ styles = [] }: Props) => (
     <div
         role="presentation"
-        {...stylex.props(styles.skeleton, ...customStyles)}
+        aria-busy="true"
+        aria-label="Loading..."
+        {...stylex.props(baseStyles.skeleton, ...styles)}
     />
 );
 
