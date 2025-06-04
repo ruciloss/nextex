@@ -20,9 +20,6 @@ const boxStyles = stylex.create({
     radiusLg: {
         borderRadius: radius.lg,
     },
-    radiusXl: {
-        borderRadius: radius.xl,
-    },
 });
 
 const RadiusBoxes = () => {
@@ -32,7 +29,6 @@ const RadiusBoxes = () => {
             <div {...stylex.props(boxStyles.base, boxStyles.radiusSm)}>sm</div>
             <div {...stylex.props(boxStyles.base, boxStyles.radiusMd)}>md</div>
             <div {...stylex.props(boxStyles.base, boxStyles.radiusLg)}>lg</div>
-            <div {...stylex.props(boxStyles.base, boxStyles.radiusXl)}>xl</div>
         </div>
     );
 };
