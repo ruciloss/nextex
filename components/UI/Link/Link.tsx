@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Link.stylex";
 
-type Props = {
+type LinkProps = {
     href: string;
     children: ReactNode;
     ariaLabel: string;
@@ -18,7 +18,7 @@ const isExternalLink = (href: string) => {
     );
 };
 
-const Link = ({ href, children, ariaLabel, styles = [] }: Props) => {
+const Link = ({ href, children, ariaLabel, styles = [] }: LinkProps) => {
     const external = isExternalLink(href);
 
     if (external) {

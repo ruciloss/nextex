@@ -7,10 +7,10 @@ import {
     text,
 } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
+export const baseStyles = stylex.create({
     wrapper: {
         backgroundColor: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
-        borderRadius: radius.xl,
+        borderRadius: radius.lg,
         height: `calc(${global.headerHeight} - ${spacing.xs})`,
         maxWidth: 400,
         position: "relative",

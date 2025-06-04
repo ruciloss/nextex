@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "@/components/UI/Link/Link";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Search.stylex";
+import { baseStyles } from "./Search.stylex";
 import Input from "@/components/UI/Input/Input";
 import Button from "@/components/UI/Button/Button";
 import Heading from "@/components/UI/Heading/Heading";
@@ -66,8 +66,8 @@ const Search = () => {
 
     return (
         <div>
-            <div {...stylex.props(styles.wrapper)}>
-                <div {...stylex.props(styles.inputWrapper)}>
+            <div {...stylex.props(baseStyles.wrapper)}>
+                <div {...stylex.props(baseStyles.inputWrapper)}>
                     <SearchIcon size={16} />
                     <Input
                         type="search"
@@ -78,16 +78,16 @@ const Search = () => {
                         onBlur={() =>
                             setTimeout(() => setIsFocused(false), 150)
                         }
-                        styles={[styles.input]}
+                        styles={[baseStyles.input]}
                     />
                 </div>
             </div>
             <div>
                 {showDropdown && (
-                    <div {...stylex.props(styles.dropdown)}>
+                    <div {...stylex.props(baseStyles.dropdown)}>
                         <Button
                             ariaLabel="Back"
-                            styles={[styles.closeButton]}
+                            styles={[baseStyles.closeButton]}
                             onClick={() => setIsFocused(false)}
                         >
                             <ArrowLeftIcon aria-label="Back" size={20} />
@@ -95,7 +95,7 @@ const Search = () => {
                         <Heading>Recent</Heading>
 
                         {filtered.length === 0 ? (
-                            <div {...stylex.props(styles.notFound)}>
+                            <div {...stylex.props(baseStyles.notFound)}>
                                 <Text>No results found</Text>
                             </div>
                         ) : (
@@ -104,22 +104,24 @@ const Search = () => {
                                     key={item.href}
                                     href={item.href}
                                     ariaLabel={`Link to ${item.label}`}
-                                    {...stylex.props(styles.link)}
+                                    {...stylex.props(baseStyles.link)}
                                 >
-                                    <div {...stylex.props(styles.item)}>
+                                    <div {...stylex.props(baseStyles.item)}>
                                         <item.icon
                                             size={16}
                                             aria-hidden="true"
                                         />
                                         <div>
                                             <span
-                                                {...stylex.props(styles.title)}
+                                                {...stylex.props(
+                                                    baseStyles.title,
+                                                )}
                                             >
                                                 {item.label}
                                             </span>
                                             <span
                                                 {...stylex.props(
-                                                    styles.description,
+                                                    baseStyles.description,
                                                 )}
                                             >
                                                 {item.description}

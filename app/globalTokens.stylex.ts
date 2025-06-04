@@ -206,7 +206,6 @@ const MULT_RADIUS = {
     sm: 0.5,
     md: 0.75,
     lg: 1,
-    xl: 1.5,
 };
 
 const MIN_RADIUS = {
@@ -214,7 +213,6 @@ const MIN_RADIUS = {
     sm: MULT_RADIUS.sm * MIN_BASE_SIZE,
     md: MULT_RADIUS.md * MIN_BASE_SIZE,
     lg: MULT_RADIUS.lg * MIN_BASE_SIZE,
-    xl: MULT_RADIUS.xl * MIN_BASE_SIZE,
 };
 
 const MAX_RADIUS = {
@@ -222,7 +220,6 @@ const MAX_RADIUS = {
     sm: MULT_RADIUS.sm * MAX_BASE_SIZE,
     md: MULT_RADIUS.md * MAX_BASE_SIZE,
     lg: MULT_RADIUS.lg * MAX_BASE_SIZE,
-    xl: MULT_RADIUS.xl * MAX_BASE_SIZE,
 };
 
 const SLOPE_RADIUS = {
@@ -230,7 +227,6 @@ const SLOPE_RADIUS = {
     sm: (MAX_RADIUS.sm - MIN_RADIUS.sm) / (MAX_WIDTH - MIN_WIDTH),
     md: (MAX_RADIUS.md - MIN_RADIUS.md) / (MAX_WIDTH - MIN_WIDTH),
     lg: (MAX_RADIUS.lg - MIN_RADIUS.lg) / (MAX_WIDTH - MIN_WIDTH),
-    xl: (MAX_RADIUS.xl - MIN_RADIUS.xl) / (MAX_WIDTH - MIN_WIDTH),
 };
 
 const INTERCEPT_RADIUS = {
@@ -238,7 +234,6 @@ const INTERCEPT_RADIUS = {
     sm: Math.round(4 * (MIN_RADIUS.sm - SLOPE_RADIUS.sm * MIN_WIDTH)) / 4,
     md: Math.round(4 * (MIN_RADIUS.md - SLOPE_RADIUS.md * MIN_WIDTH)) / 4,
     lg: Math.round(4 * (MIN_RADIUS.lg - SLOPE_RADIUS.lg * MIN_WIDTH)) / 4,
-    xl: Math.round(4 * (MIN_RADIUS.xl - SLOPE_RADIUS.xl * MIN_WIDTH)) / 4,
 };
 
 // prettier-ignore
@@ -247,7 +242,6 @@ export const radius = stylex.defineVars({
     sm: `clamp(${MIN_RADIUS.sm}px, calc(${INTERCEPT_RADIUS.sm}px + ${Math.round(10000 * SLOPE_RADIUS.sm) / 100}vw), ${MAX_RADIUS.sm}px)`,
     md: `clamp(${MIN_RADIUS.md}px, calc(${INTERCEPT_RADIUS.md}px + ${Math.round(10000 * SLOPE_RADIUS.md) / 100}vw), ${MAX_RADIUS.md}px)`,
     lg: `clamp(${MIN_RADIUS.lg}px, calc(${INTERCEPT_RADIUS.lg}px + ${Math.round(10000 * SLOPE_RADIUS.lg) / 100}vw), ${MAX_RADIUS.lg}px)`,
-    xl: `clamp(${MIN_RADIUS.xl}px, calc(${INTERCEPT_RADIUS.xl}px + ${Math.round(10000 * SLOPE_RADIUS.xl) / 100}vw), ${MAX_RADIUS.xl}px)`,
 });
 
 /**
@@ -264,9 +258,13 @@ export const colors = stylex.defineVars({
     foregroundG: { default: "8", [DARK_MODE]: "229" },
     foregroundB: { default: "9", [DARK_MODE]: "233" },
 
-    secondaryTextR: { default: "101", [DARK_MODE]: "176" },
-    secondaryTextG: { default: "104", [DARK_MODE]: "179" },
-    secondaryTextB: { default: "108", [DARK_MODE]: "184" },
+    textSecondaryR: { default: "101", [DARK_MODE]: "176" },
+    textSecondaryG: { default: "104", [DARK_MODE]: "179" },
+    textSecondaryB: { default: "108", [DARK_MODE]: "184" },
+
+    textInheritR: { default: "226", [DARK_MODE]: "8" },
+    textInheritG: { default: "229", [DARK_MODE]: "8" },
+    textInheritB: { default: "233", [DARK_MODE]: "9" },
 
     bgStartR: { default: "242", [DARK_MODE]: "28" },
     bgStartG: { default: "244", [DARK_MODE]: "28" },
@@ -287,6 +285,10 @@ export const colors = stylex.defineVars({
     bgTertiaryHoverR: { default: "213", [DARK_MODE]: "78" },
     bgTertiaryHoverG: { default: "216", [DARK_MODE]: "80" },
     bgTertiaryHoverB: { default: "220", [DARK_MODE]: "80" },
+
+    bgInheritR: { default: "37", [DARK_MODE]: "255" },
+    bgInheritG: { default: "39", [DARK_MODE]: "255" },
+    bgInheritB: { default: "40", [DARK_MODE]: "255" },
 
     borderR: { default: "187", [DARK_MODE]: "101" },
     borderG: { default: "189", [DARK_MODE]: "104" },
@@ -367,19 +369,7 @@ const pulse = stylex.keyframes({
     "100%": { transform: "scale(1)" },
 });
 
-const fadeIn = stylex.keyframes({
-    "0%": { opacity: 0 },
-    "100%": { opacity: 1 },
-});
-
-const fadeOut = stylex.keyframes({
-    "0%": { opacity: 1 },
-    "100%": { opacity: 0 },
-});
-
 export const animations = stylex.defineVars({
     blink,
     pulse,
-    fadeIn,
-    fadeOut,
 });

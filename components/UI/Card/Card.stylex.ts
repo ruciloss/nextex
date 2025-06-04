@@ -7,7 +7,11 @@ export const baseStyles = stylex.create({
         borderRadius: radius.md,
         boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .25)`,
     },
-    header: {},
+    header: {
+        borderTopLeftRadius: "inherit",
+        borderTopRightRadius: "inherit",
+        background: "red",
+    },
     body: {},
     footer: {},
 });

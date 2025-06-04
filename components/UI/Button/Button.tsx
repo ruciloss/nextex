@@ -4,7 +4,7 @@ import { ReactNode, KeyboardEvent } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Button.stylex";
 
-type Props = {
+type ButtonProps = {
     children: ReactNode;
     ariaLabel?: string;
     ariaPressed?: boolean;
@@ -32,7 +32,7 @@ const Button = ({
     onClick,
     onKeyDown,
     styles = [],
-}: Props) => {
+}: ButtonProps) => {
     const handleKeyDown = (e: KeyboardEvent<HTMLSpanElement>) => {
         if (ariaDisabled) {
             e.preventDefault();

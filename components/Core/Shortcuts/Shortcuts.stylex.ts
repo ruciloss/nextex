@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import { colors, spacing, radius } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
+export const baseStyles = stylex.create({
     wrapper: {
         display: {
             default: "inherit",
@@ -34,12 +34,20 @@ export const styles = stylex.create({
             ":hover": `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
         },
         borderRadius: radius.sm,
-        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
-        display: "flex",
+        color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
         gap: spacing.xxxs,
         height: "calc(100% - 8px)",
         justifyContent: "center",
         marginTop: spacing.xxxs,
+        opacity: {
+            default: 1,
+            ":hover > div": 1,
+        },
+        display: {
+            default: "flex",
+            ":hover > div": "flex",
+        },
+        position: "relative",
         textDecoration: "none",
         width: 100,
     },

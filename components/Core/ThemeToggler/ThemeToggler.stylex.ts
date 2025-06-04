@@ -6,7 +6,7 @@ import {
     text,
 } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
+export const baseStyles = stylex.create({
     wrapper: {
         display: "inline-block",
         position: "relative",
@@ -64,7 +64,7 @@ export const styles = stylex.create({
         marginBottom: spacing.xxxs,
     },
     description: {
-        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
+        color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
         display: "block",
     },
     icon: {
@@ -98,7 +98,7 @@ export const styles = stylex.create({
         fontWeight: 600,
     },
     itemDescription: {
-        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
+        color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
         display: "block",
         fontSize: text.xs,
         paddingRight: spacing.sm,

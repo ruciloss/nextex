@@ -1,11 +1,11 @@
 "use client";
 
-import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Breadcrumbs.stylex";
+import { baseStyles } from "./Breadcrumbs.stylex";
 import { usePathname } from "next/navigation";
 import Link from "@/components/UI/Link/Link";
 import Text from "@/components/UI/Text/Text";
 import Navigation from "@/components/UI/Navigation/Navigation";
+import Flex from "@/components/UI/Flex/Flex";
 
 const Breadcrumbs = () => {
     const pathname = usePathname();
@@ -25,15 +25,15 @@ const Breadcrumbs = () => {
     ];
 
     return (
-        <Navigation ariaLabel="Breadcrumbs" styles={[styles.wrapper]}>
-            {breadcrumbs.map((breadcrumb, index) => {
-                const isLast = index === breadcrumbs.length - 1;
+        <Navigation ariaLabel="Breadcrumbs" styles={[baseStyles.breadcrumbs]}>
+            <Flex>
+                {breadcrumbs.map((breadcrumb, index) => {
+                    const isLast = index === breadcrumbs.length - 1;
 
-                return (
-                    <div key={index}>
-                        <span>
+                    return (
+                        <div key={index}>
                             {isLast ? (
-                                <Text>{breadcrumb.label}</Text>
+                                <Text size="small">{breadcrumb.label}</Text>
                             ) : (
                                 <Link
                                     href={breadcrumb.href}
@@ -42,15 +42,18 @@ const Breadcrumbs = () => {
                                     {breadcrumb.label}
                                 </Link>
                             )}
-                        </span>
-                        {!isLast && (
-                            <span {...stylex.props(styles.divider)}>
-                                &bull;
-                            </span>
-                        )}
-                    </div>
-                );
-            })}
+                            {!isLast && (
+                                <Text
+                                    size="small"
+                                    styles={[baseStyles.divider]}
+                                >
+                                    &bull;
+                                </Text>
+                            )}
+                        </div>
+                    );
+                })}
+            </Flex>
         </Navigation>
     );
 };

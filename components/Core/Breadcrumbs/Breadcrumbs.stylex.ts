@@ -1,11 +1,8 @@
 import * as stylex from "@stylexjs/stylex";
-import { spacing, text } from "../../../app/globalTokens.stylex";
+import { spacing } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
-    wrapper: {
-        alignItems: "center",
-        display: "flex",
-        fontSize: text.xs,
+export const baseStyles = stylex.create({
+    breadcrumbs: {
         textTransform: "capitalize",
     },
     divider: {

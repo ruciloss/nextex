@@ -2,9 +2,11 @@
 
 import Link from "@/components/UI/Link/Link";
 import { usePathname } from "next/navigation";
-import { styles } from "./Shortcuts.stylex";
+import { baseStyles } from "./Shortcuts.stylex";
 import Navigation from "@/components/UI/Navigation/Navigation";
 import List from "@/components/UI/List/List";
+import Tooltip from "@/components/UI/Tooltip/Tooltip";
+
 import {
     OctagonAlertIcon,
     BadgeCheckIcon,
@@ -25,8 +27,8 @@ const Shortcuts = () => {
     const pathname = usePathname();
 
     return (
-        <Navigation ariaLabel="Shortcuts" styles={[styles.wrapper]}>
-            <List ariaLabel="Shortcuts" styles={[styles.list]}>
+        <Navigation ariaLabel="Shortcuts" styles={[baseStyles.wrapper]}>
+            <List ariaLabel="Shortcuts" styles={[baseStyles.list]}>
                 {navLinks.map(({ href, label, icon: Icon }) => {
                     const isActive = pathname === href;
 
@@ -34,20 +36,21 @@ const Shortcuts = () => {
                         <List.Item
                             key={href}
                             styles={[
-                                styles.item,
-                                isActive && styles.linkActive,
+                                baseStyles.item,
+                                isActive && baseStyles.linkActive,
                             ]}
                         >
                             <Link
                                 key={href}
                                 href={href}
                                 styles={[
-                                    styles.link,
-                                    isActive && styles.linkActive,
+                                    baseStyles.link,
+                                    isActive && baseStyles.linkActive,
                                 ]}
                                 ariaLabel={`Link to ${label}`}
                             >
                                 <Icon size={24} />
+                                <Tooltip>{label}</Tooltip>
                             </Link>
                         </List.Item>
                     );

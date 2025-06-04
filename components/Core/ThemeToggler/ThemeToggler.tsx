@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./ThemeToggler.stylex";
+import { baseStyles } from "./ThemeToggler.stylex";
 import { ChevronDown, Monitor, Moon, Sun } from "lucide-react";
 
 const options = [
@@ -48,7 +48,7 @@ const ThemeToggler = () => {
     }, []);
 
     return (
-        <div {...stylex.props(styles.wrapper)}>
+        <div {...stylex.props(baseStyles.wrapper)}>
             <span
                 role="button"
                 tabIndex={0}
@@ -60,44 +60,29 @@ const ThemeToggler = () => {
                         setOpen((prev) => !prev);
                     }
                 }}
-                {...stylex.props(styles.button)}
+                {...stylex.props(baseStyles.button)}
             >
                 {currentOption?.icon ? (
-                    <currentOption.icon
-                        width={20}
-                        height={20}
-                        strokeWidth={2}
-                        aria-hidden="true"
-                    />
+                    <currentOption.icon size={20} strokeWidth={2} />
                 ) : (
-                    <Monitor
-                        width={20}
-                        height={20}
-                        strokeWidth={2}
-                        aria-hidden="true"
-                    />
+                    <Monitor size={20} strokeWidth={2} />
                 )}
-                <span {...stylex.props(styles.arrow)}>
+                <span {...stylex.props(baseStyles.arrow)}>
                     <ChevronDown strokeWidth={4} aria-hidden="true" />
                 </span>
             </span>
 
             {open && (
-                <div {...stylex.props(styles.dropdown)} ref={dropdownRef}>
-                    <div {...stylex.props(styles.header)}>
-                        <span {...stylex.props(styles.icon)}>
-                            <Moon
-                                width={20}
-                                height={20}
-                                strokeWidth={2}
-                                aria-hidden="true"
-                            />
+                <div {...stylex.props(baseStyles.dropdown)} ref={dropdownRef}>
+                    <div {...stylex.props(baseStyles.header)}>
+                        <span {...stylex.props(baseStyles.icon)}>
+                            <Moon size={20} strokeWidth={2} />
                         </span>
                         <div>
-                            <span {...stylex.props(styles.heading)}>
+                            <span {...stylex.props(baseStyles.heading)}>
                                 Dark mode
                             </span>
-                            <span {...stylex.props(styles.description)}>
+                            <span {...stylex.props(baseStyles.description)}>
                                 Adjust the appearance of the website to reduce
                                 glare and give your eyes a break.
                             </span>
@@ -110,7 +95,7 @@ const ThemeToggler = () => {
                         return (
                             <div
                                 key={opt.value}
-                                {...stylex.props(styles.item)}
+                                {...stylex.props(baseStyles.item)}
                                 role="button"
                                 tabIndex={0}
                                 aria-pressed={isSelected}
@@ -135,17 +120,19 @@ const ThemeToggler = () => {
                                     }
                                 }}
                             >
-                                <div {...stylex.props(styles.itemContent)}>
+                                <div {...stylex.props(baseStyles.itemContent)}>
                                     <div>
                                         <span
-                                            {...stylex.props(styles.itemTitle)}
+                                            {...stylex.props(
+                                                baseStyles.itemTitle,
+                                            )}
                                         >
                                             {opt.label}
                                         </span>
                                         {opt.description && (
                                             <span
                                                 {...stylex.props(
-                                                    styles.itemDescription,
+                                                    baseStyles.itemDescription,
                                                 )}
                                             >
                                                 {opt.description}
@@ -154,8 +141,9 @@ const ThemeToggler = () => {
                                     </div>
                                     <input
                                         {...stylex.props(
-                                            styles.radio,
-                                            isSelected && styles.radioSelected,
+                                            baseStyles.radio,
+                                            isSelected &&
+                                                baseStyles.radioSelected,
                                         )}
                                         type="radio"
                                         aria-checked={

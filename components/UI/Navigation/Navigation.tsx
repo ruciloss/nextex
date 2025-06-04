@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Navigation.stylex";
 
-type Props = {
+type NavigationProps = {
     children: ReactNode;
     ariaLabel: string;
     styles?: stylex.StyleXStyles[];
 };
 
-const Navigation = ({ children, ariaLabel, styles = [] }: Props) => {
+const Navigation = ({ children, ariaLabel, styles = [] }: NavigationProps) => {
     return (
         <div
             role="navigation"

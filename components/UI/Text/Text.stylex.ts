@@ -2,7 +2,9 @@ import * as stylex from "@stylexjs/stylex";
 import { spacing, text, colors } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
-    text: {},
+    text: {
+        color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
+    },
 
     t: {
         display: "block",
@@ -25,7 +27,7 @@ export const baseStyles = stylex.create({
         color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
     },
     secondary: {
-        color: `rgba(${colors.secondaryTextR}, ${colors.secondaryTextG}, ${colors.secondaryTextB}, 1)`,
+        color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
     },
     error: {
         color: `rgba(${colors.errorR}, ${colors.errorG}, ${colors.errorB}, 1)`,

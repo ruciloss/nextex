@@ -85,7 +85,6 @@ const DropdownButton = ({ children, styles = [] }: ButtonProps) => {
     );
 };
 
-// Namespace
 Dropdown.Item = DropdownItem;
 Dropdown.Button = DropdownButton;
 Dropdown.Modal = DropdownModal;

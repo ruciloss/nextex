@@ -16,7 +16,7 @@ type InputType =
     | "radio"
     | "file";
 
-type Props = {
+type InputProps = {
     type: InputType;
     id?: string;
     name?: string;
@@ -33,7 +33,6 @@ type Props = {
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
     styles?: stylex.StyleXStyles[];
 };
-
 const Input = ({
     type,
     id,
@@ -50,7 +49,17 @@ const Input = ({
     onFocus,
     onBlur,
     styles = [],
-}: Props) => {
+}: InputProps) => {
+    let typeStyles: stylex.StyleXStyles[] = [];
+
+    if (type === "radio") {
+        typeStyles = [baseStyles.radio];
+    } else if (type === "checkbox") {
+        typeStyles = [baseStyles.checkbox];
+    } else {
+        typeStyles = [baseStyles.inputText];
+    }
+
     return (
         <label>
             <input
@@ -70,7 +79,7 @@ const Input = ({
                 onChange={onChange}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                {...stylex.props(baseStyles.input, ...styles)}
+                {...stylex.props(baseStyles.input, ...typeStyles, ...styles)}
             />
         </label>
     );

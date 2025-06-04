@@ -2,26 +2,41 @@ import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Card.stylex";
 
-type Props = {
+type CardProps = {
     children: ReactNode;
     styles?: stylex.StyleXStyles[];
 };
 
-const Card = ({ children, styles = [] }: Props) => {
+type HeaderProps = {
+    children: ReactNode;
+    styles?: stylex.StyleXStyles[];
+};
+
+type BodyProps = {
+    children: ReactNode;
+    styles?: stylex.StyleXStyles[];
+};
+
+type FooterProps = {
+    children: ReactNode;
+    styles?: stylex.StyleXStyles[];
+};
+
+const Card = ({ children, styles = [] }: CardProps) => {
     return <div {...stylex.props(baseStyles.card, ...styles)}>{children}</div>;
 };
 
-const Header = ({ children, styles = [] }: Props) => {
+const Header = ({ children, styles = [] }: HeaderProps) => {
     return (
         <div {...stylex.props(baseStyles.header, ...styles)}>{children}</div>
     );
 };
 
-const Body = ({ children, styles = [] }: Props) => {
+const Body = ({ children, styles = [] }: BodyProps) => {
     return <div {...stylex.props(baseStyles.body, ...styles)}>{children}</div>;
 };
 
-const Footer = ({ children, styles = [] }: Props) => {
+const Footer = ({ children, styles = [] }: FooterProps) => {
     return (
         <div {...stylex.props(baseStyles.footer, ...styles)}>{children}</div>
     );

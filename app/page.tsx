@@ -9,12 +9,16 @@ import Input from "@/components/UI/Input/Input";
 import List from "@/components/UI/List/List";
 import Dropdown from "@/components/UI/Dropdown/Dropdown";
 import Navigation from "@/components/UI/Navigation/Navigation";
-import Progressbar from "@/components/UI/Progressbar/Progressbar";
+import Progress from "@/components/UI/Progress/Progress";
 import Skeleton from "@/components/UI/Skeleton/Skeleton";
 import Tooltip from "@/components/UI/Tooltip/Tooltip";
 import Dialog from "@/components/UI/Dialog/Dialog";
 import Form from "@/components/UI/Form/Form";
 import Image from "@/components/UI/Image/Image";
+import Flex from "@/components/UI/Flex/Flex";
+import Icon from "@/components/UI/Icon/Icon";
+import Test from "./borderradius";
+import { ChevronDown } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -25,6 +29,7 @@ export const metadata: Metadata = {
 const Homepage = () => {
     return (
         <Feed>
+            <Test />
             <div>
                 <Heading level={1}>NexteX</Heading>
                 <Text>
@@ -35,7 +40,13 @@ const Homepage = () => {
 
             <div>
                 <Heading level={2}>Input</Heading>
-                <Input type="text" placeholder="Enter text" />
+                <Input type="radio" name="group1" value="option1" />
+                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
+
+                <Heading level={2}>Icon</Heading>
+                <Icon>
+                    <ChevronDown />
+                </Icon>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Button</Heading>
@@ -53,15 +64,21 @@ const Homepage = () => {
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Dialog</Heading>
-                <Dialog>Dialog</Dialog>
+                <Dialog id="custom-dialog" ariaLabel="Custom dialog">
+                    <Dialog.Header>Nadpis dialogu</Dialog.Header>
+                    <Dialog.Body>Obsah dialogu</Dialog.Body>
+                    <Dialog.Footer>
+                        <button>Zavřít</button>
+                    </Dialog.Footer>
+                </Dialog>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Form</Heading>
                 <Form>Form</Form>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
-                <Heading level={2}>Progress bar</Heading>
-                <Progressbar />
+                <Heading level={2}>Progress (Loading)</Heading>
+                <Progress />
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Image</Heading>
@@ -75,18 +92,31 @@ const Homepage = () => {
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Tooltip</Heading>
-                <Tooltip>Tooltip</Tooltip>
+                <Tooltip>This is the tooltip</Tooltip>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>List</Heading>
                 <List ariaLabel="List">
                     <List.Item>
+                        <Icon>
+                            <ChevronDown />
+                        </Icon>
                         <Text>ListItem1</Text>
                     </List.Item>
                     <List.Item>
-                        <Text>ListItem2</Text>
+                        <Flex gap={1}>
+                            <Link href="/" ariaLabel="Test">
+                                <Icon>
+                                    <ChevronDown />
+                                </Icon>
+                                <Text>ListItem2</Text>
+                            </Link>
+                        </Flex>
                     </List.Item>
                     <List.Item>
+                        <Icon>
+                            <ChevronDown />
+                        </Icon>
                         <Text>ListItem3</Text>
                     </List.Item>
                 </List>
@@ -117,11 +147,34 @@ const Homepage = () => {
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Card</Heading>
-                <Card>
-                    <Card.Header>CardHeader</Card.Header>
-                    <Card.Body>CardBody</Card.Body>
-                    <Card.Footer>CardFooter</Card.Footer>
-                </Card>
+                <Flex>
+                    <Card>
+                        <Card.Header>
+                            <Heading>Text</Heading>
+                        </Card.Header>
+                        <Card.Body>
+                            <Image
+                                src="https://static.xx.fbcdn.net/assets/?set=help_center_about_page_illustrations&name=desktop-groups-icon&density=1"
+                                alt="Image"
+                            />
+                            <Text>Text</Text>
+                        </Card.Body>
+                        <Card.Footer>CardFooter</Card.Footer>
+                    </Card>
+                    <Card>
+                        <Card.Header>
+                            <Heading>Text</Heading>
+                        </Card.Header>
+                        <Card.Body>
+                            <Image
+                                src="https://static.xx.fbcdn.net/assets/?set=help_center_about_page_illustrations&name=desktop-groups-icon&density=1"
+                                alt="Image"
+                            />
+                            <Text>Text</Text>
+                        </Card.Body>
+                        <Card.Footer>CardFooter</Card.Footer>
+                    </Card>
+                </Flex>
             </div>
         </Feed>
     );

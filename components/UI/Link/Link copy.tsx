@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Link.stylex";
+import { baseStyles } from "./Link.stylex";
 import NextLink from "next/link";
 
 type Props = {
@@ -35,21 +35,23 @@ const Link = ({
     const isButtonVariant = variant.startsWith("btn");
     const isBtnCircle = variant === "btnCircle";
 
-    const wrapperStyles = [
-        styles.displayblock,
-        align && styles[`${align}` as keyof typeof styles],
-        spacing && styles[`marginBottom${spacing}` as keyof typeof styles],
+    const wrapperbaseStyles = [
+        baseStyles.displayblock,
+        align && baseStyles[`${align}` as keyof typeof baseStyles],
+        spacing &&
+            baseStyles[`marginBottom${spacing}` as keyof typeof baseStyles],
     ].filter(Boolean);
 
-    const linkStyles = [
-        styles.link,
-        isButtonVariant && styles.btn,
-        styles[variant],
-        weight && styles.fontWeightBold,
-        !isBtnCircle && styles[`display${display}` as keyof typeof styles],
+    const linkbaseStyles = [
+        baseStyles.link,
+        isButtonVariant && baseStyles.btn,
+        baseStyles[variant],
+        weight && baseStyles.fontWeightBold,
+        !isBtnCircle &&
+            baseStyles[`display${display}` as keyof typeof baseStyles],
     ].filter(Boolean);
 
-    const commonProps = stylex.props(...linkStyles);
+    const commonProps = stylex.props(...linkbaseStyles);
 
     const linkElement = external ? (
         <a
@@ -75,7 +77,7 @@ const Link = ({
         </NextLink>
     );
 
-    return <span {...stylex.props(...wrapperStyles)}>{linkElement}</span>;
+    return <span {...stylex.props(...wrapperbaseStyles)}>{linkElement}</span>;
 };
 
 export default Link;

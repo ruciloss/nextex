@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Feed.stylex";
+import { baseStyles } from "./Feed.stylex";
 
 type FeedProps = {
     children: React.ReactNode;
@@ -7,7 +7,7 @@ type FeedProps = {
 
 const Feed = ({ children }: FeedProps) => {
     return (
-        <div role="main" {...stylex.props(styles.wrapper)}>
+        <div role="main" {...stylex.props(baseStyles.feed)}>
             {children}
         </div>
     );

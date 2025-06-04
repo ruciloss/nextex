@@ -1,8 +1,8 @@
 import * as stylex from "@stylexjs/stylex";
 import { colors, global, spacing } from "../../../app/globalTokens.stylex";
 
-export const styles = stylex.create({
-    wrapper: {
+export const baseStyles = stylex.create({
+    header: {
         alignItems: "center",
         backdropFilter: "blur(6px)",
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, .75)`,
@@ -20,11 +20,6 @@ export const styles = stylex.create({
         top: 0,
         width: "100%",
         zIndex: 2,
-    },
-    wrapperInner: {
-        alignItems: "center",
-        display: "flex",
-        gap: spacing.xxs,
     },
     logo: {
         borderRadius: "50%",

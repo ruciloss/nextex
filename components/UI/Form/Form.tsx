@@ -2,7 +2,7 @@ import { ReactNode, FormEvent } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Form.stylex";
 
-type Props = {
+type FormProps = {
     children: ReactNode;
     ariaLabelledby?: string;
     ariaDescribedby?: string;
@@ -18,7 +18,7 @@ const Form = ({
     ariaBusy,
     onSubmit,
     styles = [],
-}: Props) => {
+}: FormProps) => {
     return (
         <form
             onSubmit={onSubmit}

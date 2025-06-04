@@ -1,23 +1,24 @@
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Footer.stylex";
+import { baseStyles } from "./Footer.stylex";
+import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
 import Text from "@/components/UI/Text/Text";
 import Link from "@/components/UI/Link/Link";
-import Breadcrumbs from "@/components/Core/Breadcrumbs/Breadcrumbs";
+import Flex from "@/components/UI/Flex/Flex";
 
 const Footer = () => (
-    <div role="contentinfo" {...stylex.props(styles.wrapper)}>
-        <div {...stylex.props(styles.item)}>
-            <Text>Created by Ruciloss &copy; {new Date().getFullYear()}</Text>
-        </div>
-        <div {...stylex.props(styles.item)}>
+    <div role="contentinfo" {...stylex.props(baseStyles.footer)}>
+        <Flex gap={1}>
+            <Text size="small">
+                Created by Ruciloss &copy; {new Date().getFullYear()}
+            </Text>
             <Link href="/mit" ariaLabel="Link to License MIT">
                 License MIT
             </Link>
-            <Text>&bull;</Text>
-            <Text>v1.0.0</Text>
-            <Text>&bull;</Text>
+            <Text size="small">&bull;</Text>
+            <Text size="small">v1.0.0</Text>
+            <Text size="small">&bull;</Text>
             <Breadcrumbs />
-        </div>
+        </Flex>
     </div>
 );
 

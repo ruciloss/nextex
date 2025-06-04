@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./List.stylex";
 
-type Props = {
+type ListProps = {
     children: ReactNode;
     ariaLabel: string;
     styles?: stylex.StyleXStyles[];
@@ -13,7 +13,7 @@ type ItemProps = {
     styles?: stylex.StyleXStyles[];
 };
 
-const List = ({ children, ariaLabel, styles = [] }: Props) => {
+const List = ({ children, ariaLabel, styles = [] }: ListProps) => {
     return (
         <div
             role="list"

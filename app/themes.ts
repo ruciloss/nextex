@@ -7,9 +7,13 @@ export const light = stylex.createTheme(colors, {
     foregroundG: "8",
     foregroundB: "9",
 
-    secondaryTextR: "101",
-    secondaryTextG: "104",
-    secondaryTextB: "108",
+    textSecondaryR: "101",
+    textSecondaryG: "104",
+    textSecondaryB: "108",
+
+    textInheritR: "226",
+    textInheritG: "229",
+    textInheritB: "233",
 
     bgStartR: "214",
     bgStartG: "219",
@@ -30,6 +34,10 @@ export const light = stylex.createTheme(colors, {
     bgTertiaryHoverR: "213",
     bgTertiaryHoverG: "216",
     bgTertiaryHoverB: "220",
+
+    bgInheritR: "0",
+    bgInheritG: "0",
+    bgInheritB: "0",
 
     borderR: "187",
     borderG: "189",
@@ -65,9 +73,13 @@ export const dark = stylex.createTheme(colors, {
     foregroundG: "229",
     foregroundB: "233",
 
-    secondaryTextR: "176",
-    secondaryTextG: "179",
-    secondaryTextB: "184",
+    textSecondaryR: "176",
+    textSecondaryG: "179",
+    textSecondaryB: "184",
+
+    textInheritR: "8",
+    textInheritG: "8",
+    textInheritB: "9",
 
     bgStartR: "28",
     bgStartG: "28",
@@ -88,6 +100,10 @@ export const dark = stylex.createTheme(colors, {
     bgTertiaryHoverR: "78",
     bgTertiaryHoverG: "80",
     bgTertiaryHoverB: "80",
+
+    bgInheritR: "255",
+    bgInheritG: "255",
+    bgInheritB: "255",
 
     borderR: "101",
     borderG: "104",
