@@ -153,10 +153,6 @@ const Homepage = () => {
                             <Heading>Text</Heading>
                         </Card.Header>
                         <Card.Body>
-                            <Image
-                                src="https://static.xx.fbcdn.net/assets/?set=help_center_about_page_illustrations&name=desktop-groups-icon&density=1"
-                                alt="Image"
-                            />
                             <Text>Text</Text>
                         </Card.Body>
                         <Card.Footer>CardFooter</Card.Footer>
@@ -166,10 +162,6 @@ const Homepage = () => {
                             <Heading>Text</Heading>
                         </Card.Header>
                         <Card.Body>
-                            <Image
-                                src="https://static.xx.fbcdn.net/assets/?set=help_center_about_page_illustrations&name=desktop-groups-icon&density=1"
-                                alt="Image"
-                            />
                             <Text>Text</Text>
                         </Card.Body>
                         <Card.Footer>CardFooter</Card.Footer>
