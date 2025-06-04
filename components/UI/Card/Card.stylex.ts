@@ -10,7 +10,6 @@ export const baseStyles = stylex.create({
     header: {
         borderTopLeftRadius: "inherit",
         borderTopRightRadius: "inherit",
-        background: "red",
     },
     body: {},
     footer: {},
