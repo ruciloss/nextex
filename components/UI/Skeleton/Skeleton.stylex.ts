@@ -1,9 +1,9 @@
 import * as stylex from "@stylexjs/stylex";
-import { animations, colors } from "../../../app/globalTokens.stylex";
+import { animations, colors, duration } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     skeleton: {
-        animationDuration: "2s",
+        animationDuration: duration.fast,
         animationIterationCount: "infinite",
         animationName: animations.blink,
         animationTimingFunction: "ease-in-out",

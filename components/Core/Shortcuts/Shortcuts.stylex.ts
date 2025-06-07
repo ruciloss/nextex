@@ -19,7 +19,6 @@ export const baseStyles = stylex.create({
         display: "flex",
         gap: spacing.sm,
         height: "inherit",
-        listStyle: "none",
     },
     item: {
         borderBottomColor: "transparent",

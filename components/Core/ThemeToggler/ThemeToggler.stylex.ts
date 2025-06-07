@@ -33,7 +33,7 @@ export const baseStyles = stylex.create({
         borderRadius: "50%",
         borderStyle: "solid",
         borderWidth: 2,
-        bottom: 0,
+        bottom: -3,
         display: "flex",
         height: 14,
         justifyContent: "center",

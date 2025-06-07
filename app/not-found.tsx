@@ -1,32 +1,24 @@
 "use client";
 
-import * as stylex from "@stylexjs/stylex";
-import { spacing } from "./globalTokens.stylex";
 import Inner from "@/components/Layout/Feed/Feed";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
 import Link from "@/components/UI/Link/Link";
 import { FileLock2Icon } from "lucide-react";
-
-export const styles = stylex.create({
-    icon: {
-        display: "block",
-        margin: "auto",
-        marginBottom: spacing.xs,
-    },
-});
+import Icon from "@/components/UI/Icon/Icon";
+import Flex from "@/components/UI/Flex/Flex";
 
 const NotFound = () => {
     return (
         <Inner>
-            <div>
-                <FileLock2Icon
-                    size={60}
-                    strokeWidth={1.5}
-                    {...stylex.props(styles.icon)}
-                />
+            <Flex gap={5} column={true}>
+                <Flex justify="center">
+                    <Icon color="secondary">
+                        <FileLock2Icon size={56} strokeWidth={1.5} />
+                    </Icon>
+                </Flex>
 
-                <Heading level={1}>
+                <Heading level={1} size={6} align="center">
                     This content isn&apos;t available right now.
                 </Heading>
 
@@ -39,7 +31,7 @@ const NotFound = () => {
                 <Link href="/" ariaLabel="Link to Homepage">
                     Go to Homepage
                 </Link>
-            </div>
+            </Flex>
         </Inner>
     );
 };

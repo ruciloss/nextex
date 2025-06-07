@@ -2,31 +2,68 @@ import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Sidebar.stylex";
 import List from "@/components/UI/List/List";
 import Footer from "@/components/Layout/Footer/Footer";
+import Flex from "@/components/UI/Flex/Flex";
+import Icon from "@/components/UI/Icon/Icon";
+import Link from "@/components/UI/Link/Link";
+import Text from "@/components/UI/Text/Text";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 type SidebarProps = {
-    children: React.ReactNode;
     ariaLabel: string;
     role: string;
     styles?: stylex.StyleXStyles[];
+    align?: "right";
 };
 
-const Sidebar = ({ children, ariaLabel, role, styles = [] }: SidebarProps) => {
+const Sidebar = ({ ariaLabel, role, styles = [], align }: SidebarProps) => {
+    const alignStyles = {
+        right: baseStyles.siderbarRight,
+    };
+
     return (
         <div
             aria-label={ariaLabel}
             role={role}
-            {...stylex.props(baseStyles.sidebar, ...styles)}
+            {...stylex.props(
+                baseStyles.sidebar,
+                align ? alignStyles[align] : undefined,
+                ...styles,
+            )}
         >
             <List ariaLabel="List">
-                <List.Item>d</List.Item>
-
-                <List.Item>d</List.Item>
-
-                <List.Item>dasdsa</List.Item>
+                <List.Item>
+                    <Link href="/" ariaLabel="Test">
+                        <Flex gap={2}>
+                            <Icon bg="secondary">
+                                <ChevronDown />
+                            </Icon>
+                            <Text>ListItem2</Text>
+                            <ChevronRight />
+                        </Flex>
+                    </Link>
+                </List.Item>
+                <List.Item>
+                    <Link href="/" ariaLabel="Test">
+                        <Flex gap={2}>
+                            <Icon>
+                                <ChevronDown />
+                            </Icon>
+                            <Text>ListItem2</Text>
+                        </Flex>
+                    </Link>
+                </List.Item>
+                <List.Item>
+                    <Link href="/" ariaLabel="Test">
+                        <Flex gap={2}>
+                            <Icon>
+                                <ChevronDown />
+                            </Icon>
+                            <Text>ListItem2</Text>
+                        </Flex>
+                    </Link>
+                </List.Item>
             </List>
             <Footer />
-
-            {children}
         </div>
     );
 };

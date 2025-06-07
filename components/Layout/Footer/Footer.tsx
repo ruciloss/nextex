@@ -7,12 +7,12 @@ import Flex from "@/components/UI/Flex/Flex";
 
 const Footer = () => (
     <div role="contentinfo" {...stylex.props(baseStyles.footer)}>
-        <Flex gap={1}>
+        <Flex gap={1} wrap={true}>
             <Text size="small">
                 Created by Ruciloss &copy; {new Date().getFullYear()}
             </Text>
-            <Link href="/mit" ariaLabel="Link to License MIT">
-                License MIT
+            <Link href="/mit" ariaLabel="Link to License MIT" size="small">
+                <Text>License MIT</Text>
             </Link>
             <Text size="small">&bull;</Text>
             <Text size="small">v1.0.0</Text>

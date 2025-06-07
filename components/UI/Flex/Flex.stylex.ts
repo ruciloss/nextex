@@ -7,7 +7,13 @@ export const baseStyles = stylex.create({
         display: "flex",
     },
 
-    wrap: { flex: "wrap" },
+    wrap: { flexWrap: "wrap" },
+
+    column: { flexDirection: "column" },
+
+    justifyCenter: { justifyContent: "center" },
+    justifyEnd: { justifyContent: "flex-end" },
+    justifyBetween: { justifyContent: "space-between" },
 
     gap1: { gap: spacing.xxxs },
     gap2: { gap: spacing.xxs },
@@ -18,4 +24,5 @@ export const baseStyles = stylex.create({
     gap7: { gap: spacing.xl },
     gap8: { gap: spacing.xxl },
     gap9: { gap: spacing.xxxl },
+    gap10: { gap: spacing.xxxxl },
 });

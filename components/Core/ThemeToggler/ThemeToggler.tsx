@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import * as stylex from "@stylexjs/stylex";
+import Icon from "@/components/UI/Icon/Icon";
 import { baseStyles } from "./ThemeToggler.stylex";
 import { ChevronDown, Monitor, Moon, Sun } from "lucide-react";
 
@@ -62,11 +63,7 @@ const ThemeToggler = () => {
                 }}
                 {...stylex.props(baseStyles.button)}
             >
-                {currentOption?.icon ? (
-                    <currentOption.icon size={20} strokeWidth={2} />
-                ) : (
-                    <Monitor size={20} strokeWidth={2} />
-                )}
+                {currentOption?.icon ? <currentOption.icon /> : <Monitor />}
                 <span {...stylex.props(baseStyles.arrow)}>
                     <ChevronDown strokeWidth={4} aria-hidden="true" />
                 </span>
@@ -76,7 +73,9 @@ const ThemeToggler = () => {
                 <div {...stylex.props(baseStyles.dropdown)} ref={dropdownRef}>
                     <div {...stylex.props(baseStyles.header)}>
                         <span {...stylex.props(baseStyles.icon)}>
-                            <Moon size={20} strokeWidth={2} />
+                            <Icon>
+                                <Moon />
+                            </Icon>
                         </span>
                         <div>
                             <span {...stylex.props(baseStyles.heading)}>

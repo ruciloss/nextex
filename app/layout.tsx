@@ -6,20 +6,20 @@ import { styles } from "./layout.stylex";
 import { ThemeProvider, useTheme } from "@/contexts/ThemeContext";
 import { light, dark } from "./themes";
 import SelfXSSWarning from "@/components/Core/SelfXSSWarning";
-import Progress from "@/components/UI/Progress/Progress";
+import RouteChangeProgress from "@/components/Core/RouteChangeProgress";
 import Header from "@/components/Layout/Header/Header";
-import Container from "@/components/Layout/Container/Wrapper";
+import Container from "@/components/Layout/Container/Container";
 import Sidebar from "@/components/Layout/Sidebar/Sidebar";
 
-const Root = ({ children }: { children: React.ReactNode }) => {
+const App = ({ children }: { children: React.ReactNode }) => {
     return (
         <ThemeProvider>
-            <RootLayout>{children}</RootLayout>
+            <Layout>{children}</Layout>
         </ThemeProvider>
     );
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
     const { theme } = useTheme();
 
     return (
@@ -37,13 +37,16 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             )}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
-                <Progress />
+                <RouteChangeProgress />
                 <Header />
                 <Container>
-                    <Sidebar ariaLabel="Shortcuts" role="navigation">
-                        d
-                    </Sidebar>
+                    <Sidebar ariaLabel="Shortcuts" role="navigation" />
                     {children}
+                    <Sidebar
+                        ariaLabel="Shortcuts"
+                        role="navigation"
+                        align="right"
+                    />
                 </Container>
                 <SelfXSSWarning />
             </body>
@@ -51,4 +54,4 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     );
 };
 
-export default Root;
+export default App;

@@ -38,6 +38,7 @@ const Breadcrumbs = () => {
                                 <Link
                                     href={breadcrumb.href}
                                     ariaLabel={breadcrumb.label}
+                                    size="small"
                                 >
                                     {breadcrumb.label}
                                 </Link>

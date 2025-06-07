@@ -1,10 +1,15 @@
 import * as stylex from "@stylexjs/stylex";
-import { global } from "../../../app/globalTokens.stylex";
+import { spacing } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     feed: {
-        margin: `${global.headerHeight} auto 0 auto`,
+        gridArea: "feed",
+        marginLeft: "auto",
+        marginRight: "auto",
         maxWidth: 600,
-        padding: `0 32px`,
+        paddingBottom: spacing.xs,
+        paddingLeft: spacing.md,
+        paddingRight: spacing.md,
+        paddingTop: spacing.xs,
     },
 });

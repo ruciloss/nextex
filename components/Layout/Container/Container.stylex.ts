@@ -1,10 +1,11 @@
 import * as stylex from "@stylexjs/stylex";
-import { global } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     container: {
-        display: "flex",
-        marginTop: global.headerHeight,
+        display: "grid",
+        gridTemplateAreas: `"header header header" "left feed right"`,
+        gridTemplateColumns: "minmax(280px, 360px) 1fr minmax(280px, 360px)",
+        gridTemplateRows: "56px 1fr",
         minHeight: "100vh",
     },
 });

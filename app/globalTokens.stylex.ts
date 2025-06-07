@@ -357,6 +357,12 @@ export const transitions = stylex.defineVars({
     slow: "all 0.6s ease-in-out",
 });
 
+export const duration = stylex.defineVars({
+    fast: "1s",
+    medium: "1.5s",
+    slow: "2s",
+});
+
 const blink = stylex.keyframes({
     "0%": { opacity: 1 },
     "50%": { opacity: 0.65 },
@@ -369,7 +375,19 @@ const pulse = stylex.keyframes({
     "100%": { transform: "scale(1)" },
 });
 
+const loading = stylex.keyframes({
+    "0%": { width: "0%" },
+    "100%": { width: "100%" },
+});
+
+const rotate = stylex.keyframes({
+    "0%": { transform: "rotate(0deg)" },
+    "100%": { transform: "rotate(360deg)" },
+});
+
 export const animations = stylex.defineVars({
     blink,
     pulse,
+    loading,
+    rotate,
 });

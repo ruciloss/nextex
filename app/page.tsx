@@ -8,16 +8,12 @@ import Link from "@/components/UI/Link/Link";
 import Input from "@/components/UI/Input/Input";
 import List from "@/components/UI/List/List";
 import Dropdown from "@/components/UI/Dropdown/Dropdown";
-import Navigation from "@/components/UI/Navigation/Navigation";
 import Progress from "@/components/UI/Progress/Progress";
 import Skeleton from "@/components/UI/Skeleton/Skeleton";
-import Tooltip from "@/components/UI/Tooltip/Tooltip";
 import Dialog from "@/components/UI/Dialog/Dialog";
 import Form from "@/components/UI/Form/Form";
 import Image from "@/components/UI/Image/Image";
 import Flex from "@/components/UI/Flex/Flex";
-import Icon from "@/components/UI/Icon/Icon";
-import Test from "./borderradius";
 import { ChevronDown } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -29,7 +25,6 @@ export const metadata: Metadata = {
 const Homepage = () => {
     return (
         <Feed>
-            <Test />
             <div>
                 <Heading level={1}>NexteX</Heading>
                 <Text>
@@ -43,12 +38,6 @@ const Homepage = () => {
                 <Input type="radio" name="group1" value="option1" />
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
-                <Heading level={2}>Icon</Heading>
-                <Icon>
-                    <ChevronDown />
-                </Icon>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
                 <Heading level={2}>Button</Heading>
                 <Button>Button</Button>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
@@ -57,10 +46,6 @@ const Homepage = () => {
                 <Link href="/" ariaLabel="Link">
                     Link
                 </Link>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
-                <Heading level={2}>Navigation</Heading>
-                <Navigation ariaLabel="Navigation">Navigation</Navigation>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Dialog</Heading>
@@ -78,7 +63,9 @@ const Homepage = () => {
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Progress (Loading)</Heading>
-                <Progress />
+                <Progress variant="bar" />
+                <Progress variant="circle" />
+                <Progress variant="reload" />
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Image</Heading>
@@ -91,32 +78,21 @@ const Homepage = () => {
                 </div>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
-                <Heading level={2}>Tooltip</Heading>
-                <Tooltip>This is the tooltip</Tooltip>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
                 <Heading level={2}>List</Heading>
                 <List ariaLabel="List">
                     <List.Item>
-                        <Icon>
-                            <ChevronDown />
-                        </Icon>
+                        <ChevronDown />
                         <Text>ListItem1</Text>
                     </List.Item>
                     <List.Item>
                         <Flex gap={1}>
                             <Link href="/" ariaLabel="Test">
-                                <Icon>
-                                    <ChevronDown />
-                                </Icon>
                                 <Text>ListItem2</Text>
                             </Link>
                         </Flex>
                     </List.Item>
                     <List.Item>
-                        <Icon>
-                            <ChevronDown />
-                        </Icon>
+                        <ChevronDown />
                         <Text>ListItem3</Text>
                     </List.Item>
                 </List>

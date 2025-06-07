@@ -1,15 +1,11 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     icon: {
-        backgroundColor: {
-            default: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
-            ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
-        },
-        borderRadius: "100%",
-        color: "inherit",
-        display: "inline-block",
+        alignItems: "center",
+        borderRadius: "50%",
+        display: "flex",
+        justifyContent: "center",
         minHeight: 36,
         minWidth: 36,
     },
@@ -19,5 +15,9 @@ export const baseStyles = stylex.create({
         justifyContent: "center",
         minHeight: 36,
         minWidth: 36,
+    },
+    iconLarge: {
+        minHeight: 40,
+        minWidth: 40,
     },
 });

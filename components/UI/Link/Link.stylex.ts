@@ -1,10 +1,23 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, radius, spacing } from "../../../app/globalTokens.stylex";
+import {
+    colors,
+    radius,
+    spacing,
+    text,
+} from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     link: {
+        color: "inherit",
         cursor: "pointer",
+        textDecoration: {
+            default: "none",
+            ":hover": "underline",
+        },
     },
+
+    small: { fontSize: text.xs },
+
     /*
     link: {
         color: "inherit",
