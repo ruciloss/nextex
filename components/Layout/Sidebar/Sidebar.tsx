@@ -9,19 +9,39 @@ import Text from "@/components/UI/Text/Text";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 type SidebarProps = {
+    as?: "div" | "aside";
     ariaLabel: string;
     role: string;
     styles?: stylex.StyleXStyles[];
     align?: "right";
 };
 
-const Sidebar = ({ ariaLabel, role, styles = [], align }: SidebarProps) => {
+const sidebarLinks = [
+    {
+        href: "/",
+        label: "ListItem1",
+        iconLeft: ChevronDown,
+        iconRight: ChevronRight,
+    },
+    { href: "/mit", label: "ListItem2", iconLeft: ChevronDown },
+    { href: "/security", label: "ListItem3", iconLeft: ChevronRight },
+];
+
+const Sidebar = ({
+    as = "div",
+    ariaLabel,
+    role,
+    styles = [],
+    align,
+}: SidebarProps) => {
+    const Component = as;
+
     const alignStyles = {
-        right: baseStyles.siderbarRight,
+        right: baseStyles.sidebarRight,
     };
 
     return (
-        <div
+        <Component
             aria-label={ariaLabel}
             role={role}
             {...stylex.props(
@@ -31,40 +51,31 @@ const Sidebar = ({ ariaLabel, role, styles = [], align }: SidebarProps) => {
             )}
         >
             <List ariaLabel="List">
-                <List.Item>
-                    <Link href="/" ariaLabel="Test">
-                        <Flex gap={2}>
-                            <Icon bg="secondary">
-                                <ChevronDown />
-                            </Icon>
-                            <Text>ListItem2</Text>
-                            <ChevronRight />
-                        </Flex>
-                    </Link>
-                </List.Item>
-                <List.Item>
-                    <Link href="/" ariaLabel="Test">
-                        <Flex gap={2}>
-                            <Icon>
-                                <ChevronDown />
-                            </Icon>
-                            <Text>ListItem2</Text>
-                        </Flex>
-                    </Link>
-                </List.Item>
-                <List.Item>
-                    <Link href="/" ariaLabel="Test">
-                        <Flex gap={2}>
-                            <Icon>
-                                <ChevronDown />
-                            </Icon>
-                            <Text>ListItem2</Text>
-                        </Flex>
-                    </Link>
-                </List.Item>
+                {sidebarLinks.map(
+                    ({
+                        href,
+                        label,
+                        iconLeft: IconLeft,
+                        iconRight: IconRight,
+                    }) => (
+                        <List.Item key={href}>
+                            <Link href={href} ariaLabel={`Link to ${label}`}>
+                                <Flex gap={2}>
+                                    {IconLeft && (
+                                        <Icon bg="secondary">
+                                            <IconLeft />
+                                        </Icon>
+                                    )}
+                                    <Text>{label}</Text>
+                                    {IconRight && <IconRight />}
+                                </Flex>
+                            </Link>
+                        </List.Item>
+                    ),
+                )}
             </List>
             <Footer />
-        </div>
+        </Component>
     );
 };
 

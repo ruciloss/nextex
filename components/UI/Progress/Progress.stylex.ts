@@ -2,16 +2,11 @@ import * as stylex from "@stylexjs/stylex";
 import { animations, colors, duration } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
-    progress: {
-        position: "relative",
-        zIndex: 2,
-    },
+    progress: {},
 
     bar: {
         backgroundColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, .1)`,
         height: 2,
-        position: "relative",
-        zIndex: 2,
     },
 
     progressBar: {
@@ -44,18 +39,17 @@ export const baseStyles = stylex.create({
         width: 22,
     },
 
-    reload: {
+    preload: {
         alignItems: "center",
         backgroundColor: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
         borderRadius: "50%",
-        boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .25)`,
         display: "flex",
         height: 50,
         justifyContent: "center",
         width: 50,
     },
 
-    progressReload: {
+    progressPreload: {
         height: 28,
         width: 28,
     },

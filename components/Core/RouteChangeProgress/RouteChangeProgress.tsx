@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { usePathname } from "next/navigation";
-import { useTransition } from "react";
-import Progress from "../UI/Progress/Progress";
+import Progress from "@/components/UI/Progress/Progress";
+import * as stylex from "@stylexjs/stylex";
+import { baseStyles } from "./RouteChangeProgress.stylex";
 
 const RouteChangeProgress = () => {
     const pathname = usePathname();
@@ -19,7 +20,11 @@ const RouteChangeProgress = () => {
         return () => clearTimeout(timeout);
     }, [pathname]);
 
-    return loading || isPending ? <Progress /> : null;
+    return loading || isPending ? (
+        <div {...stylex.props(baseStyles.progressBar)}>
+            <Progress />
+        </div>
+    ) : null;
 };
 
 export default RouteChangeProgress;

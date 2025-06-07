@@ -12,8 +12,6 @@ type InputType =
     | "url"
     | "date"
     | "time"
-    | "checkbox"
-    | "radio"
     | "file";
 
 type InputProps = {
@@ -50,16 +48,6 @@ const Input = ({
     onBlur,
     styles = [],
 }: InputProps) => {
-    let typeStyles: stylex.StyleXStyles[] = [];
-
-    if (type === "radio") {
-        typeStyles = [baseStyles.radio];
-    } else if (type === "checkbox") {
-        typeStyles = [baseStyles.checkbox];
-    } else {
-        typeStyles = [baseStyles.inputText];
-    }
-
     return (
         <label>
             <input
@@ -79,7 +67,7 @@ const Input = ({
                 onChange={onChange}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                {...stylex.props(baseStyles.input, ...typeStyles, ...styles)}
+                {...stylex.props(baseStyles.input, ...styles)}
             />
         </label>
     );

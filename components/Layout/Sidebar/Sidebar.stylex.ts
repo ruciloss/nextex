@@ -13,7 +13,7 @@ export const baseStyles = stylex.create({
         top: global.headerHeight,
         width: "360px",
     },
-    siderbarRight: {
+    sidebarRight: {
         left: "unset",
         right: 0,
     },

@@ -5,8 +5,8 @@ import { globalStyles } from "../../../app/globalStyles.stylex";
 
 type TextProps = {
     children: ReactNode;
-    id?: string;
     as?: "span" | "div";
+    id?: string;
     size?: "small";
     weight?: "bold";
     align?: "center" | "right";
@@ -17,8 +17,8 @@ type TextProps = {
 
 const Text = ({
     children,
-    id,
     as = "span",
+    id,
     size,
     weight,
     align,

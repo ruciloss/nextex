@@ -6,28 +6,34 @@ import { globalStyles } from "../../../app/globalStyles.stylex";
 type ListProps = {
     children: ReactNode;
     ariaLabel: string;
+    as?: "div" | "ul";
     styles?: stylex.StyleXStyles[];
 };
 
 type ItemProps = {
     children: ReactNode;
+    as?: "div" | "li";
     spacing?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
     styles?: stylex.StyleXStyles[];
 };
 
-const List = ({ children, ariaLabel, styles = [] }: ListProps) => {
+const List = ({ children, ariaLabel, as = "div", styles = [] }: ListProps) => {
+    const Component = as;
+
     return (
-        <div
+        <Component
             role="list"
             aria-label={ariaLabel}
             {...stylex.props(baseStyles.list, ...styles)}
         >
             {children}
-        </div>
+        </Component>
     );
 };
 
-const Item = ({ children, spacing, styles = [] }: ItemProps) => {
+const Item = ({ children, as = "div", spacing, styles = [] }: ItemProps) => {
+    const Component = as;
+
     const marginBottom = {
         1: globalStyles.marginBottom1,
         2: globalStyles.marginBottom2,
@@ -42,7 +48,7 @@ const Item = ({ children, spacing, styles = [] }: ItemProps) => {
     };
 
     return (
-        <div
+        <Component
             role="listitem"
             {...stylex.props(
                 baseStyles.item,
@@ -51,7 +57,7 @@ const Item = ({ children, spacing, styles = [] }: ItemProps) => {
             )}
         >
             {children}
-        </div>
+        </Component>
     );
 };
 

@@ -2,7 +2,6 @@ import * as stylex from "@stylexjs/stylex";
 import { colors } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
-    input: {},
     radio: {
         backgroundColor: "transparent",
         borderRadius: "50%",
@@ -15,7 +14,6 @@ export const baseStyles = stylex.create({
         outlineWidth: "2px",
         position: "relative",
         width: 12,
-        zIndex: 999,
     },
     radioSelected: {
         backgroundColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,

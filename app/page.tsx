@@ -11,10 +11,9 @@ import Dropdown from "@/components/UI/Dropdown/Dropdown";
 import Progress from "@/components/UI/Progress/Progress";
 import Skeleton from "@/components/UI/Skeleton/Skeleton";
 import Dialog from "@/components/UI/Dialog/Dialog";
-import Form from "@/components/UI/Form/Form";
 import Image from "@/components/UI/Image/Image";
 import Flex from "@/components/UI/Flex/Flex";
-import { ChevronDown } from "lucide-react";
+import Divider from "@/components/UI/Divider/Divider";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -35,12 +34,12 @@ const Homepage = () => {
 
             <div>
                 <Heading level={2}>Input</Heading>
-                <Input type="radio" name="group1" value="option1" />
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
+                <Input type="text" name="group1" placeholder="option1" />
+                <Divider gap={2} />
 
                 <Heading level={2}>Button</Heading>
                 <Button>Button</Button>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
+                <Divider gap={2} />
 
                 <Heading level={2}>Link</Heading>
                 <Link href="/" ariaLabel="Link">
@@ -58,14 +57,10 @@ const Homepage = () => {
                 </Dialog>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
-                <Heading level={2}>Form</Heading>
-                <Form>Form</Form>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
                 <Heading level={2}>Progress (Loading)</Heading>
                 <Progress variant="bar" />
                 <Progress variant="circle" />
-                <Progress variant="reload" />
+                <Progress variant="preload" />
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Image</Heading>
@@ -81,18 +76,14 @@ const Homepage = () => {
                 <Heading level={2}>List</Heading>
                 <List ariaLabel="List">
                     <List.Item>
-                        <ChevronDown />
                         <Text>ListItem1</Text>
                     </List.Item>
                     <List.Item>
-                        <Flex gap={1}>
-                            <Link href="/" ariaLabel="Test">
-                                <Text>ListItem2</Text>
-                            </Link>
-                        </Flex>
+                        <Link href="/" ariaLabel="Test">
+                            <Text>ListItem2</Text>
+                        </Link>
                     </List.Item>
                     <List.Item>
-                        <ChevronDown />
                         <Text>ListItem3</Text>
                     </List.Item>
                 </List>
@@ -131,7 +122,9 @@ const Homepage = () => {
                         <Card.Body>
                             <Text>Text</Text>
                         </Card.Body>
-                        <Card.Footer>CardFooter</Card.Footer>
+                        <Card.Footer>
+                            <Text>CardFooter</Text>
+                        </Card.Footer>
                     </Card>
                     <Card>
                         <Card.Header>
@@ -140,7 +133,9 @@ const Homepage = () => {
                         <Card.Body>
                             <Text>Text</Text>
                         </Card.Body>
-                        <Card.Footer>CardFooter</Card.Footer>
+                        <Card.Footer>
+                            <Text>CardFooter</Text>
+                        </Card.Footer>
                     </Card>
                 </Flex>
             </div>

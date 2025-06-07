@@ -5,6 +5,7 @@ import { baseStyles } from "./Card.stylex";
 type CardProps = {
     children: ReactNode;
     styles?: stylex.StyleXStyles[];
+    as?: "div" | "article";
 };
 
 type HeaderProps = {
@@ -22,8 +23,14 @@ type FooterProps = {
     styles?: stylex.StyleXStyles[];
 };
 
-const Card = ({ children, styles = [] }: CardProps) => {
-    return <div {...stylex.props(baseStyles.card, ...styles)}>{children}</div>;
+const Card = ({ children, styles = [], as = "div" }: CardProps) => {
+    const Component = as;
+
+    return (
+        <Component {...stylex.props(baseStyles.card, ...styles)}>
+            {children}
+        </Component>
+    );
 };
 
 const Header = ({ children, styles = [] }: HeaderProps) => {

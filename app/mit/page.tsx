@@ -13,9 +13,13 @@ const PageMIT = () => {
     return (
         <Feed>
             <div>
-                <Heading level={1}>MIT License</Heading>
-                <Text>Copyright (c) {new Date().getFullYear()} Ruciloss</Text>
-                <Text>
+                <Heading level={1} size={3} gap={5}>
+                    MIT License
+                </Heading>
+                <Text as="div" gap={2}>
+                    Copyright (c) {new Date().getFullYear()} Ruciloss
+                </Text>
+                <Text as="div" gap={2}>
                     Permission is hereby granted, free of charge, to any person
                     obtaining a copy of this software and associated
                     documentation files (the &quot;Software&quot;), to deal in
@@ -25,7 +29,7 @@ const PageMIT = () => {
                     and to permit persons to whom the Software is furnished to
                     do so, subject to the following conditions:
                 </Text>
-                <Text>
+                <Text as="div" gap={2}>
                     THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY
                     OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
                     TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A

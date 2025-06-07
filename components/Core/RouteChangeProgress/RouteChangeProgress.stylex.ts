@@ -1,5 +1,8 @@
 import * as stylex from "@stylexjs/stylex";
 
 export const baseStyles = stylex.create({
-    form: {},
+    progressBar: {
+        position: "relative",
+        zIndex: 3,
+    },
 });

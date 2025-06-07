@@ -5,23 +5,23 @@ import { globalStyles } from "../../../app/globalStyles.stylex";
 
 type HeadingProps = {
     children: ReactNode;
+    as?: "div" | "span";
     id?: string;
     level?: 1 | 2 | 3 | 4 | 5 | 6;
     size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
     gap?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
     align?: "center" | "right";
-    as?: "div" | "span";
     styles?: stylex.StyleXStyles[];
 };
 
 const Heading = ({
     children,
+    as = "div",
     id,
     level,
     size = 6,
     gap,
     align,
-    as = "div",
     styles = [],
 }: HeadingProps) => {
     const Component: ElementType = as;

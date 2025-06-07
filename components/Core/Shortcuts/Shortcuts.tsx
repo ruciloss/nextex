@@ -27,11 +27,7 @@ const Shortcuts = () => {
     const pathname = usePathname();
 
     return (
-        <Navigation
-            ariaLabel="Shortcuts"
-            styles={[baseStyles.wrapper]}
-            className="shortcuts"
-        >
+        <Navigation ariaLabel="Shortcuts" styles={[baseStyles.wrapper]}>
             <List ariaLabel="Shortcuts" styles={[baseStyles.list]}>
                 {navLinks.map(({ href, label, icon: Icon }) => {
                     const isActive = pathname === href;

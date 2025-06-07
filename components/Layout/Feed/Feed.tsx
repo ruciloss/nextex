@@ -3,13 +3,16 @@ import { baseStyles } from "./Feed.stylex";
 
 type FeedProps = {
     children: React.ReactNode;
+    as?: "div" | "main";
 };
 
-const Feed = ({ children }: FeedProps) => {
+const Feed = ({ children, as = "div" }: FeedProps) => {
+    const Component = as;
+
     return (
-        <div role="main" {...stylex.props(baseStyles.feed)}>
+        <Component role="main" {...stylex.props(baseStyles.feed)}>
             {children}
-        </div>
+        </Component>
     );
 };
 

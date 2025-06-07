@@ -8,9 +8,15 @@ import Shortcuts from "@/components/Core/Shortcuts/Shortcuts";
 import Search from "@/components/Core/Search/Search";
 import Flex from "@/components/UI/Flex/Flex";
 
-const Header = () => {
+type HeaderProps = {
+    as?: "div" | "header";
+};
+
+const Header = ({ as = "div" }: HeaderProps) => {
+    const Component = as;
+
     return (
-        <div role="banner" {...stylex.props(baseStyles.header)}>
+        <Component role="banner" {...stylex.props(baseStyles.header)}>
             <Flex gap={2}>
                 <Link
                     href="/"
@@ -28,7 +34,7 @@ const Header = () => {
                 <GitHubIcon />
                 <ThemeToggler />
             </Flex>
-        </div>
+        </Component>
     );
 };
 

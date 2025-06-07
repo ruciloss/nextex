@@ -3,7 +3,6 @@ import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Radio.stylex";
 
 type RadioProps = {
-    id?: string;
     name?: string;
     value?: string | number | readonly string[];
     placeholder?: string;
@@ -18,7 +17,6 @@ type RadioProps = {
     styles?: stylex.StyleXStyles[];
 };
 const Radio = ({
-    id,
     name,
     value,
     placeholder,
@@ -36,7 +34,6 @@ const Radio = ({
         <label>
             <input
                 type="radio"
-                id={id}
                 name={name}
                 value={value}
                 placeholder={placeholder}
@@ -49,7 +46,7 @@ const Radio = ({
                 onChange={onChange}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                {...stylex.props(baseStyles.input, ...styles)}
+                {...stylex.props(baseStyles.radio, ...styles)}
             />
         </label>
     );

@@ -6,10 +6,11 @@ import { styles } from "./layout.stylex";
 import { ThemeProvider, useTheme } from "@/contexts/ThemeContext";
 import { light, dark } from "./themes";
 import SelfXSSWarning from "@/components/Core/SelfXSSWarning";
-import RouteChangeProgress from "@/components/Core/RouteChangeProgress";
+import RouteChangeProgress from "@/components/Core/RouteChangeProgress/RouteChangeProgress";
 import Header from "@/components/Layout/Header/Header";
 import Container from "@/components/Layout/Container/Container";
 import Sidebar from "@/components/Layout/Sidebar/Sidebar";
+import ReloadData from "@/components/Core/ReloadData/ReloadData";
 
 const App = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -38,6 +39,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         >
             <body {...stylex.props(styles.reset, styles.body)}>
                 <RouteChangeProgress />
+                <ReloadData />
                 <Header />
                 <Container>
                     <Sidebar ariaLabel="Shortcuts" role="navigation" />

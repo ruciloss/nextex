@@ -3,20 +3,20 @@ import { baseStyles } from "./Progress.stylex";
 
 type ProgressProps = {
     styles?: stylex.StyleXStyles[];
-    variant?: "bar" | "circle" | "reload";
+    variant?: "circle" | "bar" | "preload";
 };
 
-const Progress = ({ variant = "bar", styles = [] }: ProgressProps) => {
+const Progress = ({ variant = "circle", styles = [] }: ProgressProps) => {
     const variantStyles = {
-        bar: baseStyles.bar,
         circle: baseStyles.circle,
-        reload: baseStyles.reload,
+        bar: baseStyles.bar,
+        preload: baseStyles.preload,
     };
 
     const progressStyles = {
-        bar: baseStyles.progressBar,
         circle: baseStyles.progressCircle,
-        reload: [baseStyles.progressCircle, baseStyles.progressReload],
+        bar: baseStyles.progressBar,
+        preload: [baseStyles.progressCircle, baseStyles.progressPreload],
     };
 
     return (

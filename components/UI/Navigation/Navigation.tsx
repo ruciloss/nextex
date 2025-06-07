@@ -6,24 +6,25 @@ type NavigationProps = {
     children: ReactNode;
     ariaLabel: string;
     styles?: stylex.StyleXStyles[];
-    className?: string;
+    as?: "div" | "nav";
 };
 
 const Navigation = ({
     children,
     ariaLabel,
     styles = [],
-    className,
+    as = "div",
 }: NavigationProps) => {
+    const Component = as;
+
     return (
-        <div
+        <Component
             role="navigation"
             aria-label={ariaLabel}
             {...stylex.props(baseStyles.navigation, ...styles)}
-            className={className}
         >
             {children}
-        </div>
+        </Component>
     );
 };
 
