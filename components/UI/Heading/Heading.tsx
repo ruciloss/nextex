@@ -9,7 +9,6 @@ type HeadingProps = {
     id?: string;
     level?: 1 | 2 | 3 | 4 | 5 | 6;
     size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
-    gap?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
     align?: "center" | "right";
     styles?: stylex.StyleXStyles[];
 };
@@ -20,7 +19,6 @@ const Heading = ({
     id,
     level,
     size = 6,
-    gap,
     align,
     styles = [],
 }: HeadingProps) => {
@@ -38,19 +36,6 @@ const Heading = ({
         9: globalStyles.h9,
     };
 
-    const marginBottom = {
-        1: globalStyles.marginBottom1,
-        2: globalStyles.marginBottom2,
-        3: globalStyles.marginBottom3,
-        4: globalStyles.marginBottom4,
-        5: globalStyles.marginBottom5,
-        6: globalStyles.marginBottom6,
-        7: globalStyles.marginBottom7,
-        8: globalStyles.marginBottom8,
-        9: globalStyles.marginBottom9,
-        10: globalStyles.marginBottom10,
-    };
-
     const alignStyles = {
         center: globalStyles.textCenter,
         right: globalStyles.textRight,
@@ -63,7 +48,6 @@ const Heading = ({
             {...stylex.props(
                 baseStyles.heading,
                 fontSize[size],
-                gap ? marginBottom[gap] : undefined,
                 align ? alignStyles[align] : undefined,
                 ...styles,
             )}

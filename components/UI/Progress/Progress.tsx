@@ -14,20 +14,16 @@ const Progress = ({ variant = "circle", styles = [] }: ProgressProps) => {
     };
 
     const progressStyles = {
-        circle: baseStyles.progressCircle,
-        bar: baseStyles.progressBar,
-        preload: [baseStyles.progressCircle, baseStyles.progressPreload],
+        circle: baseStyles.circleProgress,
+        bar: baseStyles.barProgress,
+        preload: baseStyles.preloadProgress,
     };
 
     return (
         <div
             role="progressbar"
             aria-valuetext="Loading..."
-            {...stylex.props(
-                baseStyles.progress,
-                variantStyles[variant],
-                ...styles,
-            )}
+            {...stylex.props(variantStyles[variant], ...styles)}
         >
             <div {...stylex.props(progressStyles[variant])} />
         </div>

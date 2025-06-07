@@ -5,7 +5,7 @@ export const baseStyles = stylex.create({
     preload: {
         left: "50%",
         position: "absolute",
-        top: `calc(${global.headerHeight} + 20px)`,
+        top: `calc(${global.headerHeight} + 10px)`,
         transform: "translateX(-50%)",
     },
 });

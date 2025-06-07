@@ -3,13 +3,13 @@ import { animations, colors, duration } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     skeleton: {
-        animationDuration: duration.fast,
+        animationDuration: duration.medium,
         animationIterationCount: "infinite",
         animationName: animations.blink,
         animationTimingFunction: "ease-in-out",
         backgroundColor: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, .75)`,
         borderRadius: "inherit",
-        height: 50,
+        height: "100%",
         width: "100%",
     },
 });

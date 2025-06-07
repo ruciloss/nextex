@@ -11,7 +11,6 @@ type TextProps = {
     weight?: "bold";
     align?: "center" | "right";
     color?: "secondary" | "primary" | "error" | "success" | "warning";
-    gap?: 1 | 2 | 3 | 4 | 5;
     styles?: stylex.StyleXStyles[];
 };
 
@@ -23,7 +22,6 @@ const Text = ({
     weight,
     align,
     color,
-    gap,
     styles = [],
 }: TextProps) => {
     const sizeStyles = {
@@ -47,14 +45,6 @@ const Text = ({
         warning: globalStyles.colorWarning,
     };
 
-    const gapStyles = {
-        1: globalStyles.marginBottom1,
-        2: globalStyles.marginBottom2,
-        3: globalStyles.marginBottom3,
-        4: globalStyles.marginBottom4,
-        5: globalStyles.marginBottom5,
-    };
-
     const Component = as;
 
     return (
@@ -66,7 +56,6 @@ const Text = ({
                 weight && weightStyles[weight],
                 align && alignStyles[align],
                 color && colorStyles[color],
-                gap && gapStyles[gap],
                 ...styles,
             )}
         >

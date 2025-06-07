@@ -22,7 +22,7 @@ const RouteChangeProgress = () => {
 
     return loading || isPending ? (
         <div {...stylex.props(baseStyles.progressBar)}>
-            <Progress />
+            <Progress variant="bar" />
         </div>
     ) : null;
 };

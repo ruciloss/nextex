@@ -4,21 +4,27 @@ import { baseStyles } from "./Flex.stylex";
 
 type FlexProps = {
     children: ReactNode;
+    as?: "div" | "span";
+    direction?: "row" | "column" | "rowReverse" | "columnReverse";
+    align?: "stretch" | "start" | "center" | "end" | "baseline";
+    justify?: "start" | "center" | "end" | "between" | "around" | "evenly";
+    wrap?: "nowrap" | "wrap" | "wrapReverse";
     gap?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-    wrap?: boolean;
-    column?: boolean;
-    justify?: "center" | "end" | "between";
     styles?: stylex.StyleXStyles[];
 };
 
 const Flex = ({
     children,
+    as = "div",
+    direction = "row",
+    align = "center",
+    justify = "start",
+    wrap = "nowrap",
     gap,
-    wrap = false,
-    column = false,
-    justify,
     styles = [],
 }: FlexProps) => {
+    const Component = as;
+
     const gapStyles = {
         1: baseStyles.gap1,
         2: baseStyles.gap2,
@@ -32,25 +38,50 @@ const Flex = ({
         10: baseStyles.gap10,
     };
 
+    const wrapStyles = {
+        nowrap: baseStyles.nowrap,
+        wrap: baseStyles.wrap,
+        wrapReverse: baseStyles.wrapReverse,
+    };
+
+    const directionStyles = {
+        row: baseStyles.row,
+        rowReverse: baseStyles.rowReverse,
+        column: baseStyles.column,
+        columnReverse: baseStyles.columnReverse,
+    };
+
+    const alignStyles = {
+        stretch: baseStyles.alignStretch,
+        start: baseStyles.alignStart,
+        center: baseStyles.alignCenter,
+        end: baseStyles.alignEnd,
+        baseline: baseStyles.alignBaseline,
+    };
+
     const justifyStyles = {
+        start: baseStyles.justifyStart,
         center: baseStyles.justifyCenter,
         end: baseStyles.justifyEnd,
         between: baseStyles.justifyBetween,
+        around: baseStyles.justifyAround,
+        evenly: baseStyles.justifyEvenly,
     };
 
     return (
-        <div
+        <Component
             {...stylex.props(
                 baseStyles.flex,
-                wrap ? baseStyles.wrap : null,
-                column ? baseStyles.column : null,
+                directionStyles[direction],
+                wrapStyles[wrap],
+                justifyStyles[justify],
+                alignStyles[align],
                 gap ? gapStyles[gap] : null,
-                justify ? justifyStyles[justify] : null,
                 ...styles,
             )}
         >
             {children}
-        </div>
+        </Component>
     );
 };
 

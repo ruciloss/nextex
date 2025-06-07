@@ -13,7 +13,9 @@ import Skeleton from "@/components/UI/Skeleton/Skeleton";
 import Dialog from "@/components/UI/Dialog/Dialog";
 import Image from "@/components/UI/Image/Image";
 import Flex from "@/components/UI/Flex/Flex";
+import Icon from "@/components/UI/Icon/Icon";
 import Divider from "@/components/UI/Divider/Divider";
+import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -58,9 +60,13 @@ const Homepage = () => {
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Progress (Loading)</Heading>
-                <Progress variant="bar" />
-                <Progress variant="circle" />
-                <Progress variant="preload" />
+                <Button>
+                    <Flex as="span" gap={2}>
+                        <Progress variant="circle" />
+                        Button
+                    </Flex>
+                </Button>
+
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Image</Heading>
@@ -74,7 +80,7 @@ const Homepage = () => {
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>List</Heading>
-                <List ariaLabel="List">
+                <List ariaLabel="List" styleType="circle" as="ul" gap={2}>
                     <List.Item>
                         <Text>ListItem1</Text>
                     </List.Item>
@@ -114,30 +120,36 @@ const Homepage = () => {
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Card</Heading>
-                <Flex>
-                    <Card>
-                        <Card.Header>
-                            <Heading>Text</Heading>
-                        </Card.Header>
-                        <Card.Body>
-                            <Text>Text</Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <Text>CardFooter</Text>
-                        </Card.Footer>
-                    </Card>
-                    <Card>
-                        <Card.Header>
-                            <Heading>Text</Heading>
-                        </Card.Header>
-                        <Card.Body>
-                            <Text>Text</Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <Text>CardFooter</Text>
-                        </Card.Footer>
-                    </Card>
-                </Flex>
+                <Card>
+                    <Flex justify="between">
+                        <Heading>Text</Heading>
+                        <Flex gap={2}>
+                            <Button>
+                                <Icon>
+                                    <ChevronRight />
+                                </Icon>
+                            </Button>
+                            <Button>
+                                <Icon>
+                                    <ChevronRight />
+                                </Icon>
+                            </Button>
+                        </Flex>
+                    </Flex>
+                    <Image
+                        src="https://picsum.photos/id/237/800/600"
+                        alt="Image"
+                    />
+                    dsadsa
+                    <Divider />
+                    <Flex justify="around">
+                        <Flex gap={10} justify="evenly">
+                            <Button>Button</Button>
+                            <Button>Button</Button>
+                            <Button>Button</Button>
+                        </Flex>
+                    </Flex>
+                </Card>
             </div>
         </Feed>
     );

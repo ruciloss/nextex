@@ -3,17 +3,30 @@ import { spacing } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     flex: {
-        alignItems: "center",
         display: "flex",
     },
 
+    nowrap: { flexWrap: "nowrap" },
     wrap: { flexWrap: "wrap" },
+    wrapReverse: { flexWrap: "wrap-reverse" },
 
+    row: { flexDirection: "row" },
+    rowReverse: { flexDirection: "row-reverse" },
     column: { flexDirection: "column" },
+    columnReverse: { flexDirection: "column-reverse" },
 
+    alignStart: { alignItems: "flex-start" },
+    alignCenter: { alignItems: "center" },
+    alignEnd: { alignItems: "flex-end" },
+    alignStretch: { alignItems: "stretch" },
+    alignBaseline: { alignItems: "baseline" },
+
+    justifyStart: { justifyContent: "flex-start" },
     justifyCenter: { justifyContent: "center" },
     justifyEnd: { justifyContent: "flex-end" },
     justifyBetween: { justifyContent: "space-between" },
+    justifyAround: { justifyContent: "space-around" },
+    justifyEvenly: { justifyContent: "space-evenly" },
 
     gap1: { gap: spacing.xxxs },
     gap2: { gap: spacing.xxs },

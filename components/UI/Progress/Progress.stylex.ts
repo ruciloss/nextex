@@ -2,14 +2,12 @@ import * as stylex from "@stylexjs/stylex";
 import { animations, colors, duration } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
-    progress: {},
-
     bar: {
         backgroundColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, .1)`,
         height: 2,
     },
 
-    progressBar: {
+    barProgress: {
         animationDuration: duration.fast,
         animationName: animations.loading,
         animationTimingFunction: "ease-in-out",
@@ -25,7 +23,7 @@ export const baseStyles = stylex.create({
         width: 24,
     },
 
-    progressCircle: {
+    circleProgress: {
         animationDuration: duration.medium,
         animationIterationCount: "infinite",
         animationName: animations.rotate,
@@ -49,7 +47,16 @@ export const baseStyles = stylex.create({
         width: 50,
     },
 
-    progressPreload: {
+    preloadProgress: {
+        animationDuration: duration.medium,
+        animationIterationCount: "infinite",
+        animationName: animations.rotate,
+        animationTimingFunction: "linear",
+        borderColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+        borderRadius: "50%",
+        borderStyle: "solid",
+        borderTopColor: "transparent",
+        borderWidth: "2px",
         height: 28,
         width: 28,
     },

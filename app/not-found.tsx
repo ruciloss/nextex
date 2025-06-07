@@ -11,14 +11,14 @@ import Flex from "@/components/UI/Flex/Flex";
 const NotFound = () => {
     return (
         <Inner>
-            <Flex gap={5} column={true}>
+            <Flex direction="column" gap={5}>
                 <Flex justify="center">
                     <Icon color="secondary">
                         <FileLock2Icon size={56} strokeWidth={1.5} />
                     </Icon>
                 </Flex>
 
-                <Heading level={1} size={6} align="center">
+                <Heading level={1} size={6}>
                     This content isn&apos;t available right now.
                 </Heading>
 

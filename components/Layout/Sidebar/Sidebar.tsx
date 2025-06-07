@@ -6,6 +6,7 @@ import Flex from "@/components/UI/Flex/Flex";
 import Icon from "@/components/UI/Icon/Icon";
 import Link from "@/components/UI/Link/Link";
 import Text from "@/components/UI/Text/Text";
+import Divider from "@/components/UI/Divider/Divider";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 type SidebarProps = {
@@ -74,7 +75,10 @@ const Sidebar = ({
                     ),
                 )}
             </List>
-            <Footer />
+            <Flex direction="column" gap={2}>
+                <Divider />
+                <Footer />
+            </Flex>
         </Component>
     );
 };
