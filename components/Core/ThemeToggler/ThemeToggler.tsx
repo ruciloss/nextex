@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import * as stylex from "@stylexjs/stylex";
 import Icon from "@/components/UI/Icon/Icon";
+import Flex from "@/components/UI/Flex/Flex";
+import Heading from "@/components/UI/Heading/Heading";
+import Text from "@/components/UI/Text/Text";
 import { baseStyles } from "./ThemeToggler.stylex";
 import { ChevronDown, Monitor, Moon, Sun } from "lucide-react";
 
@@ -63,96 +66,109 @@ const ThemeToggler = () => {
                 }}
                 {...stylex.props(baseStyles.button)}
             >
-                {currentOption?.icon ? <currentOption.icon /> : <Monitor />}
+                {currentOption?.icon ? (
+                    <Icon>
+                        <currentOption.icon />
+                    </Icon>
+                ) : (
+                    <Icon>
+                        <Monitor />
+                    </Icon>
+                )}
                 <span {...stylex.props(baseStyles.arrow)}>
-                    <ChevronDown strokeWidth={4} aria-hidden="true" />
+                    <ChevronDown strokeWidth={4} />
                 </span>
             </span>
 
             {open && (
                 <div {...stylex.props(baseStyles.dropdown)} ref={dropdownRef}>
-                    <div {...stylex.props(baseStyles.header)}>
-                        <span {...stylex.props(baseStyles.icon)}>
-                            <Icon>
+                    <Flex direction="column" gap={3}>
+                        <Flex gap={3}>
+                            <Icon bg="secondary">
                                 <Moon />
                             </Icon>
-                        </span>
-                        <div>
-                            <span {...stylex.props(baseStyles.heading)}>
-                                Dark mode
-                            </span>
-                            <span {...stylex.props(baseStyles.description)}>
-                                Adjust the appearance of the website to reduce
-                                glare and give your eyes a break.
-                            </span>
-                        </div>
-                    </div>
+                            <Flex direction="column" gap={1}>
+                                <Heading>Dark mode</Heading>
+                                <Text color="secondary">
+                                    Adjust the appearance of the website to
+                                    reduce glare and give your eyes a break.
+                                </Text>
+                            </Flex>
+                        </Flex>
 
-                    {options.map((opt) => {
-                        const isSelected = opt.value === theme;
+                        {options.map((opt) => {
+                            const isSelected = opt.value === theme;
 
-                        return (
-                            <div
-                                key={opt.value}
-                                {...stylex.props(baseStyles.item)}
-                                role="button"
-                                tabIndex={0}
-                                aria-pressed={isSelected}
-                                aria-label={`Dark Mode ${opt.label}${isSelected ? " (selected)" : ""}`}
-                                onClick={() =>
-                                    handleSelect(
-                                        opt.value as
-                                            | "system"
-                                            | "light"
-                                            | "dark",
-                                    )
-                                }
-                                onKeyDown={(e) => {
-                                    if (e.key === "Enter" || e.key === " ") {
-                                        e.preventDefault();
+                            return (
+                                <div
+                                    key={opt.value}
+                                    {...stylex.props(baseStyles.item)}
+                                    role="button"
+                                    tabIndex={0}
+                                    aria-pressed={isSelected}
+                                    aria-label={`Dark Mode ${opt.label}${isSelected ? " (selected)" : ""}`}
+                                    onClick={() =>
                                         handleSelect(
                                             opt.value as
                                                 | "system"
                                                 | "light"
                                                 | "dark",
-                                        );
+                                        )
                                     }
-                                }}
-                            >
-                                <div {...stylex.props(baseStyles.itemContent)}>
-                                    <div>
-                                        <span
-                                            {...stylex.props(
-                                                baseStyles.itemTitle,
-                                            )}
-                                        >
-                                            {opt.label}
-                                        </span>
-                                        {opt.description && (
+                                    onKeyDown={(e) => {
+                                        if (
+                                            e.key === "Enter" ||
+                                            e.key === " "
+                                        ) {
+                                            e.preventDefault();
+                                            handleSelect(
+                                                opt.value as
+                                                    | "system"
+                                                    | "light"
+                                                    | "dark",
+                                            );
+                                        }
+                                    }}
+                                >
+                                    <div
+                                        {...stylex.props(
+                                            baseStyles.itemContent,
+                                        )}
+                                    >
+                                        <div>
                                             <span
                                                 {...stylex.props(
-                                                    baseStyles.itemDescription,
+                                                    baseStyles.itemTitle,
                                                 )}
                                             >
-                                                {opt.description}
+                                                {opt.label}
                                             </span>
-                                        )}
+                                            {opt.description && (
+                                                <span
+                                                    {...stylex.props(
+                                                        baseStyles.itemDescription,
+                                                    )}
+                                                >
+                                                    {opt.description}
+                                                </span>
+                                            )}
+                                        </div>
+                                        <input
+                                            {...stylex.props(
+                                                baseStyles.radio,
+                                                isSelected &&
+                                                    baseStyles.radioSelected,
+                                            )}
+                                            type="radio"
+                                            aria-checked={
+                                                isSelected ? "true" : "false"
+                                            }
+                                        />
                                     </div>
-                                    <input
-                                        {...stylex.props(
-                                            baseStyles.radio,
-                                            isSelected &&
-                                                baseStyles.radioSelected,
-                                        )}
-                                        type="radio"
-                                        aria-checked={
-                                            isSelected ? "true" : "false"
-                                        }
-                                    />
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </Flex>
                 </div>
             )}
         </div>

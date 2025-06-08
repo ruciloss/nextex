@@ -51,31 +51,6 @@ export const baseStyles = stylex.create({
         position: "absolute",
         right: 0,
     },
-    header: {
-        alignItems: "start",
-        display: "flex",
-        gap: spacing.xxs,
-        marginBottom: spacing.sm,
-    },
-    heading: {
-        display: "block",
-        fontSize: text.p,
-        fontWeight: 700,
-        marginBottom: spacing.xxxs,
-    },
-    description: {
-        color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
-        display: "block",
-    },
-    icon: {
-        alignItems: "center",
-        backgroundColor: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
-        borderRadius: "50%",
-        display: "flex",
-        justifyContent: "center",
-        minHeight: 35,
-        minWidth: 35,
-    },
     item: {
         backgroundColor: {
             default: "transparent",

@@ -37,11 +37,11 @@ const Homepage = () => {
             <div>
                 <Heading level={2}>Input</Heading>
                 <Input type="text" name="group1" placeholder="option1" />
-                <Divider gap={2} />
+                <Divider />
 
                 <Heading level={2}>Button</Heading>
                 <Button>Button</Button>
-                <Divider gap={2} />
+                <Divider />
 
                 <Heading level={2}>Link</Heading>
                 <Link href="/" ariaLabel="Link">
@@ -79,22 +79,6 @@ const Homepage = () => {
                 </div>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
-                <Heading level={2}>List</Heading>
-                <List ariaLabel="List" styleType="circle" as="ul" gap={2}>
-                    <List.Item>
-                        <Text>ListItem1</Text>
-                    </List.Item>
-                    <List.Item>
-                        <Link href="/" ariaLabel="Test">
-                            <Text>ListItem2</Text>
-                        </Link>
-                    </List.Item>
-                    <List.Item>
-                        <Text>ListItem3</Text>
-                    </List.Item>
-                </List>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
                 <Heading level={2}>Dropdown</Heading>
                 <Dropdown>
                     <Dropdown.Button>
@@ -107,14 +91,20 @@ const Homepage = () => {
                         </Button>
                     </Dropdown.Button>
 
-                    <Dropdown.Modal
-                        id="dropdown-modal"
-                        ariaLabel="Dropdown"
-                        role="menu"
-                    >
-                        <Dropdown.Item>DropdownItem1</Dropdown.Item>
-                        <Dropdown.Item>DropdownItem2</Dropdown.Item>
-                        <Dropdown.Item>DropdownItem3</Dropdown.Item>
+                    <Dropdown.Modal id="dropdown-modal" ariaLabel="Dropdown">
+                        <List ariaLabel="List" bullet="circle" as="ul" gap={2}>
+                            <List.Item>
+                                <Text>ListItem1</Text>
+                            </List.Item>
+                            <List.Item>
+                                <Link href="/" ariaLabel="Test">
+                                    <Text>ListItem2</Text>
+                                </Link>
+                            </List.Item>
+                            <List.Item>
+                                <Text>ListItem3</Text>
+                            </List.Item>
+                        </List>
                     </Dropdown.Modal>
                 </Dropdown>
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
@@ -140,7 +130,7 @@ const Homepage = () => {
                         src="https://picsum.photos/id/237/800/600"
                         alt="Image"
                     />
-                    dsadsa
+                    sadsada
                     <Divider />
                     <Flex justify="around">
                         <Flex gap={10} justify="evenly">

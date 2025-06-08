@@ -4,7 +4,6 @@ import { baseStyles } from "./Divider.stylex";
 type DividerProps = {
     as?: "div" | "span";
     vertical?: boolean;
-    gap?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 };
 
 const Divider = ({ as = "div", vertical = false }: DividerProps) => {

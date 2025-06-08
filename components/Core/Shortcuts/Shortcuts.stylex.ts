@@ -17,7 +17,6 @@ export const baseStyles = stylex.create({
     },
     list: {
         display: "flex",
-        flexDirection: "row",
         gap: spacing.sm,
         height: "inherit",
     },

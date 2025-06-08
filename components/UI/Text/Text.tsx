@@ -1,16 +1,14 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Text.stylex";
-import { globalStyles } from "../../../app/globalStyles.stylex";
 
 type TextProps = {
     children: ReactNode;
-    as?: "span" | "div";
+    as?: "span" | "div" | "p";
     id?: string;
     size?: "small";
     weight?: "bold";
-    align?: "center" | "right";
-    color?: "secondary" | "primary" | "error" | "success" | "warning";
+    color?: "secondary" | "error" | "success" | "warning";
     styles?: stylex.StyleXStyles[];
 };
 
@@ -20,32 +18,25 @@ const Text = ({
     id,
     size,
     weight,
-    align,
     color,
     styles = [],
 }: TextProps) => {
+    const Component = as;
+
     const sizeStyles = {
-        small: globalStyles.h8,
+        small: baseStyles.fontSmall,
     };
 
     const weightStyles = {
-        bold: globalStyles.fontBold,
-    };
-
-    const alignStyles = {
-        center: globalStyles.textCenter,
-        right: globalStyles.textRight,
+        bold: baseStyles.fontBold,
     };
 
     const colorStyles = {
-        primary: globalStyles.colorPrimary,
-        secondary: globalStyles.colorSecondary,
-        error: globalStyles.colorError,
-        success: globalStyles.colorSuccess,
-        warning: globalStyles.colorWarning,
+        secondary: baseStyles.colorSecondary,
+        error: baseStyles.colorError,
+        success: baseStyles.colorSuccess,
+        warning: baseStyles.colorWarning,
     };
-
-    const Component = as;
 
     return (
         <Component
@@ -54,7 +45,6 @@ const Text = ({
                 baseStyles.text,
                 size && sizeStyles[size],
                 weight && weightStyles[weight],
-                align && alignStyles[align],
                 color && colorStyles[color],
                 ...styles,
             )}

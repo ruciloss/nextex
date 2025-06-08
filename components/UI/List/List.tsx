@@ -7,7 +7,8 @@ type ListProps = {
     ariaLabel: string;
     as?: "div" | "ul";
     gap?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-    styleType?: "none" | "disc" | "decimal" | "circle" | "square";
+    bullet?: "none" | "disc" | "decimal" | "circle" | "square";
+    direction?: "row" | "column" | "rowReverse" | "columnReverse";
     styles?: stylex.StyleXStyles[];
 };
 
@@ -22,7 +23,8 @@ const List = ({
     ariaLabel,
     as = "div",
     gap,
-    styleType = "none",
+    bullet = "none",
+    direction = "column",
     styles = [],
 }: ListProps) => {
     const Component = as;
@@ -40,7 +42,7 @@ const List = ({
         10: baseStyles.gap10,
     };
 
-    const styleTypeStyles = {
+    const bulletStyles = {
         none: baseStyles.none,
         disc: baseStyles.disc,
         decimal: baseStyles.decimal,
@@ -48,8 +50,14 @@ const List = ({
         square: baseStyles.square,
     };
 
-    const listStyle =
-        as === "ul" ? styleTypeStyles[styleType] : baseStyles.none;
+    const directionStyles = {
+        row: baseStyles.row,
+        rowReverse: baseStyles.rowReverse,
+        column: baseStyles.column,
+        columnReverse: baseStyles.columnReverse,
+    };
+
+    const listStyle = as === "ul" ? bulletStyles[bullet] : baseStyles.none;
 
     const childrenWithAs = Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === List.Item) {
@@ -69,8 +77,9 @@ const List = ({
             aria-label={ariaLabel}
             {...stylex.props(
                 baseStyles.list,
-                listStyle,
                 gap ? gapStyles[gap] : undefined,
+                listStyle,
+                direction ? directionStyles[direction] : undefined,
                 ...styles,
             )}
         >

@@ -4,14 +4,14 @@ import { spacing } from "../../../app/globalTokens.stylex";
 export const baseStyles = stylex.create({
     list: {
         display: "flex",
-        flexDirection: "column",
     },
 
     item: {},
 
-    listPadding: {
-        paddingLeft: spacing.md,
-    },
+    row: { flexDirection: "row" },
+    rowReverse: { flexDirection: "row-reverse" },
+    column: { flexDirection: "column" },
+    columnReverse: { flexDirection: "column-reverse" },
 
     disc: {
         listStyleType: "disc",

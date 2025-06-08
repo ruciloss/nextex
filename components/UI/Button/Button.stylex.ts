@@ -5,23 +5,12 @@ export const baseStyles = stylex.create({
     button: {
         cursor: "pointer",
     },
+
     btn: {
         borderRadius: radius.sm,
-        borderWidth: 0,
-        cursor: "pointer",
         display: "inline-block",
         fontWeight: 600,
-        textDecoration: "none",
     },
-    marginBottom1: { marginBottom: spacing.xxxs },
-    marginBottom2: { marginBottom: spacing.xxs },
-    marginBottom3: { marginBottom: spacing.xs },
-    marginBottom4: { marginBottom: spacing.sm },
-    marginBottom5: { marginBottom: spacing.md },
-
-    center: { textAlign: "center" },
-    left: { textAlign: "left" },
-    right: { textAlign: "right" },
 
     solid: {
         color: "inherit",

@@ -29,7 +29,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             lang="en"
             dir="ltr"
             {...stylex.props(
-                styles.reset,
                 styles.html,
                 theme === "light" && styles.htmlLight,
                 theme === "dark" && styles.htmlDark,
@@ -37,7 +36,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 theme === "dark" && dark,
             )}
         >
-            <body {...stylex.props(styles.reset, styles.body)}>
+            <body {...stylex.props(styles.body)}>
                 <RouteChangeProgress />
                 <ReloadData />
                 <Header />

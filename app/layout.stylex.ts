@@ -11,11 +11,6 @@ export const styles = stylex.create({
     htmlDark: {
         colorScheme: "dark",
     },
-    reset: {
-        margin: 0,
-        minHeight: "100%",
-        padding: 0,
-    },
     body: {
         backgroundImage: `linear-gradient(to bottom, rgb(${colors.bgStartR}, ${colors.bgStartG}, ${colors.bgStartB}), rgb(${colors.bgEndR}, ${colors.bgEndG}, ${colors.bgEndB}))`,
         color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,

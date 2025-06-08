@@ -4,19 +4,14 @@ import { baseStyles } from "./Tooltip.stylex";
 
 type TooltipProps = {
     children: ReactNode;
-    ariaHidden?: boolean;
     styles?: stylex.StyleXStyles[];
 };
 
-const Tooltip = ({
-    children,
-    ariaHidden = true,
-    styles = [],
-}: TooltipProps) => {
+const Tooltip = ({ children, styles = [] }: TooltipProps) => {
     return (
         <div
             role="tooltip"
-            aria-hidden={ariaHidden}
+            aria-hidden="true"
             {...stylex.props(baseStyles.tooltip, ...styles)}
         >
             {children}

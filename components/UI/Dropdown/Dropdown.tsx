@@ -14,13 +14,6 @@ type ModalProps = {
     children: ReactNode;
     id?: string;
     ariaLabel?: string;
-    role?: "menu" | "listbox";
-    styles?: stylex.StyleXStyles[];
-};
-
-type ItemProps = {
-    children: ReactNode;
-    role?: "menuitem" | "option";
     styles?: stylex.StyleXStyles[];
 };
 
@@ -52,13 +45,12 @@ const DropdownModal = ({
     children,
     id,
     ariaLabel,
-    role = "menu",
     styles = [],
 }: ModalProps) => {
     return (
         <div
             id={id}
-            role={role}
+            role="dialog"
             aria-label={ariaLabel}
             {...stylex.props(baseStyles.modal, ...styles)}
         >
@@ -67,25 +59,10 @@ const DropdownModal = ({
     );
 };
 
-const DropdownItem = ({
-    children,
-    role = "menuitem",
-    styles = [],
-}: ItemProps) => {
-    return (
-        <div role={role} {...stylex.props(baseStyles.item, ...styles)}>
-            {children}
-        </div>
-    );
+const DropdownButton = ({ children }: ButtonProps) => {
+    return <div>{children}</div>;
 };
 
-const DropdownButton = ({ children, styles = [] }: ButtonProps) => {
-    return (
-        <div {...stylex.props(baseStyles.button, ...styles)}>{children}</div>
-    );
-};
-
-Dropdown.Item = DropdownItem;
 Dropdown.Button = DropdownButton;
 Dropdown.Modal = DropdownModal;
 

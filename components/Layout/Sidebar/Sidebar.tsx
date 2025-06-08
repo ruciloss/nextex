@@ -7,6 +7,7 @@ import Icon from "@/components/UI/Icon/Icon";
 import Link from "@/components/UI/Link/Link";
 import Text from "@/components/UI/Text/Text";
 import Divider from "@/components/UI/Divider/Divider";
+import Tab from "@/components/UI/Tab/Tab";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 type SidebarProps = {
@@ -51,34 +52,43 @@ const Sidebar = ({
                 ...styles,
             )}
         >
-            <List ariaLabel="List">
-                {sidebarLinks.map(
-                    ({
-                        href,
-                        label,
-                        iconLeft: IconLeft,
-                        iconRight: IconRight,
-                    }) => (
-                        <List.Item key={href}>
-                            <Link href={href} ariaLabel={`Link to ${label}`}>
-                                <Flex gap={2}>
-                                    {IconLeft && (
-                                        <Icon bg="secondary">
-                                            <IconLeft />
-                                        </Icon>
-                                    )}
-                                    <Text>{label}</Text>
-                                    {IconRight && <IconRight />}
-                                </Flex>
-                            </Link>
-                        </List.Item>
-                    ),
-                )}
-            </List>
-            <Flex direction="column" gap={2}>
+            <Flex direction="column" gap={4}>
+                <List ariaLabel="List">
+                    {sidebarLinks.map(
+                        ({
+                            href,
+                            label,
+                            iconLeft: IconLeft,
+                            iconRight: IconRight,
+                        }) => (
+                            <List.Item key={href}>
+                                <Link
+                                    href={href}
+                                    ariaLabel={`Link to ${label}`}
+                                >
+                                    <Tab>
+                                        <Flex gap={2} align="center">
+                                            {IconLeft && (
+                                                <Icon bg="secondary">
+                                                    <IconLeft />
+                                                </Icon>
+                                            )}
+                                            <Text>{label}</Text>
+                                            {IconRight && (
+                                                <Icon>
+                                                    <IconRight />
+                                                </Icon>
+                                            )}
+                                        </Flex>
+                                    </Tab>
+                                </Link>
+                            </List.Item>
+                        ),
+                    )}
+                </List>
                 <Divider />
-                <Footer />
             </Flex>
+            <Footer />
         </Component>
     );
 };

@@ -11,7 +11,7 @@ type ButtonProps = {
     ariaExpanded?: boolean;
     ariaControls?: string;
     ariaDisabled?: boolean;
-    ariaHaspopup?: "menu" | "listbox" | "tree" | "grid" | "dialog";
+    ariaHaspopup?: "dialog";
     ariaDescribedby?: string;
 
     onClick?: () => void;
@@ -50,7 +50,7 @@ const Button = ({
     };
 
     return (
-        <span
+        <button
             role="button"
             aria-label={ariaLabel}
             aria-pressed={ariaPressed}
@@ -65,7 +65,7 @@ const Button = ({
             {...stylex.props(baseStyles.button, ...styles)}
         >
             {children}
-        </span>
+        </button>
     );
 };
 

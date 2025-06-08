@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Icon.stylex";
-import { globalStyles } from "../../../app/globalStyles.stylex";
 
 type IconProps = {
     children: ReactNode;
@@ -16,25 +15,30 @@ const Icon = ({ children, size, color, bg }: IconProps) => {
     };
 
     const colorStyles = {
-        secondary: globalStyles.colorSecondary,
+        secondary: baseStyles.colorSecondary,
     };
 
     const bgStyles = {
-        secondary: globalStyles.bgTertiary,
+        secondary: baseStyles.bgTertiary,
     };
 
     return (
-        <span {...stylex.props(baseStyles.icon, bg ? bgStyles[bg] : undefined)}>
+        <div
+            {...stylex.props(
+                baseStyles.icon,
+                bg ? bgStyles[bg] : undefined,
+                size ? sizeStyles[size] : undefined,
+            )}
+        >
             <span
                 {...stylex.props(
                     baseStyles.iconInner,
-                    size ? sizeStyles[size] : undefined,
                     color ? colorStyles[color] : undefined,
                 )}
             >
                 {children}
             </span>
-        </span>
+        </div>
     );
 };
 

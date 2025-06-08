@@ -17,7 +17,7 @@ const Flex = ({
     children,
     as = "div",
     direction = "row",
-    align = "center",
+    align = "stretch",
     justify = "start",
     wrap = "nowrap",
     gap,
