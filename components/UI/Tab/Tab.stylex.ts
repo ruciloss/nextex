@@ -9,10 +9,10 @@ export const baseStyles = stylex.create({
         },
         borderRadius: radius.sm,
         cursor: "pointer",
+        padding: spacing.xxxs,
         textDecoration: {
             default: "none",
             ":hover": "none",
         },
-        padding: spacing.xxxs,
     },
 });
