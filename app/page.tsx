@@ -12,12 +12,10 @@ import Progress from "@/components/UI/Progress/Progress";
 import Skeleton from "@/components/UI/Skeleton/Skeleton";
 import Dialog from "@/components/UI/Dialog/Dialog";
 import Image from "@/components/UI/Image/Image";
-import Navigation from "@/components/UI/Navigation/Navigation";
 import Flex from "@/components/UI/Flex/Flex";
 import Icon from "@/components/UI/Icon/Icon";
 import Divider from "@/components/UI/Divider/Divider";
 import { ChevronRight } from "lucide-react";
-import * as stylex from "@stylexjs/stylex";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -25,25 +23,9 @@ export const metadata: Metadata = {
         "A simple template for building modern websites with Next.js & StyleX.",
 };
 
-export const baseStyles = stylex.create({
-    test: {
-        color: "blue",
-        fontSize: "20px",
-    },
-});
-
 const Homepage = () => {
     return (
         <Feed>
-            <Navigation
-                ariaLabel="Main navigation"
-                className="test test2 test3"
-                stylex={[baseStyles.test]}
-                style={{ color: "green", fontSize: 30 }}
-            >
-                dsadsaa
-            </Navigation>
-
             <div>
                 <Heading level={1}>NexteX</Heading>
                 <Text>
