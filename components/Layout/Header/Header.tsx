@@ -1,6 +1,6 @@
-import Link from "next/link";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Header.stylex";
+import Link from "@/components/UI/Link/Link";
 import ThemeToggler from "@/components/Core/ThemeToggler/ThemeToggler";
 import Logo from "@/components/Content/Logo/Logo";
 import GitHubIcon from "@/components/Content/GitHubIcon/GitHubIcon";
@@ -20,10 +20,8 @@ const Header = ({ as = "div" }: HeaderProps) => {
             <Flex gap={2}>
                 <Link
                     href="/"
-                    aria-label="Link to Homepage"
-                    role="link"
-                    tabIndex={0}
-                    {...stylex.props(baseStyles.logo)}
+                    ariaLabel="Link to Homepage"
+                    styles={[baseStyles.logo]}
                 >
                     <Logo />
                 </Link>

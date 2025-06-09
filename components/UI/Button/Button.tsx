@@ -1,11 +1,11 @@
 "use client";
 
-import { ReactNode, KeyboardEvent } from "react";
+import { KeyboardEvent } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Button.stylex";
 
 type ButtonProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     ariaLabel?: string;
     ariaPressed?: boolean;
     ariaExpanded?: boolean;

@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Dropdown.stylex";
 
 type DropdownProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     id?: string;
     ariaLabel?: string;
     role?: string;
@@ -11,14 +10,14 @@ type DropdownProps = {
 };
 
 type ModalProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     id?: string;
     ariaLabel?: string;
     styles?: stylex.StyleXStyles[];
 };
 
 type ButtonProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     styles?: stylex.StyleXStyles[];
 };
 

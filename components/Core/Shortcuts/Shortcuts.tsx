@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "@/components/UI/Link/Link";
 import { usePathname } from "next/navigation";
 import { baseStyles } from "./Shortcuts.stylex";
+import Link from "@/components/UI/Link/Link";
 import Navigation from "@/components/UI/Navigation/Navigation";
 import List from "@/components/UI/List/List";
 import Tooltip from "@/components/UI/Tooltip/Tooltip";

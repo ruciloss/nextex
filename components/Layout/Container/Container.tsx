@@ -1,9 +1,8 @@
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Container.stylex";
-import { ReactNode } from "react";
 
 type ContainerProps = {
-    children: ReactNode;
+    children: React.ReactNode;
 };
 
 const Container = ({ children }: ContainerProps) => (

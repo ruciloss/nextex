@@ -18,8 +18,10 @@ const Footer = ({ as = "div" }: FooterProps) => {
                 <Text size="small" color="secondary">
                     Created by Ruciloss &copy; {new Date().getFullYear()}
                 </Text>
-                <Link href="/mit" ariaLabel="Link to License MIT" size="small">
-                    <Text color="secondary">License MIT</Text>
+                <Link href="/mit" ariaLabel="Link to License MIT">
+                    <Text size="small" color="secondary">
+                        License MIT
+                    </Text>
                 </Link>
                 <Text size="small" color="secondary">
                     &bull;

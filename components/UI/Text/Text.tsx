@@ -1,14 +1,13 @@
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Text.stylex";
 
 type TextProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     as?: "span" | "div" | "p";
     id?: string;
     size?: "small";
     weight?: "bold";
-    color?: "secondary" | "error" | "success" | "warning";
+    color?: "primary" | "secondary" | "error" | "success" | "warning";
     styles?: stylex.StyleXStyles[];
 };
 
@@ -32,6 +31,7 @@ const Text = ({
     };
 
     const colorStyles = {
+        primary: baseStyles.colorPrimary,
         secondary: baseStyles.colorSecondary,
         error: baseStyles.colorError,
         success: baseStyles.colorSuccess,

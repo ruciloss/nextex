@@ -41,11 +41,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <ReloadData />
                 <Header />
                 <Container>
-                    <Sidebar ariaLabel="Shortcuts" role="navigation" />
+                    <Sidebar role="navigation" ariaLabel="Shortcuts" />
                     {children}
                     <Sidebar
+                        role="complementary"
                         ariaLabel="Shortcuts"
-                        role="navigation"
                         align="right"
                     />
                 </Container>

@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Icon.stylex";
 
 type IconProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     size?: "large";
     color?: "secondary";
     bg?: "secondary";

@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Navigation.stylex";
 
 type NavigationProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     ariaLabel: string;
     styles?: stylex.StyleXStyles[];
     as?: "div" | "nav";

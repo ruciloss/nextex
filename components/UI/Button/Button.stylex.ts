@@ -78,4 +78,52 @@ export const baseStyles = stylex.create({
             ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
         },
     },
+
+    /*
+    btn: {
+        borderRadius: radius.sm,
+        borderWidth: 0,
+        cursor: "pointer",
+        fontWeight: 600,
+        textAlign: "center",
+        textDecoration: "none",
+    },
+*/
+    btnSolid: {
+        backgroundColor: {
+            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+        },
+        color: "#fff",
+        padding: `${spacing.xxxs} ${spacing.xxs}`,
+    },
+
+    btnOutline: {
+        backgroundColor: "transparent",
+        borderColor: {
+            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+        },
+        borderStyle: "solid",
+        borderWidth: "2px",
+        color: {
+            default: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+            ":hover": `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+        },
+        padding: `${spacing.xxxs} ${spacing.xxs}`,
+    },
+
+    btnCircle: {
+        alignItems: "center",
+        backgroundColor: {
+            default: `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
+            ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
+        },
+        borderRadius: "50%",
+        display: "flex",
+        height: "40px",
+        justifyContent: "center",
+        position: "relative",
+        width: "40px",
+    },
 });

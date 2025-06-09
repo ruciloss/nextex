@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "@/components/UI/Link/Link";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Search.stylex";
+import Link from "@/components/UI/Link/Link";
 import Input from "@/components/UI/Input/Input";
 import Button from "@/components/UI/Button/Button";
 import Heading from "@/components/UI/Heading/Heading";

@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Tooltip.stylex";
 
 type TooltipProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     styles?: stylex.StyleXStyles[];
 };
 

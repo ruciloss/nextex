@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Dialog.stylex";
 
 type DialogProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     id?: string;
     role?: "dialog" | "alertdialog";
     ariaLabel?: string;
@@ -13,17 +12,17 @@ type DialogProps = {
 };
 
 type HeaderProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     styles?: stylex.StyleXStyles[];
 };
 
 type BodyProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     styles?: stylex.StyleXStyles[];
 };
 
 type FooterProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     styles?: stylex.StyleXStyles[];
 };
 

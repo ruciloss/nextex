@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Flex.stylex";
 
 type FlexProps = {
-    children: ReactNode;
+    children: React.ReactNode;
     as?: "div" | "span";
     direction?: "row" | "column" | "rowReverse" | "columnReverse";
     align?: "stretch" | "start" | "center" | "end" | "baseline";

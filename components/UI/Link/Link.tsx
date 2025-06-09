@@ -1,13 +1,11 @@
 import NextLink from "next/link";
-import { ReactNode } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Link.stylex";
 
 type LinkProps = {
     href: string;
-    children: ReactNode;
+    children: React.ReactNode;
     ariaLabel: string;
-    size?: "small";
     styles?: stylex.StyleXStyles[];
 };
 
@@ -19,12 +17,8 @@ const isExternalLink = (href: string) => {
     );
 };
 
-const Link = ({ href, children, ariaLabel, size, styles = [] }: LinkProps) => {
+const Link = ({ href, children, ariaLabel, styles = [] }: LinkProps) => {
     const external = isExternalLink(href);
-
-    const sizeStyles = {
-        small: baseStyles.small,
-    };
 
     if (external) {
         return (
@@ -35,11 +29,7 @@ const Link = ({ href, children, ariaLabel, size, styles = [] }: LinkProps) => {
                 aria-label={ariaLabel}
                 role="link"
                 tabIndex={0}
-                {...stylex.props(
-                    baseStyles.link,
-                    size ? sizeStyles[size] : undefined,
-                    ...styles,
-                )}
+                {...stylex.props(baseStyles.link, ...styles)}
             >
                 {children}
             </a>
@@ -52,11 +42,7 @@ const Link = ({ href, children, ariaLabel, size, styles = [] }: LinkProps) => {
             aria-label={ariaLabel}
             role="link"
             tabIndex={0}
-            {...stylex.props(
-                baseStyles.link,
-                size ? sizeStyles[size] : undefined,
-                ...styles,
-            )}
+            {...stylex.props(baseStyles.link, ...styles)}
         >
             {children}
         </NextLink>
