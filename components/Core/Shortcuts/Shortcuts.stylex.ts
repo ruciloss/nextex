@@ -36,16 +36,12 @@ export const baseStyles = stylex.create({
         color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
         display: {
             default: "flex",
-            ":hover > div": "flex",
+            ":hover > span": "flex",
         },
         gap: spacing.xxxs,
         height: "calc(100% - 8px)",
         justifyContent: "center",
         marginTop: spacing.xxxs,
-        opacity: {
-            default: 1,
-            ":hover > div": 1,
-        },
         position: "relative",
         textDecoration: "none",
         width: 100,

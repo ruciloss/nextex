@@ -26,7 +26,7 @@ const Breadcrumbs = () => {
 
     return (
         <Navigation ariaLabel="Breadcrumbs" styles={[baseStyles.breadcrumbs]}>
-            <Flex>
+            <Flex gap={1}>
                 {breadcrumbs.map((breadcrumb, index) => {
                     const isLast = index === breadcrumbs.length - 1;
 
@@ -42,14 +42,7 @@ const Breadcrumbs = () => {
                                     <Text size="small">{breadcrumb.label}</Text>
                                 </Link>
                             )}
-                            {!isLast && (
-                                <Text
-                                    size="small"
-                                    styles={[baseStyles.divider]}
-                                >
-                                    &bull;
-                                </Text>
-                            )}
+                            {!isLast && <Text size="small">&bull;</Text>}
                         </div>
                     );
                 })}

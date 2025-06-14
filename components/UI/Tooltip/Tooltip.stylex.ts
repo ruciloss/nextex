@@ -9,7 +9,7 @@ import {
 
 export const baseStyles = stylex.create({
     tooltip: {
-        backgroundColor: `rgba(${colors.bgInheritR}, ${colors.bgInheritG}, ${colors.bgInheritB}, .95)`,
+        backgroundColor: `rgba(${colors.bgInheritR}, ${colors.bgInheritG}, ${colors.bgInheritB}, .85)`,
         borderRadius: radius.sm,
         boxShadow: {
             default: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .25)`,
@@ -19,7 +19,6 @@ export const baseStyles = stylex.create({
         display: "none",
         fontSize: text.xs,
         left: "50%",
-        opacity: 0,
         padding: `${spacing.xxs} ${spacing.xs}`,
         pointerEvents: "none",
         position: "absolute",

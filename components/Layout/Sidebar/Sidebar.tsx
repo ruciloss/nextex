@@ -53,7 +53,7 @@ const Sidebar = ({
             )}
         >
             <Flex direction="column" gap={4}>
-                <List ariaLabel="List">
+                <List ariaLabel="List" as="ul">
                     {sidebarLinks.map(
                         ({
                             href,
@@ -67,13 +67,20 @@ const Sidebar = ({
                                     ariaLabel={`Link to ${label}`}
                                 >
                                     <Tab>
-                                        <Flex gap={2} align="center">
-                                            {IconLeft && (
-                                                <Icon bg="secondary">
-                                                    <IconLeft />
-                                                </Icon>
-                                            )}
-                                            <Text>{label}</Text>
+                                        <Flex
+                                            gap={2}
+                                            align="center"
+                                            justify="between"
+                                        >
+                                            <Flex gap={2} align="center">
+                                                {IconLeft && (
+                                                    <Icon bg="secondary">
+                                                        <IconLeft />
+                                                    </Icon>
+                                                )}
+                                                <Text>{label}</Text>
+                                            </Flex>
+
                                             {IconRight && (
                                                 <Icon>
                                                     <IconRight />

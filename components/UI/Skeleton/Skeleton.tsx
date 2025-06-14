@@ -7,9 +7,9 @@ type SkeletonProps = {
 
 const Skeleton = ({ styles = [] }: SkeletonProps) => (
     <div
-        role="presentation"
+        role="progressbar"
+        aria-valuetext="Loading..."
         aria-busy="true"
-        aria-label="Loading..."
         {...stylex.props(baseStyles.skeleton, ...styles)}
     />
 );

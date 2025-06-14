@@ -4,7 +4,7 @@
 ![Badge](https://img.shields.io/badge/Version-1.0.0-orange)
 ![Badge](https://img.shields.io/badge/Release-stable-brightgreen)
 
-A simple template for building modern websites with **Next.js** and **StyleX**, designed for fast development and easy customization.
+A boilerplate template for building modern websites with **Next.js** and **StyleX**, designed for fast development and easy customization.
 
 [Check out the demo](https://ruciloss.github.io/nextex)
 

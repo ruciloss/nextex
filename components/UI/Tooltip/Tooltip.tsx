@@ -8,13 +8,13 @@ type TooltipProps = {
 
 const Tooltip = ({ children, styles = [] }: TooltipProps) => {
     return (
-        <div
+        <span
             role="tooltip"
             aria-hidden="true"
             {...stylex.props(baseStyles.tooltip, ...styles)}
         >
             {children}
-        </div>
+        </span>
     );
 };
 

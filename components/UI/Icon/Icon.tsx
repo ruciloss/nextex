@@ -22,7 +22,7 @@ const Icon = ({ children, size, color, bg }: IconProps) => {
     };
 
     return (
-        <div
+        <span
             {...stylex.props(
                 baseStyles.icon,
                 bg ? bgStyles[bg] : undefined,
@@ -37,7 +37,7 @@ const Icon = ({ children, size, color, bg }: IconProps) => {
             >
                 {children}
             </span>
-        </div>
+        </span>
     );
 };
 

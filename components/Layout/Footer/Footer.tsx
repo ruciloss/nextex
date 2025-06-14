@@ -14,15 +14,17 @@ const Footer = ({ as = "div" }: FooterProps) => {
 
     return (
         <Component role="contentinfo" {...stylex.props(baseStyles.footer)}>
-            <Flex gap={1} wrap="wrap">
-                <Text size="small" color="secondary">
-                    Created by Ruciloss &copy; {new Date().getFullYear()}
-                </Text>
-                <Link href="/mit" ariaLabel="Link to License MIT">
+            <Flex gap={1} wrap="wrap" align="center">
+                <Link
+                    href="/mit"
+                    ariaLabel="Link to License MIT"
+                    styles={[baseStyles.link]}
+                >
                     <Text size="small" color="secondary">
                         License MIT
                     </Text>
                 </Link>
+                <Breadcrumbs />
                 <Text size="small" color="secondary">
                     &bull;
                 </Text>
@@ -32,7 +34,9 @@ const Footer = ({ as = "div" }: FooterProps) => {
                 <Text size="small" color="secondary">
                     &bull;
                 </Text>
-                <Breadcrumbs />
+                <Text size="small" color="secondary">
+                    Ruciloss &copy; {new Date().getFullYear()}
+                </Text>
             </Flex>
         </Component>
     );

@@ -130,27 +130,22 @@ const ThemeToggler = () => {
                                         }
                                     }}
                                 >
-                                    <div
-                                        {...stylex.props(
-                                            baseStyles.itemContent,
-                                        )}
+                                    <Flex
+                                        justify="between"
+                                        align="center"
+                                        gap={2}
                                     >
                                         <div>
-                                            <span
-                                                {...stylex.props(
-                                                    baseStyles.itemTitle,
-                                                )}
-                                            >
+                                            <Heading size={7}>
                                                 {opt.label}
-                                            </span>
+                                            </Heading>
                                             {opt.description && (
-                                                <span
-                                                    {...stylex.props(
-                                                        baseStyles.itemDescription,
-                                                    )}
+                                                <Text
+                                                    size="small"
+                                                    color="secondary"
                                                 >
                                                     {opt.description}
-                                                </span>
+                                                </Text>
                                             )}
                                         </div>
                                         <input
@@ -164,7 +159,7 @@ const ThemeToggler = () => {
                                                 isSelected ? "true" : "false"
                                             }
                                         />
-                                    </div>
+                                    </Flex>
                                 </div>
                             );
                         })}

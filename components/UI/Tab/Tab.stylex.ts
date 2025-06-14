@@ -5,7 +5,7 @@ export const baseStyles = stylex.create({
     tab: {
         backgroundColor: {
             default: "transparent",
-            ":hover": `rgba(${colors.bgTertiaryR}, ${colors.bgTertiaryG}, ${colors.bgTertiaryB}, 1)`,
+            ":hover": `rgba(${colors.bgTertiaryHoverR}, ${colors.bgTertiaryHoverG}, ${colors.bgTertiaryHoverB}, 1)`,
         },
         borderRadius: radius.sm,
         cursor: "pointer",

@@ -6,7 +6,7 @@ export const baseStyles = stylex.create({
         cursor: "pointer",
         textDecoration: {
             default: "none",
-            ":hover": "underline",
+            ":hover": "none",
         },
     },
 });

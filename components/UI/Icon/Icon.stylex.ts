@@ -6,12 +6,12 @@ export const baseStyles = stylex.create({
         alignItems: "center",
         borderRadius: "50%",
         display: "flex",
+        height: 36,
         justifyContent: "center",
-        minHeight: 36,
         minWidth: 36,
     },
     iconLarge: {
-        minHeight: 40,
+        height: 40,
         minWidth: 40,
     },
     iconInner: {

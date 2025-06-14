@@ -10,11 +10,11 @@ import List from "@/components/UI/List/List";
 import Dropdown from "@/components/UI/Dropdown/Dropdown";
 import Progress from "@/components/UI/Progress/Progress";
 import Skeleton from "@/components/UI/Skeleton/Skeleton";
-import Dialog from "@/components/UI/Dialog/Dialog";
 import Image from "@/components/UI/Image/Image";
 import Flex from "@/components/UI/Flex/Flex";
 import Icon from "@/components/UI/Icon/Icon";
 import Divider from "@/components/UI/Divider/Divider";
+import Tab from "@/components/UI/Tab/Tab";
 import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -43,34 +43,15 @@ const Homepage = () => {
                 <Button>Button</Button>
                 <Divider />
 
-                <Heading level={2}>Link</Heading>
-                <Link href="/" ariaLabel="Link">
-                    Link
-                </Link>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
-                <Heading level={2}>Dialog</Heading>
-                <Dialog id="custom-dialog" ariaLabel="Custom dialog">
-                    <Dialog.Header>Nadpis dialogu</Dialog.Header>
-                    <Dialog.Body>Obsah dialogu</Dialog.Body>
-                    <Dialog.Footer>
-                        <button>Zavřít</button>
-                    </Dialog.Footer>
-                </Dialog>
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
                 <Heading level={2}>Progress (Loading)</Heading>
                 <Button>
                     <Flex as="span" gap={2}>
-                        <Progress variant="circle" />
+                        <Progress />
+                        <Progress variant="bar" />
                         Button
                     </Flex>
                 </Button>
 
-                <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-
-                <Heading level={2}>Image</Heading>
-                <Image src="https://picsum.photos/id/237/800/600" alt="Image" />
                 <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
 
                 <Heading level={2}>Skeleton</Heading>
@@ -92,13 +73,15 @@ const Homepage = () => {
                     </Dropdown.Button>
 
                     <Dropdown.Modal id="dropdown-modal" ariaLabel="Dropdown">
-                        <List ariaLabel="List" bullet="circle" as="ul" gap={2}>
+                        <List ariaLabel="List" as="ul" gap={2}>
                             <List.Item>
                                 <Text>ListItem1</Text>
                             </List.Item>
                             <List.Item>
                                 <Link href="/" ariaLabel="Test">
-                                    <Text>ListItem2</Text>
+                                    <Tab>
+                                        <Text>ListItem2</Text>
+                                    </Tab>
                                 </Link>
                             </List.Item>
                             <List.Item>
