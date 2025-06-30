@@ -14,7 +14,7 @@ const PageMIT = () => {
     return (
         <Feed>
             <div>
-                <Heading level={1} size={5}>
+                <Heading level={1} size="large">
                     MIT License
                 </Heading>
                 <Flex direction="column" gap={2}>

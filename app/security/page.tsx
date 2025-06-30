@@ -14,7 +14,9 @@ const PageSecurity = () => {
     return (
         <Feed>
             <div>
-                <Heading level={1}>Security</Heading>
+                <Heading level={1} size="large">
+                    Security
+                </Heading>
                 <Text>
                     If you discover a security vulnerability in this project, we
                     kindly ask you to report it via our GitHub repository by
