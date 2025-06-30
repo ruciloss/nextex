@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { spacing } from "../../../app/globalTokens.stylex";
+import { spacing as spacing } from "../../../app/globalTokens.stylex";
 
 export const baseStyles = stylex.create({
     flex: {

@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { baseStyles } from "./Tab.stylex";
+import { baseStyles } from "./Tabs.stylex";
 
 type TabProps = {
     children: React.ReactNode;

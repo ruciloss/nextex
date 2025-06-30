@@ -6,6 +6,7 @@ import Icon from "@/components/UI/Icon/Icon";
 import Flex from "@/components/UI/Flex/Flex";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
+import Dropdown from "@/components/UI/Dropdown/Dropdown";
 import { ChevronDown, Monitor, Moon, Sun } from "lucide-react";
 
 const options = [
@@ -52,7 +53,7 @@ const ThemeToggler = () => {
     }, []);
 
     return (
-        <div {...stylex.props(baseStyles.wrapper)}>
+        <Dropdown>
             <span
                 role="button"
                 tabIndex={0}
@@ -136,7 +137,7 @@ const ThemeToggler = () => {
                                         gap={2}
                                     >
                                         <div>
-                                            <Heading size={7}>
+                                            <Heading size="small">
                                                 {opt.label}
                                             </Heading>
                                             {opt.description && (
@@ -166,7 +167,7 @@ const ThemeToggler = () => {
                     </Flex>
                 </div>
             )}
-        </div>
+        </Dropdown>
     );
 };
 

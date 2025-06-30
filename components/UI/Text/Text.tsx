@@ -31,11 +31,11 @@ const Text = ({
     };
 
     const colorStyles = {
-        primary: baseStyles.colorPrimary,
-        secondary: baseStyles.colorSecondary,
-        error: baseStyles.colorError,
-        success: baseStyles.colorSuccess,
-        warning: baseStyles.colorWarning,
+        primary: baseStyles.primary,
+        secondary: baseStyles.secondary,
+        error: baseStyles.error,
+        success: baseStyles.success,
+        warning: baseStyles.warning,
     };
 
     return (

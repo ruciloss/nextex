@@ -1,18 +1,11 @@
 import * as stylex from "@stylexjs/stylex";
 import { baseStyles } from "./Divider.stylex";
 
-type DividerProps = {
-    as?: "div" | "span";
-    vertical?: boolean;
-};
-
-const Divider = ({ as = "div", vertical = false }: DividerProps) => {
-    const Component = as;
-
+const Divider = () => {
     return (
-        <Component
+        <div
             role="separator"
-            aria-orientation={vertical ? "vertical" : "horizontal"}
+            aria-orientation="horizontal"
             {...stylex.props(baseStyles.divider)}
         />
     );

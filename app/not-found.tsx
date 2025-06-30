@@ -11,14 +11,14 @@ import Flex from "@/components/UI/Flex/Flex";
 const NotFound = () => {
     return (
         <Inner>
-            <Flex direction="column" gap={5}>
+            <Flex direction="column" gap={5} justify="center">
                 <Flex justify="center">
                     <Icon color="secondary">
                         <FileLock2Icon size={56} strokeWidth={1.5} />
                     </Icon>
                 </Flex>
 
-                <Heading level={1} size={6}>
+                <Heading level={1} size="large">
                     This content isn&apos;t available right now.
                 </Heading>
 
@@ -29,7 +29,7 @@ const NotFound = () => {
                 </Text>
 
                 <Link href="/" ariaLabel="Link to Homepage">
-                    Go to Homepage
+                    <Text>Go to Homepage</Text>
                 </Link>
             </Flex>
         </Inner>

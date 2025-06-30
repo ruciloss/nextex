@@ -10,19 +10,19 @@ export const baseStyles = stylex.create({
         fontWeight: 600,
     },
 
-    colorPrimary: {
+    primary: {
         color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
     },
-    colorSecondary: {
+    secondary: {
         color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
     },
-    colorError: {
+    error: {
         color: `rgba(${colors.errorR}, ${colors.errorG}, ${colors.errorB}, 1)`,
     },
-    colorSuccess: {
+    success: {
         color: `rgba(${colors.successR}, ${colors.successG}, ${colors.successB}, 1)`,
     },
-    colorWarning: {
+    warning: {
         color: `rgba(${colors.warningR}, ${colors.warningG}, ${colors.warningB}, 1)`,
     },
 });

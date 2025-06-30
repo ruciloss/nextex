@@ -5,7 +5,7 @@ type IconProps = {
     children: React.ReactNode;
     size?: "large";
     color?: "secondary";
-    bg?: "secondary";
+    bg?: "transparentHover" | "secondary" | "secondaryHover";
 };
 
 const Icon = ({ children, size, color, bg }: IconProps) => {
@@ -18,7 +18,9 @@ const Icon = ({ children, size, color, bg }: IconProps) => {
     };
 
     const bgStyles = {
-        secondary: baseStyles.bgTertiary,
+        transparentHover: baseStyles.bgTransparentHover,
+        secondary: baseStyles.bgSecondary,
+        secondaryHover: baseStyles.bgSecondaryHover,
     };
 
     return (

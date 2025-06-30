@@ -15,13 +15,11 @@ const PageCodex = () => {
     return (
         <Feed>
             <div>
-                <Heading level={1} size={5}>
+                <Heading level={1} size="large">
                     Code of Conduct
                 </Heading>
 
-                <Heading level={2} size={2}>
-                    Our Pledge
-                </Heading>
+                <Heading level={2}>Our Pledge</Heading>
                 <Text>
                     In the interest of fostering an open and welcoming
                     environment, we as contributors and maintainers pledge to
@@ -34,11 +32,9 @@ const PageCodex = () => {
                     orientation.
                 </Text>
 
-                <Heading level={2} size={2}>
-                    Our Standards
-                </Heading>
+                <Heading level={2}>Our Standards</Heading>
 
-                <Heading level={3} size={3}>
+                <Heading level={3} size="small">
                     Examples of behavior that contributes to creating a positive
                     environment include:
                 </Heading>
@@ -65,7 +61,7 @@ const PageCodex = () => {
                     </List.Item>
                 </List>
 
-                <Heading level={3} size={3}>
+                <Heading level={3} size="small">
                     Examples of unacceptable behavior by participants include:
                 </Heading>
                 <List ariaLabel="Examples of unacceptable behavior">
@@ -99,9 +95,7 @@ const PageCodex = () => {
                     </List.Item>
                 </List>
 
-                <Heading level={2} size={2}>
-                    Our Responsibilities
-                </Heading>
+                <Heading level={2}>Our Responsibilities</Heading>
                 <Text>
                     Project maintainers are responsible for clarifying the
                     standards of acceptable behavior and are expected to take
@@ -115,9 +109,7 @@ const PageCodex = () => {
                     offensive, or harmful.
                 </Text>
 
-                <Heading level={2} size={2}>
-                    Scope
-                </Heading>
+                <Heading level={2}>Scope</Heading>
                 <Text>
                     This Code of Conduct applies to all spaces managed by the
                     project organization, as well as to all interactions between
@@ -125,9 +117,7 @@ const PageCodex = () => {
                     offline.
                 </Text>
 
-                <Heading level={2} size={2}>
-                    Enforcement
-                </Heading>
+                <Heading level={2}>Enforcement</Heading>
                 <Text>
                     Instances of abusive, harassing, or otherwise unacceptable
                     behavior may be reported by contacting the maintainers
@@ -143,9 +133,7 @@ const PageCodex = () => {
                     project&apos;s leadership.
                 </Text>
 
-                <Heading level={2} size={2}>
-                    Attribution
-                </Heading>
+                <Heading level={2}>Attribution</Heading>
                 <Text>
                     This Code of Conduct is adapted from the{" "}
                     <Link

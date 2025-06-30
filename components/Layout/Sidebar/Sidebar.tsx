@@ -7,7 +7,8 @@ import Icon from "@/components/UI/Icon/Icon";
 import Link from "@/components/UI/Link/Link";
 import Text from "@/components/UI/Text/Text";
 import Divider from "@/components/UI/Divider/Divider";
-import Tab from "@/components/UI/Tab/Tab";
+import Tab from "@/components/UI/Tabs/Tabs";
+import Heading from "@/components/UI/Heading/Heading";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 type SidebarProps = {
@@ -94,6 +95,7 @@ const Sidebar = ({
                     )}
                 </List>
                 <Divider />
+                <Heading color="secondary">Sidebar</Heading>
             </Flex>
             <Footer />
         </Component>

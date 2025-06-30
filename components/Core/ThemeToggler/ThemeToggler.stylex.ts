@@ -59,7 +59,6 @@ export const baseStyles = stylex.create({
         borderRadius: radius.sm,
         caretColor: "transparent",
         cursor: "pointer",
-        marginBottom: spacing.xxxs,
         marginLeft: spacing.lg,
         padding: `${spacing.xxs}`,
     },

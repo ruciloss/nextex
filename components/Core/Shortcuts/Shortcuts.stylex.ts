@@ -34,10 +34,6 @@ export const baseStyles = stylex.create({
         },
         borderRadius: radius.sm,
         color: `rgba(${colors.textSecondaryR}, ${colors.textSecondaryG}, ${colors.textSecondaryB}, 1)`,
-        display: {
-            default: "flex",
-            ":hover > span": "flex",
-        },
         gap: spacing.xxxs,
         height: "calc(100% - 8px)",
         justifyContent: "center",
