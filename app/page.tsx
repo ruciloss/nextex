@@ -3,7 +3,6 @@ import Feed from "@/components/Layout/Feed/Feed";
 import Heading from "@/components/UI/Heading/Heading";
 import Text from "@/components/UI/Text/Text";
 import Button from "@/components/UI/Button/Button";
-import Input from "@/components/UI/Input/Input";
 import List from "@/components/UI/List/List";
 import Dropdown from "@/components/UI/Dropdown/Dropdown";
 import Progress from "@/components/UI/Progress/Progress";
@@ -31,7 +30,6 @@ const Homepage = () => {
                 <Heading level={2} size="small">
                     Input
                 </Heading>
-                <Input type="text" name="group1" placeholder="option1" />
 
                 <Heading level={2} size="large">
                     Button

@@ -5,7 +5,6 @@ import ThemeToggler from "@/components/Core/ThemeToggler/ThemeToggler";
 import Logo from "@/components/Content/Logo/Logo";
 import GitHubIcon from "@/components/Content/GitHubIcon/GitHubIcon";
 import Shortcuts from "@/components/Core/Shortcuts/Shortcuts";
-import Search from "@/components/Core/Search/Search";
 import Flex from "@/components/UI/Flex/Flex";
 
 type HeaderProps = {
@@ -25,7 +24,6 @@ const Header = ({ as = "div" }: HeaderProps) => {
                 >
                     <Logo />
                 </Link>
-                <Search />
             </Flex>
             <Shortcuts />
             <Flex gap={2}>
