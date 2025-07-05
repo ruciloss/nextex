@@ -43,11 +43,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Container>
                     <Sidebar role="navigation" ariaLabel="Shortcuts" />
                     {children}
-                    <Sidebar
-                        role="complementary"
-                        ariaLabel="Shortcuts"
-                        align="right"
-                    />
+                    <Sidebar role="complementary" ariaLabel="Shortcuts" />
                 </Container>
                 <SelfXSSWarning />
             </body>
